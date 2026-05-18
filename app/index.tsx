@@ -367,17 +367,15 @@ export default function SavvymaxUS() {
                     index === US_BANK_DATASET.length - 1 && { borderBottomWidth: 0 },
                   ]}
                 >
-                  <View style={styles.bankRankCol}>
-                    <Text style={[styles.bankRank, bank.isLowYield && styles.bankRankLow]}>
-                      #{index + 1}
-                    </Text>
-                  </View>
                   <View style={styles.bankInfoCol}>
-                    <Text style={[styles.bankName, bank.isLowYield && styles.bankNameLow]}>
-                      {bank.name}
+                    <Text
+                      style={[styles.bankName, bank.isLowYield && styles.bankNameLow]}
+                      numberOfLines={1}
+                    >
+                      {index + 1}. {bank.name}
                     </Text>
                     {bank.note && (
-                      <Text style={styles.bankNote}>{bank.note}</Text>
+                      <Text style={styles.bankNote} numberOfLines={1}>{bank.note}</Text>
                     )}
                     {bank.isLowYield && (
                       <Text style={styles.bankLowYieldTag}>Low-Yield Trap</Text>
@@ -387,9 +385,6 @@ export default function SavvymaxUS() {
                     <Text style={[styles.bankApy, bank.isLowYield && styles.bankApyLow]}>
                       {bank.apy.toFixed(2)}%
                     </Text>
-                    <Text style={[styles.bankApyLabel, bank.isLowYield && styles.bankApyLabelLow]}>
-                      APY
-                    </Text>
                   </View>
                   <View style={styles.bankCtaCol}>
                     {bank.url && !bank.isLowYield ? (
@@ -398,7 +393,7 @@ export default function SavvymaxUS() {
                         onPress={() => handleBankPress(bank.url!)}
                         accessibilityRole="link"
                       >
-                        <Text style={styles.bankCtaBtnText}>Claim High Rate →</Text>
+                        <Text style={styles.bankCtaBtnText}>Claim Rate →</Text>
                       </Pressable>
                     ) : (
                       <View style={styles.bankCtaBtnDisabled}>
@@ -924,36 +919,26 @@ const styles = StyleSheet.create({
   bankRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 14,
-    paddingHorizontal: 8,
+    paddingVertical: 12,
+    paddingHorizontal: 6,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(31, 41, 55, 0.6)',
-    gap: 10,
+    gap: 8,
   },
   bankRowLowYield: {
     opacity: 0.55,
     backgroundColor: 'rgba(248, 113, 113, 0.04)',
     borderRadius: 10,
   },
-  bankRankCol: {
-    width: 32,
-    alignItems: 'center',
-  },
-  bankRank: {
-    fontFamily: Fonts.bold,
-    fontSize: 13,
-    color: '#64748B',
-  },
-  bankRankLow: {
-    color: '#475569',
-  },
   bankInfoCol: {
     flex: 1,
+    flexShrink: 1,
+    minWidth: 120,
     gap: 2,
   },
   bankName: {
     fontFamily: Fonts.semiBold,
-    fontSize: 14,
+    fontSize: 13,
     color: '#F3F4F6',
   },
   bankNameLow: {
@@ -961,12 +946,12 @@ const styles = StyleSheet.create({
   },
   bankNote: {
     fontFamily: Fonts.regular,
-    fontSize: 11,
+    fontSize: 10,
     color: '#64748B',
   },
   bankLowYieldTag: {
     fontFamily: Fonts.semiBold,
-    fontSize: 10,
+    fontSize: 9,
     color: '#F87171',
     letterSpacing: 0.5,
     textTransform: 'uppercase',
@@ -974,58 +959,49 @@ const styles = StyleSheet.create({
   },
   bankApyCol: {
     alignItems: 'flex-end',
-    gap: 1,
-    minWidth: 52,
+    flexShrink: 0,
+    minWidth: 48,
   },
   bankApy: {
     fontFamily: Fonts.bold,
-    fontSize: 16,
+    fontSize: 14,
     color: '#34D399',
     fontVariant: ['tabular-nums'],
   },
   bankApyLow: {
     color: '#64748B',
   },
-  bankApyLabel: {
-    fontFamily: Fonts.regular,
-    fontSize: 10,
-    color: '#34D399',
-    opacity: 0.7,
-  },
-  bankApyLabelLow: {
-    color: '#64748B',
-  },
   bankCtaCol: {
-    minWidth: 120,
+    flexShrink: 0,
     alignItems: 'flex-end',
   },
   bankCtaBtn: {
     backgroundColor: 'rgba(52, 211, 153, 0.12)',
     borderRadius: 8,
     borderCurve: 'continuous',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
+    paddingVertical: 7,
+    paddingHorizontal: 10,
     borderWidth: 1,
     borderColor: 'rgba(52, 211, 153, 0.25)',
-    minHeight: 36,
+    minHeight: 32,
     justifyContent: 'center',
   },
   bankCtaBtnText: {
     fontFamily: Fonts.semiBold,
-    fontSize: 11,
+    fontSize: 10,
     color: '#34D399',
     letterSpacing: 0.2,
   },
   bankCtaBtnDisabled: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    minHeight: 36,
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    minHeight: 32,
     justifyContent: 'center',
     alignItems: 'center',
   },
   bankCtaBtnDisabledText: {
     fontFamily: Fonts.regular,
-    fontSize: 14,
+    fontSize: 12,
     color: '#475569',
   },
   bankModalFooter: {
