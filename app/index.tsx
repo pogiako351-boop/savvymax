@@ -9,6 +9,7 @@ import { InflationIndicator } from '@/components/inflation-indicator';
 import { ComparisonTable } from '@/components/comparison-table';
 import { EarningsCard } from '@/components/earnings-card';
 import { AdPlaceholder, AnchorAdBar } from '@/components/ad-placeholder';
+import { LegalFooter } from '@/components/legal-footer';
 
 function calculateEarnings(apy: number, deposit: number, annualFee?: number) {
   const gross = (deposit * apy) / 100;
@@ -112,13 +113,8 @@ export default function HomeScreen() {
           ))}
         </View>
 
-        {/* Footer Disclaimer */}
-        <View style={styles.footer}>
-          <Text style={styles.disclaimer}>
-            APY rates are subject to change. Calculations are estimates.
-            Not financial advice. Rates last checked May 2026.
-          </Text>
-        </View>
+        {/* Legal Footer */}
+        <LegalFooter />
       </ScrollView>
 
       {/* Sticky Bottom Anchor Ad */}
@@ -176,18 +172,5 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: Colors.textMuted,
     fontVariant: ['tabular-nums'],
-  },
-  footer: {
-    marginTop: 12,
-    paddingTop: 16,
-    borderTopWidth: 1,
-    borderTopColor: Colors.border,
-  },
-  disclaimer: {
-    fontFamily: Fonts.regular,
-    fontSize: 11,
-    color: Colors.textDark,
-    textAlign: 'center',
-    lineHeight: 18,
   },
 });
