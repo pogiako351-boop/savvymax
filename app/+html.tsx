@@ -73,6 +73,14 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <meta name="msapplication-TileImage" content="/savvymax-icon-512.png" />
         <meta name="msapplication-config" content="none" />
 
+        {/* Google AdSense */}
+        <meta name="google-adsense-account" content="ca-pub-7498656720223965" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7498656720223965"
+          crossOrigin="anonymous"
+        />
+
         <ScrollViewStyleReset />
       </head>
       <body>{children}</body>
