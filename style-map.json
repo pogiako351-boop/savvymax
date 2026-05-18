@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1779103147849,
+  "generatedAt": 1779119613472,
   "entries": {
     "SavvymaxLogo@components/savvymax-logo.tsx:22": {
       "element": {
@@ -4154,337 +4154,331 @@
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:158": {
+    "PulsingDot@app/index.tsx:95": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 95
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/index.tsx",
+          "properties": {
+            "position": {
+              "line": 95,
+              "col": 29,
+              "endCol": 39,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 95,
+              "col": 46,
+              "endCol": 48,
+              "raw": "-2"
+            },
+            "right": {
+              "line": 95,
+              "col": 57,
+              "endCol": 59,
+              "raw": "-2"
+            },
+            "alignItems": {
+              "line": 95,
+              "col": 108,
+              "endCol": 116,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 95,
+              "col": 134,
+              "endCol": 142,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "PulsingDot@app/index.tsx:96": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 96
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/index.tsx",
+          "properties": {
+            "position": {
+              "line": 98,
+              "col": 20,
+              "endCol": 30,
+              "raw": "'absolute'"
+            }
+          }
+        }
+      ]
+    },
+    "PulsingButton@app/index.tsx:158": {
       "element": {
         "file": "app/index.tsx",
         "line": 158
       },
       "styles": [
         {
-          "origin": "stylesheet",
-          "ref": "styles.root",
-          "file": "app/index.tsx",
-          "defLine": 453,
-          "properties": {
-            "flex": {
-              "line": 454,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 455,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#0A0E17'"
-            }
-          }
+          "origin": "dynamic",
+          "resolvable": false
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:159": {
+    "PulsingButton@app/index.tsx:165": {
       "element": {
         "file": "app/index.tsx",
-        "line": 159
+        "line": 165
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.scrollView",
+          "ref": "styles.ctaButtonText",
           "file": "app/index.tsx",
-          "defLine": 457,
-          "properties": {
-            "flex": {
-              "line": 458,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:171": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 171
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.header",
-          "file": "app/index.tsx",
-          "defLine": 469,
-          "properties": {
-            "gap": {
-              "line": 470,
-              "col": 9,
-              "endCol": 11,
-              "raw": "10"
-            },
-            "paddingTop": {
-              "line": 471,
-              "col": 16,
-              "endCol": 18,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:172": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 172
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandRow",
-          "file": "app/index.tsx",
-          "defLine": 473,
-          "properties": {
-            "flexDirection": {
-              "line": 474,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 475,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "gap": {
-              "line": 476,
-              "col": 9,
-              "endCol": 11,
-              "raw": "10"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:173": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 173
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandIconContainer",
-          "file": "app/index.tsx",
-          "defLine": 478,
-          "properties": {
-            "width": {
-              "line": 479,
-              "col": 11,
-              "endCol": 13,
-              "raw": "28"
-            },
-            "height": {
-              "line": 480,
-              "col": 12,
-              "endCol": 14,
-              "raw": "28"
-            },
-            "flexDirection": {
-              "line": 481,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 482,
-              "col": 16,
-              "endCol": 26,
-              "raw": "'flex-end'"
-            },
-            "justifyContent": {
-              "line": 483,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            },
-            "gap": {
-              "line": 484,
-              "col": 9,
-              "endCol": 10,
-              "raw": "3"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:174": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 174
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandIconBar1",
-          "file": "app/index.tsx",
-          "defLine": 486,
-          "properties": {
-            "width": {
-              "line": 487,
-              "col": 11,
-              "endCol": 12,
-              "raw": "5"
-            },
-            "height": {
-              "line": 488,
-              "col": 12,
-              "endCol": 14,
-              "raw": "10"
-            },
-            "borderRadius": {
-              "line": 489,
-              "col": 18,
-              "endCol": 19,
-              "raw": "2"
-            },
-            "backgroundColor": {
-              "line": 490,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#34D399'"
-            },
-            "opacity": {
-              "line": 491,
-              "col": 13,
-              "endCol": 16,
-              "raw": "0.6"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:175": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 175
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandIconBar2",
-          "file": "app/index.tsx",
-          "defLine": 493,
-          "properties": {
-            "width": {
-              "line": 494,
-              "col": 11,
-              "endCol": 12,
-              "raw": "5"
-            },
-            "height": {
-              "line": 495,
-              "col": 12,
-              "endCol": 14,
-              "raw": "17"
-            },
-            "borderRadius": {
-              "line": 496,
-              "col": 18,
-              "endCol": 19,
-              "raw": "2"
-            },
-            "backgroundColor": {
-              "line": 497,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#34D399'"
-            },
-            "opacity": {
-              "line": 498,
-              "col": 13,
-              "endCol": 16,
-              "raw": "0.8"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:176": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 176
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandIconBar3",
-          "file": "app/index.tsx",
-          "defLine": 500,
-          "properties": {
-            "width": {
-              "line": 501,
-              "col": 11,
-              "endCol": 12,
-              "raw": "5"
-            },
-            "height": {
-              "line": 502,
-              "col": 12,
-              "endCol": 14,
-              "raw": "24"
-            },
-            "borderRadius": {
-              "line": 503,
-              "col": 18,
-              "endCol": 19,
-              "raw": "2"
-            },
-            "backgroundColor": {
-              "line": 504,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#34D399'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:178": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 178
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.brandName",
-          "file": "app/index.tsx",
-          "defLine": 506,
+          "defLine": 763,
           "properties": {
             "fontSize": {
-              "line": 508,
+              "line": 765,
               "col": 14,
               "endCol": 16,
-              "raw": "22"
-            },
-            "color": {
-              "line": 509,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            },
-            "letterSpacing": {
-              "line": 510,
-              "col": 19,
-              "endCol": 23,
-              "raw": "-0.5"
+              "raw": "14"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:183": {
+    "CreditScoreDial@app/index.tsx:179": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 179
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.dialContainer",
+          "file": "app/index.tsx",
+          "defLine": 770,
+          "properties": {
+            "alignItems": {
+              "line": 771,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 772,
+              "col": 21,
+              "endCol": 22,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "CreditScoreDial@app/index.tsx:180": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 180
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.dialOuter",
+          "file": "app/index.tsx",
+          "defLine": 774,
+          "properties": {
+            "width": {
+              "line": 775,
+              "col": 11,
+              "endCol": 14,
+              "raw": "160"
+            },
+            "height": {
+              "line": 776,
+              "col": 12,
+              "endCol": 14,
+              "raw": "90"
+            },
+            "position": {
+              "line": 777,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            },
+            "alignItems": {
+              "line": 778,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 779,
+              "col": 20,
+              "endCol": 30,
+              "raw": "'flex-end'"
+            },
+            "overflow": {
+              "line": 780,
+              "col": 14,
+              "endCol": 22,
+              "raw": "'hidden'"
+            }
+          }
+        }
+      ]
+    },
+    "CreditScoreDial@app/index.tsx:181": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 181
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.dialTrack",
+          "file": "app/index.tsx",
+          "defLine": 782,
+          "properties": {
+            "position": {
+              "line": 783,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 784,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "left": {
+              "line": 785,
+              "col": 10,
+              "endCol": 11,
+              "raw": "0"
+            },
+            "width": {
+              "line": 786,
+              "col": 11,
+              "endCol": 14,
+              "raw": "160"
+            },
+            "height": {
+              "line": 787,
+              "col": 12,
+              "endCol": 15,
+              "raw": "160"
+            },
+            "borderRadius": {
+              "line": 788,
+              "col": 18,
+              "endCol": 20,
+              "raw": "80"
+            },
+            "borderWidth": {
+              "line": 789,
+              "col": 17,
+              "endCol": 19,
+              "raw": "12"
+            },
+            "borderColor": {
+              "line": 790,
+              "col": 17,
+              "endCol": 26,
+              "raw": "'#e5e7eb'"
+            },
+            "borderBottomColor": {
+              "line": 791,
+              "col": 23,
+              "endCol": 36,
+              "raw": "'transparent'"
+            },
+            "borderLeftColor": {
+              "line": 792,
+              "col": 21,
+              "endCol": 34,
+              "raw": "'transparent'"
+            }
+          }
+        }
+      ]
+    },
+    "CreditScoreDial@app/index.tsx:182": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 182
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.dialFill",
+          "file": "app/index.tsx",
+          "defLine": 795,
+          "properties": {
+            "position": {
+              "line": 796,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 797,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "left": {
+              "line": 798,
+              "col": 10,
+              "endCol": 11,
+              "raw": "0"
+            },
+            "width": {
+              "line": 799,
+              "col": 11,
+              "endCol": 14,
+              "raw": "160"
+            },
+            "height": {
+              "line": 800,
+              "col": 12,
+              "endCol": 15,
+              "raw": "160"
+            },
+            "borderRadius": {
+              "line": 801,
+              "col": 18,
+              "endCol": 20,
+              "raw": "80"
+            },
+            "borderWidth": {
+              "line": 802,
+              "col": 17,
+              "endCol": 19,
+              "raw": "12"
+            },
+            "borderBottomColor": {
+              "line": 804,
+              "col": 23,
+              "endCol": 36,
+              "raw": "'transparent'"
+            },
+            "borderLeftColor": {
+              "line": 805,
+              "col": 21,
+              "endCol": 34,
+              "raw": "'transparent'"
+            }
+          }
+        }
+      ]
+    },
+    "CreditScoreDial@app/index.tsx:183": {
       "element": {
         "file": "app/index.tsx",
         "line": 183
@@ -4492,61 +4486,51 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.heroSection",
+          "ref": "styles.dialNeedle",
           "file": "app/index.tsx",
-          "defLine": 514,
+          "defLine": 808,
           "properties": {
-            "gap": {
-              "line": 515,
-              "col": 9,
-              "endCol": 10,
-              "raw": "8"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:184": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 184
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headline",
-          "file": "app/index.tsx",
-          "defLine": 517,
-          "properties": {
-            "fontSize": {
-              "line": 519,
+            "position": {
+              "line": 809,
               "col": 14,
-              "endCol": 16,
-              "raw": "28"
+              "endCol": 24,
+              "raw": "'absolute'"
             },
-            "color": {
-              "line": 520,
+            "bottom": {
+              "line": 810,
+              "col": 12,
+              "endCol": 14,
+              "raw": "78"
+            },
+            "left": {
+              "line": 811,
+              "col": 10,
+              "endCol": 12,
+              "raw": "76"
+            },
+            "width": {
+              "line": 812,
               "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
+              "endCol": 12,
+              "raw": "4"
             },
-            "lineHeight": {
-              "line": 521,
-              "col": 16,
-              "endCol": 18,
-              "raw": "34"
+            "height": {
+              "line": 813,
+              "col": 12,
+              "endCol": 14,
+              "raw": "50"
             },
-            "letterSpacing": {
-              "line": 522,
-              "col": 19,
-              "endCol": 23,
-              "raw": "-0.5"
+            "borderRadius": {
+              "line": 815,
+              "col": 18,
+              "endCol": 19,
+              "raw": "2"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:185": {
+    "CreditScoreDial@app/index.tsx:185": {
       "element": {
         "file": "app/index.tsx",
         "line": 185
@@ -4554,639 +4538,105 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.subheadline",
+          "ref": "styles.dialCenter",
           "file": "app/index.tsx",
-          "defLine": 524,
+          "defLine": 818,
           "properties": {
-            "fontSize": {
-              "line": 526,
-              "col": 14,
-              "endCol": 16,
-              "raw": "15"
-            },
-            "color": {
-              "line": 527,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "lineHeight": {
-              "line": 528,
-              "col": 16,
-              "endCol": 18,
-              "raw": "22"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:189": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 189
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.depositCard",
-          "file": "app/index.tsx",
-          "defLine": 532,
-          "properties": {
-            "backgroundColor": {
-              "line": 533,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#111827'"
-            },
-            "borderRadius": {
-              "line": 534,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 535,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "padding": {
-              "line": 536,
-              "col": 13,
-              "endCol": 15,
-              "raw": "22"
-            },
-            "gap": {
-              "line": 537,
-              "col": 9,
-              "endCol": 11,
-              "raw": "14"
-            },
-            "borderWidth": {
-              "line": 538,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderColor": {
-              "line": 539,
-              "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
-            },
-            "boxShadow": {
-              "line": 540,
-              "col": 15,
-              "endCol": 46,
-              "raw": "'0 4px 20px rgba(0, 0, 0, 0.3)'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:190": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 190
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.depositLabel",
-          "file": "app/index.tsx",
-          "defLine": 542,
-          "properties": {
-            "fontSize": {
-              "line": 544,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "color": {
-              "line": 545,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "letterSpacing": {
-              "line": 546,
-              "col": 19,
-              "endCol": 22,
-              "raw": "1.2"
-            },
-            "textTransform": {
-              "line": 547,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:191": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 191
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.depositInputRow",
-          "file": "app/index.tsx",
-          "defLine": 549,
-          "properties": {
-            "flexDirection": {
-              "line": 550,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
             "alignItems": {
-              "line": 551,
+              "line": 819,
               "col": 16,
-              "endCol": 26,
-              "raw": "'baseline'"
+              "endCol": 24,
+              "raw": "'center'"
             },
-            "gap": {
-              "line": 552,
-              "col": 9,
-              "endCol": 10,
+            "marginBottom": {
+              "line": 820,
+              "col": 18,
+              "endCol": 19,
               "raw": "4"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:192": {
+    "CreditScoreDial@app/index.tsx:186": {
       "element": {
         "file": "app/index.tsx",
-        "line": 192
+        "line": 186
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.currencySymbol",
+          "ref": "styles.dialScore",
           "file": "app/index.tsx",
-          "defLine": 554,
+          "defLine": 822,
           "properties": {
             "fontSize": {
-              "line": 556,
+              "line": 824,
               "col": 14,
               "endCol": 16,
-              "raw": "36"
-            },
-            "color": {
-              "line": 557,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
+              "raw": "28"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:193": {
+    "CreditScoreDial@app/index.tsx:187": {
       "element": {
         "file": "app/index.tsx",
-        "line": 193
+        "line": 187
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.depositInput",
+          "ref": "styles.dialLabel",
           "file": "app/index.tsx",
-          "defLine": 560,
+          "defLine": 828,
           "properties": {
-            "flex": {
-              "line": 561,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
             "fontSize": {
-              "line": 563,
+              "line": 830,
               "col": 14,
               "endCol": 16,
-              "raw": "36"
+              "raw": "12"
             },
-            "color": {
-              "line": 564,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            },
-            "padding": {
-              "line": 566,
-              "col": 13,
-              "endCol": 14,
-              "raw": "0"
-            },
-            "margin": {
-              "line": 567,
-              "col": 12,
-              "endCol": 13,
-              "raw": "0"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:207": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 207
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.inflationCard",
-          "file": "app/index.tsx",
-          "defLine": 571,
-          "properties": {
-            "backgroundColor": {
-              "line": 572,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#111827'"
-            },
-            "borderRadius": {
-              "line": 573,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 574,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "padding": {
-              "line": 575,
-              "col": 13,
-              "endCol": 15,
-              "raw": "20"
-            },
-            "gap": {
-              "line": 576,
-              "col": 9,
-              "endCol": 11,
-              "raw": "16"
-            },
-            "borderLeftWidth": {
-              "line": 577,
-              "col": 21,
-              "endCol": 22,
-              "raw": "4"
-            },
-            "borderLeftColor": {
-              "line": 578,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#F87171'"
-            },
-            "borderWidth": {
-              "line": 579,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderColor": {
-              "line": 580,
-              "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
-            },
-            "boxShadow": {
-              "line": 581,
+            "marginTop": {
+              "line": 832,
               "col": 15,
-              "endCol": 53,
-              "raw": "'0 4px 20px rgba(248, 113, 113, 0.08)'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:208": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 208
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardHeader",
-          "file": "app/index.tsx",
-          "defLine": 583,
-          "properties": {
-            "flexDirection": {
-              "line": 584,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 585,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "gap": {
-              "line": 586,
-              "col": 9,
-              "endCol": 11,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:209": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 209
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardIconDanger",
-          "file": "app/index.tsx",
-          "defLine": 588,
-          "properties": {
-            "width": {
-              "line": 589,
-              "col": 11,
-              "endCol": 13,
-              "raw": "40"
-            },
-            "height": {
-              "line": 590,
-              "col": 12,
-              "endCol": 14,
-              "raw": "40"
-            },
-            "borderRadius": {
-              "line": 591,
-              "col": 18,
-              "endCol": 20,
-              "raw": "12"
-            },
-            "borderCurve": {
-              "line": 592,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "backgroundColor": {
-              "line": 593,
-              "col": 21,
-              "endCol": 48,
-              "raw": "'rgba(248, 113, 113, 0.12)'"
-            },
-            "alignItems": {
-              "line": 594,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 595,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:210": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 210
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardIconText",
-          "file": "app/index.tsx",
-          "defLine": 606,
-          "properties": {
-            "fontSize": {
-              "line": 607,
-              "col": 14,
               "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:212": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 212
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardHeaderText",
-          "file": "app/index.tsx",
-          "defLine": 609,
-          "properties": {
-            "flex": {
-              "line": 610,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "gap": {
-              "line": 611,
-              "col": 9,
-              "endCol": 10,
               "raw": "2"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:213": {
+    "renderHomePanel@app/index.tsx:224": {
       "element": {
         "file": "app/index.tsx",
-        "line": 213
+        "line": 224
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.inflationTitle",
+          "ref": "styles.panelContent",
           "file": "app/index.tsx",
-          "defLine": 613,
+          "defLine": 624,
           "properties": {
-            "fontSize": {
-              "line": 615,
-              "col": 14,
-              "endCol": 16,
-              "raw": "17"
-            },
-            "color": {
-              "line": 616,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:214": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 214
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.inflationSubtitle",
-          "file": "app/index.tsx",
-          "defLine": 618,
-          "properties": {
-            "fontSize": {
-              "line": 620,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 621,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:219": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 219
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.annualBleedRow",
-          "file": "app/index.tsx",
-          "defLine": 623,
-          "properties": {
-            "flexDirection": {
-              "line": 624,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "justifyContent": {
+            "padding": {
               "line": 625,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
             },
-            "alignItems": {
+            "gap": {
               "line": 626,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "backgroundColor": {
-              "line": 627,
-              "col": 21,
-              "endCol": 48,
-              "raw": "'rgba(248, 113, 113, 0.08)'"
-            },
-            "borderRadius": {
-              "line": 628,
-              "col": 18,
-              "endCol": 20,
-              "raw": "10"
-            },
-            "borderCurve": {
-              "line": 629,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "paddingHorizontal": {
-              "line": 630,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingVertical": {
-              "line": 631,
-              "col": 21,
-              "endCol": 23,
-              "raw": "12"
+              "col": 9,
+              "endCol": 11,
+              "raw": "16"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:220": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 220
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.annualBleedLabel",
-          "file": "app/index.tsx",
-          "defLine": 633,
-          "properties": {
-            "fontSize": {
-              "line": 635,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 636,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:221": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 221
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.annualBleedValue",
-          "file": "app/index.tsx",
-          "defLine": 638,
-          "properties": {
-            "fontSize": {
-              "line": 640,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            },
-            "color": {
-              "line": 641,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:226": {
+    "renderHomePanel@app/index.tsx:226": {
       "element": {
         "file": "app/index.tsx",
         "line": 226
@@ -5194,45 +4644,51 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.inflationStats",
+          "ref": "styles.walletCard",
           "file": "app/index.tsx",
-          "defLine": 644,
+          "defLine": 630,
           "properties": {
-            "backgroundColor": {
-              "line": 645,
-              "col": 21,
-              "endCol": 48,
-              "raw": "'rgba(248, 113, 113, 0.06)'"
-            },
             "borderRadius": {
-              "line": 646,
+              "line": 632,
               "col": 18,
               "endCol": 20,
-              "raw": "12"
+              "raw": "16"
+            },
+            "padding": {
+              "line": 633,
+              "col": 13,
+              "endCol": 15,
+              "raw": "24"
+            },
+            "alignItems": {
+              "line": 634,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 635,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
             },
             "borderCurve": {
-              "line": 647,
+              "line": 636,
               "col": 17,
               "endCol": 29,
               "raw": "'continuous'"
             },
-            "padding": {
-              "line": 648,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "gap": {
-              "line": 649,
-              "col": 9,
-              "endCol": 11,
-              "raw": "12"
+            "backgroundImage": {
+              "line": 637,
+              "col": 21,
+              "endCol": 72,
+              "raw": "'linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%)'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:227": {
+    "renderHomePanel@app/index.tsx:227": {
       "element": {
         "file": "app/index.tsx",
         "line": 227
@@ -5240,33 +4696,27 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statRow",
+          "ref": "styles.walletLabel",
           "file": "app/index.tsx",
-          "defLine": 651,
+          "defLine": 639,
           "properties": {
-            "flexDirection": {
-              "line": 652,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
+            "fontSize": {
+              "line": 641,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
             },
-            "justifyContent": {
-              "line": 653,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
-            },
-            "alignItems": {
-              "line": 654,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
+            "color": {
+              "line": 642,
+              "col": 11,
+              "endCol": 34,
+              "raw": "'rgba(255,255,255,0.8)'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:228": {
+    "renderHomePanel@app/index.tsx:228": {
       "element": {
         "file": "app/index.tsx",
         "line": 228
@@ -5274,27 +4724,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statLabel",
+          "ref": "styles.walletBalance",
           "file": "app/index.tsx",
-          "defLine": 656,
+          "defLine": 644,
           "properties": {
             "fontSize": {
-              "line": 658,
+              "line": 646,
               "col": 14,
               "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 659,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+              "raw": "36"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:229": {
+    "renderHomePanel@app/index.tsx:229": {
       "element": {
         "file": "app/index.tsx",
         "line": 229
@@ -5302,89 +4746,67 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statValueDanger",
+          "ref": "styles.apyPill",
           "file": "app/index.tsx",
-          "defLine": 661,
+          "defLine": 650,
+          "properties": {
+            "backgroundColor": {
+              "line": 651,
+              "col": 21,
+              "endCol": 44,
+              "raw": "'rgba(255,255,255,0.2)'"
+            },
+            "paddingHorizontal": {
+              "line": 652,
+              "col": 23,
+              "endCol": 25,
+              "raw": "12"
+            },
+            "paddingVertical": {
+              "line": 653,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "borderRadius": {
+              "line": 654,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "marginTop": {
+              "line": 655,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:230": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 230
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.apyPillText",
+          "file": "app/index.tsx",
+          "defLine": 657,
           "properties": {
             "fontSize": {
-              "line": 663,
+              "line": 659,
               "col": 14,
               "endCol": 16,
-              "raw": "15"
-            },
-            "color": {
-              "line": 664,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
+              "raw": "13"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:233": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 233
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statDivider",
-          "file": "app/index.tsx",
-          "defLine": 667,
-          "properties": {
-            "height": {
-              "line": 668,
-              "col": 12,
-              "endCol": 13,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 669,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(148, 163, 184, 0.1)'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:234": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 234
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statRow",
-          "file": "app/index.tsx",
-          "defLine": 651,
-          "properties": {
-            "flexDirection": {
-              "line": 652,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "justifyContent": {
-              "line": 653,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
-            },
-            "alignItems": {
-              "line": 654,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:235": {
+    "renderHomePanel@app/index.tsx:235": {
       "element": {
         "file": "app/index.tsx",
         "line": 235
@@ -5392,27 +4814,51 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statLabel",
+          "ref": "styles.adBanner",
           "file": "app/index.tsx",
-          "defLine": 656,
+          "defLine": 664,
           "properties": {
-            "fontSize": {
-              "line": 658,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
+            "backgroundColor": {
+              "line": 665,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f3f4f6'"
             },
-            "color": {
-              "line": 659,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+            "borderRadius": {
+              "line": 666,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            },
+            "paddingVertical": {
+              "line": 667,
+              "col": 21,
+              "endCol": 23,
+              "raw": "20"
+            },
+            "alignItems": {
+              "line": 668,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderWidth": {
+              "line": 669,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderStyle": {
+              "line": 671,
+              "col": 17,
+              "endCol": 25,
+              "raw": "'dashed'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:236": {
+    "renderHomePanel@app/index.tsx:236": {
       "element": {
         "file": "app/index.tsx",
         "line": 236
@@ -5420,27 +4866,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statValueDanger",
+          "ref": "styles.adText",
           "file": "app/index.tsx",
-          "defLine": 661,
+          "defLine": 673,
           "properties": {
             "fontSize": {
-              "line": 663,
+              "line": 675,
               "col": 14,
               "endCol": 16,
-              "raw": "15"
-            },
-            "color": {
-              "line": 664,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
+              "raw": "12"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:240": {
+    "renderHomePanel@app/index.tsx:240": {
       "element": {
         "file": "app/index.tsx",
         "line": 240
@@ -5448,27 +4888,33 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statDivider",
+          "ref": "styles.serviceGrid",
           "file": "app/index.tsx",
-          "defLine": 667,
+          "defLine": 680,
           "properties": {
-            "height": {
-              "line": 668,
-              "col": 12,
-              "endCol": 13,
-              "raw": "1"
+            "flexDirection": {
+              "line": 681,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
             },
-            "backgroundColor": {
-              "line": 669,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(148, 163, 184, 0.1)'"
+            "justifyContent": {
+              "line": 682,
+              "col": 20,
+              "endCol": 35,
+              "raw": "'space-between'"
+            },
+            "gap": {
+              "line": 683,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:241": {
+    "renderHomePanel@app/index.tsx:241": {
       "element": {
         "file": "app/index.tsx",
         "line": 241
@@ -5476,89 +4922,147 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statRow",
+          "ref": "styles.serviceItem",
           "file": "app/index.tsx",
-          "defLine": 651,
+          "defLine": 685,
           "properties": {
-            "flexDirection": {
-              "line": 652,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "justifyContent": {
-              "line": 653,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
+            "flex": {
+              "line": 686,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
             },
             "alignItems": {
-              "line": 654,
+              "line": 687,
               "col": 16,
               "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 689,
+              "col": 21,
+              "endCol": 23,
+              "raw": "16"
+            },
+            "paddingHorizontal": {
+              "line": 690,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
+            },
+            "borderRadius": {
+              "line": 691,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 692,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "gap": {
+              "line": 694,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            },
+            "borderCurve": {
+              "line": 695,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "minHeight": {
+              "line": 696,
+              "col": 15,
+              "endCol": 17,
+              "raw": "80"
+            },
+            "justifyContent": {
+              "line": 697,
+              "col": 20,
+              "endCol": 28,
               "raw": "'center'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:242": {
+    "renderHomePanel@app/index.tsx:245": {
       "element": {
         "file": "app/index.tsx",
-        "line": 242
+        "line": 245
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.statLabel",
+          "ref": "styles.serviceIconWrap",
           "file": "app/index.tsx",
-          "defLine": 656,
+          "defLine": 699,
           "properties": {
-            "fontSize": {
-              "line": 658,
+            "position": {
+              "line": 700,
               "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 659,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+              "endCol": 24,
+              "raw": "'relative'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:243": {
+    "renderHomePanel@app/index.tsx:246": {
       "element": {
         "file": "app/index.tsx",
-        "line": 243
+        "line": 246
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.liveTickerValue",
+          "ref": "styles.serviceIcon",
           "file": "app/index.tsx",
-          "defLine": 671,
+          "defLine": 702,
           "properties": {
             "fontSize": {
-              "line": 673,
+              "line": 703,
               "col": 14,
               "endCol": 16,
-              "raw": "14"
-            },
-            "color": {
-              "line": 674,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
+              "raw": "24"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:251": {
+    "renderHomePanel@app/index.tsx:249": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 249
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.serviceLabel",
+          "file": "app/index.tsx",
+          "defLine": 705,
+          "properties": {
+            "fontSize": {
+              "line": 707,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textAlign": {
+              "line": 709,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:251": {
       "element": {
         "file": "app/index.tsx",
         "line": 251
@@ -5566,158 +5070,66 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.yieldCard",
+          "ref": "styles.serviceItem",
           "file": "app/index.tsx",
-          "defLine": 679,
+          "defLine": 685,
           "properties": {
-            "backgroundColor": {
-              "line": 680,
+            "flex": {
+              "line": 686,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 687,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 689,
               "col": 21,
-              "endCol": 30,
-              "raw": "'#111827'"
+              "endCol": 23,
+              "raw": "16"
+            },
+            "paddingHorizontal": {
+              "line": 690,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
             },
             "borderRadius": {
-              "line": 681,
+              "line": 691,
               "col": 18,
               "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 682,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "padding": {
-              "line": 683,
-              "col": 13,
-              "endCol": 15,
-              "raw": "20"
-            },
-            "gap": {
-              "line": 684,
-              "col": 9,
-              "endCol": 11,
-              "raw": "16"
-            },
-            "borderLeftWidth": {
-              "line": 685,
-              "col": 21,
-              "endCol": 22,
-              "raw": "4"
-            },
-            "borderLeftColor": {
-              "line": 686,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#34D399'"
+              "raw": "12"
             },
             "borderWidth": {
-              "line": 687,
+              "line": 692,
               "col": 17,
               "endCol": 18,
               "raw": "1"
             },
-            "borderColor": {
-              "line": 688,
-              "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
-            },
-            "boxShadow": {
-              "line": 689,
-              "col": 15,
-              "endCol": 52,
-              "raw": "'0 4px 20px rgba(52, 211, 153, 0.08)'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:252": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 252
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardHeader",
-          "file": "app/index.tsx",
-          "defLine": 583,
-          "properties": {
-            "flexDirection": {
-              "line": 584,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 585,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
             "gap": {
-              "line": 586,
+              "line": 694,
               "col": 9,
-              "endCol": 11,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:253": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 253
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.cardIconSuccess",
-          "file": "app/index.tsx",
-          "defLine": 597,
-          "properties": {
-            "width": {
-              "line": 598,
-              "col": 11,
-              "endCol": 13,
-              "raw": "40"
-            },
-            "height": {
-              "line": 599,
-              "col": 12,
-              "endCol": 14,
-              "raw": "40"
-            },
-            "borderRadius": {
-              "line": 600,
-              "col": 18,
-              "endCol": 20,
-              "raw": "12"
+              "endCol": 10,
+              "raw": "8"
             },
             "borderCurve": {
-              "line": 601,
+              "line": 695,
               "col": 17,
               "endCol": 29,
               "raw": "'continuous'"
             },
-            "backgroundColor": {
-              "line": 602,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(52, 211, 153, 0.12)'"
-            },
-            "alignItems": {
-              "line": 603,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
+            "minHeight": {
+              "line": 696,
+              "col": 15,
+              "endCol": 17,
+              "raw": "80"
             },
             "justifyContent": {
-              "line": 604,
+              "line": 697,
               "col": 20,
               "endCol": 28,
               "raw": "'center'"
@@ -5726,29 +5138,29 @@
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:254": {
+    "renderHomePanel@app/index.tsx:255": {
       "element": {
         "file": "app/index.tsx",
-        "line": 254
+        "line": 255
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.cardIconText",
+          "ref": "styles.serviceIconWrap",
           "file": "app/index.tsx",
-          "defLine": 606,
+          "defLine": 699,
           "properties": {
-            "fontSize": {
-              "line": 607,
+            "position": {
+              "line": 700,
               "col": 14,
-              "endCol": 16,
-              "raw": "18"
+              "endCol": 24,
+              "raw": "'relative'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:256": {
+    "renderHomePanel@app/index.tsx:256": {
       "element": {
         "file": "app/index.tsx",
         "line": 256
@@ -5756,55 +5168,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.cardHeaderText",
+          "ref": "styles.serviceIcon",
           "file": "app/index.tsx",
-          "defLine": 609,
-          "properties": {
-            "flex": {
-              "line": 610,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "gap": {
-              "line": 611,
-              "col": 9,
-              "endCol": 10,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:257": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 257
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.yieldTitle",
-          "file": "app/index.tsx",
-          "defLine": 691,
+          "defLine": 702,
           "properties": {
             "fontSize": {
-              "line": 693,
+              "line": 703,
               "col": 14,
               "endCol": 16,
-              "raw": "17"
-            },
-            "color": {
-              "line": 694,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
+              "raw": "24"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:258": {
+    "renderHomePanel@app/index.tsx:258": {
       "element": {
         "file": "app/index.tsx",
         "line": 258
@@ -5812,27 +5190,125 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.yieldSubtitle",
+          "ref": "styles.serviceLabel",
           "file": "app/index.tsx",
-          "defLine": 696,
+          "defLine": 705,
           "properties": {
             "fontSize": {
-              "line": 698,
+              "line": 707,
               "col": 14,
               "endCol": 16,
-              "raw": "13"
+              "raw": "11"
             },
-            "color": {
-              "line": 699,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#34D399'"
+            "textAlign": {
+              "line": 709,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:265": {
+    "renderHomePanel@app/index.tsx:260": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 260
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.serviceItem",
+          "file": "app/index.tsx",
+          "defLine": 685,
+          "properties": {
+            "flex": {
+              "line": 686,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 687,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 689,
+              "col": 21,
+              "endCol": 23,
+              "raw": "16"
+            },
+            "paddingHorizontal": {
+              "line": 690,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
+            },
+            "borderRadius": {
+              "line": 691,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 692,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "gap": {
+              "line": 694,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            },
+            "borderCurve": {
+              "line": 695,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "minHeight": {
+              "line": 696,
+              "col": 15,
+              "endCol": 17,
+              "raw": "80"
+            },
+            "justifyContent": {
+              "line": 697,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:264": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 264
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.serviceIconWrap",
+          "file": "app/index.tsx",
+          "defLine": 699,
+          "properties": {
+            "position": {
+              "line": 700,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:265": {
       "element": {
         "file": "app/index.tsx",
         "line": 265
@@ -5840,91 +5316,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.optimizedGainRow",
+          "ref": "styles.serviceIcon",
           "file": "app/index.tsx",
-          "defLine": 701,
-          "properties": {
-            "flexDirection": {
-              "line": 702,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "justifyContent": {
-              "line": 703,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
-            },
-            "alignItems": {
-              "line": 704,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "backgroundColor": {
-              "line": 705,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(52, 211, 153, 0.08)'"
-            },
-            "borderRadius": {
-              "line": 706,
-              "col": 18,
-              "endCol": 20,
-              "raw": "10"
-            },
-            "borderCurve": {
-              "line": 707,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "paddingHorizontal": {
-              "line": 708,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingVertical": {
-              "line": 709,
-              "col": 21,
-              "endCol": 23,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:266": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 266
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.optimizedGainLabel",
-          "file": "app/index.tsx",
-          "defLine": 711,
+          "defLine": 702,
           "properties": {
             "fontSize": {
-              "line": 713,
+              "line": 703,
               "col": 14,
               "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 714,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+              "raw": "24"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:267": {
+    "renderHomePanel@app/index.tsx:267": {
       "element": {
         "file": "app/index.tsx",
         "line": 267
@@ -5932,27 +5338,103 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.optimizedGainValue",
+          "ref": "styles.serviceLabel",
           "file": "app/index.tsx",
-          "defLine": 716,
+          "defLine": 705,
           "properties": {
             "fontSize": {
-              "line": 718,
+              "line": 707,
               "col": 14,
               "endCol": 16,
-              "raw": "18"
+              "raw": "11"
             },
-            "color": {
-              "line": 719,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#34D399'"
+            "textAlign": {
+              "line": 709,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:273": {
+    "renderHomePanel@app/index.tsx:269": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 269
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.serviceItem",
+          "file": "app/index.tsx",
+          "defLine": 685,
+          "properties": {
+            "flex": {
+              "line": 686,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 687,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 689,
+              "col": 21,
+              "endCol": 23,
+              "raw": "16"
+            },
+            "paddingHorizontal": {
+              "line": 690,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
+            },
+            "borderRadius": {
+              "line": 691,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 692,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "gap": {
+              "line": 694,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            },
+            "borderCurve": {
+              "line": 695,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "minHeight": {
+              "line": 696,
+              "col": 15,
+              "endCol": 17,
+              "raw": "80"
+            },
+            "justifyContent": {
+              "line": 697,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:273": {
       "element": {
         "file": "app/index.tsx",
         "line": 273
@@ -5960,21 +5442,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.ctaContainer",
+          "ref": "styles.serviceIconWrap",
           "file": "app/index.tsx",
-          "defLine": 722,
+          "defLine": 699,
           "properties": {
-            "paddingTop": {
-              "line": 723,
-              "col": 16,
-              "endCol": 17,
-              "raw": "4"
+            "position": {
+              "line": 700,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:274": {
+    "renderHomePanel@app/index.tsx:274": {
       "element": {
         "file": "app/index.tsx",
         "line": 274
@@ -5982,97 +5464,215 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.ctaButton",
+          "ref": "styles.serviceIcon",
           "file": "app/index.tsx",
-          "defLine": 725,
+          "defLine": 702,
           "properties": {
-            "backgroundColor": {
-              "line": 726,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#10B981'"
+            "fontSize": {
+              "line": 703,
+              "col": 14,
+              "endCol": 16,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:276": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 276
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.serviceLabel",
+          "file": "app/index.tsx",
+          "defLine": 705,
+          "properties": {
+            "fontSize": {
+              "line": 707,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
             },
+            "textAlign": {
+              "line": 709,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:281": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 281
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoCard",
+          "file": "app/index.tsx",
+          "defLine": 713,
+          "properties": {
             "borderRadius": {
-              "line": 727,
+              "line": 715,
               "col": 18,
               "endCol": 20,
+              "raw": "16"
+            },
+            "padding": {
+              "line": 716,
+              "col": 13,
+              "endCol": 15,
+              "raw": "20"
+            },
+            "gap": {
+              "line": 717,
+              "col": 9,
+              "endCol": 11,
               "raw": "12"
             },
+            "borderWidth": {
+              "line": 718,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
             "borderCurve": {
-              "line": 728,
+              "line": 720,
               "col": 17,
               "endCol": 29,
               "raw": "'continuous'"
             },
-            "paddingVertical": {
-              "line": 729,
-              "col": 21,
-              "endCol": 23,
-              "raw": "16"
-            },
-            "paddingHorizontal": {
-              "line": 730,
-              "col": 23,
-              "endCol": 25,
-              "raw": "24"
+            "boxShadow": {
+              "line": 721,
+              "col": 15,
+              "endCol": 43,
+              "raw": "'0 2px 8px rgba(0,0,0,0.04)'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:282": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 282
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoHeader",
+          "file": "app/index.tsx",
+          "defLine": 723,
+          "properties": {
+            "flexDirection": {
+              "line": 724,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
             },
             "alignItems": {
-              "line": 731,
+              "line": 725,
               "col": 16,
               "endCol": 24,
               "raw": "'center'"
             },
             "justifyContent": {
-              "line": 732,
+              "line": 726,
               "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
+              "endCol": 35,
+              "raw": "'space-between'"
             },
-            "minHeight": {
-              "line": 733,
-              "col": 15,
-              "endCol": 17,
-              "raw": "52"
+            "flexWrap": {
+              "line": 727,
+              "col": 14,
+              "endCol": 20,
+              "raw": "'wrap'"
+            },
+            "gap": {
+              "line": 728,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:279": {
+    "renderHomePanel@app/index.tsx:283": {
       "element": {
         "file": "app/index.tsx",
-        "line": 279
+        "line": 283
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.ctaButtonText",
+          "ref": "styles.promoTitle",
           "file": "app/index.tsx",
-          "defLine": 735,
+          "defLine": 730,
           "properties": {
             "fontSize": {
-              "line": 737,
+              "line": 732,
               "col": 14,
               "endCol": 16,
-              "raw": "15"
+              "raw": "16"
             },
-            "color": {
-              "line": 738,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#0A0E17'"
-            },
-            "letterSpacing": {
-              "line": 739,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.3"
+            "flex": {
+              "line": 734,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:285": {
+    "renderHomePanel@app/index.tsx:284": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 284
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoBadge",
+          "file": "app/index.tsx",
+          "defLine": 736,
+          "properties": {
+            "backgroundColor": {
+              "line": 737,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#eff6ff'"
+            },
+            "paddingHorizontal": {
+              "line": 738,
+              "col": 23,
+              "endCol": 25,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 739,
+              "col": 21,
+              "endCol": 22,
+              "raw": "4"
+            },
+            "borderRadius": {
+              "line": 740,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:285": {
       "element": {
         "file": "app/index.tsx",
         "line": 285
@@ -6080,153 +5680,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.adContainer",
+          "ref": "styles.promoBadgeText",
           "file": "app/index.tsx",
-          "defLine": 743,
-          "properties": {
-            "alignItems": {
-              "line": 744,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "gap": {
-              "line": 745,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            },
-            "paddingVertical": {
-              "line": 746,
-              "col": 21,
-              "endCol": 22,
-              "raw": "8"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:286": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 286
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.adLabel",
-          "file": "app/index.tsx",
-          "defLine": 748,
+          "defLine": 742,
           "properties": {
             "fontSize": {
-              "line": 750,
+              "line": 744,
               "col": 14,
               "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 751,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "letterSpacing": {
-              "line": 752,
-              "col": 19,
-              "endCol": 20,
-              "raw": "1"
-            },
-            "textTransform": {
-              "line": 753,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
+              "raw": "11"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:287": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 287
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.adBox",
-          "file": "app/index.tsx",
-          "defLine": 755,
-          "properties": {
-            "width": {
-              "line": 756,
-              "col": 11,
-              "endCol": 14,
-              "raw": "320"
-            },
-            "height": {
-              "line": 757,
-              "col": 12,
-              "endCol": 15,
-              "raw": "100"
-            },
-            "borderWidth": {
-              "line": 758,
-              "col": 17,
-              "endCol": 20,
-              "raw": "1.5"
-            },
-            "borderStyle": {
-              "line": 759,
-              "col": 17,
-              "endCol": 25,
-              "raw": "'dashed'"
-            },
-            "borderColor": {
-              "line": 760,
-              "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
-            },
-            "borderRadius": {
-              "line": 761,
-              "col": 18,
-              "endCol": 19,
-              "raw": "8"
-            },
-            "borderCurve": {
-              "line": 762,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "backgroundColor": {
-              "line": 763,
-              "col": 21,
-              "endCol": 44,
-              "raw": "'rgba(17, 24, 39, 0.6)'"
-            },
-            "alignItems": {
-              "line": 764,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 765,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:288": {
+    "renderHomePanel@app/index.tsx:288": {
       "element": {
         "file": "app/index.tsx",
         "line": 288
@@ -6234,135 +5702,27 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.adPlaceholder",
+          "ref": "styles.promoDescription",
           "file": "app/index.tsx",
-          "defLine": 771,
+          "defLine": 747,
           "properties": {
             "fontSize": {
-              "line": 773,
+              "line": 749,
               "col": 14,
               "endCol": 16,
-              "raw": "12"
+              "raw": "13"
             },
-            "color": {
-              "line": 774,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "letterSpacing": {
-              "line": 775,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.3"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:295": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 295
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.footer",
-          "file": "app/index.tsx",
-          "defLine": 779,
-          "properties": {
-            "gap": {
-              "line": 780,
-              "col": 9,
-              "endCol": 11,
-              "raw": "14"
-            },
-            "paddingTop": {
-              "line": 781,
+            "lineHeight": {
+              "line": 751,
               "col": 16,
-              "endCol": 17,
-              "raw": "8"
+              "endCol": 18,
+              "raw": "20"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:296": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 296
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.footerDivider",
-          "file": "app/index.tsx",
-          "defLine": 783,
-          "properties": {
-            "height": {
-              "line": 784,
-              "col": 12,
-              "endCol": 13,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 785,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#1F2937'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:297": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 297
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.footerLinks",
-          "file": "app/index.tsx",
-          "defLine": 787,
-          "properties": {
-            "flexDirection": {
-              "line": 788,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 789,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 790,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            },
-            "gap": {
-              "line": 791,
-              "col": 9,
-              "endCol": 11,
-              "raw": "12"
-            },
-            "flexWrap": {
-              "line": 792,
-              "col": 14,
-              "endCol": 20,
-              "raw": "'wrap'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:298": {
+    "renderHomePanel@app/index.tsx:298": {
       "element": {
         "file": "app/index.tsx",
         "line": 298
@@ -6370,61 +5730,211 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.linkPressable",
+          "ref": "styles.promoCard",
           "file": "app/index.tsx",
-          "defLine": 794,
+          "defLine": 713,
           "properties": {
-            "minHeight": {
-              "line": 795,
-              "col": 15,
-              "endCol": 17,
-              "raw": "44"
+            "borderRadius": {
+              "line": 715,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
             },
-            "justifyContent": {
-              "line": 796,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
+            "padding": {
+              "line": 716,
+              "col": 13,
+              "endCol": 15,
+              "raw": "20"
+            },
+            "gap": {
+              "line": 717,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 718,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 720,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "boxShadow": {
+              "line": 721,
+              "col": 15,
+              "endCol": 43,
+              "raw": "'0 2px 8px rgba(0,0,0,0.04)'"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:303": {
+    "renderHomePanel@app/index.tsx:299": {
       "element": {
         "file": "app/index.tsx",
-        "line": 303
+        "line": 299
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.link",
+          "ref": "styles.promoHeader",
           "file": "app/index.tsx",
-          "defLine": 798,
+          "defLine": 723,
           "properties": {
-            "fontSize": {
-              "line": 800,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
+            "flexDirection": {
+              "line": 724,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
             },
-            "color": {
-              "line": 801,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+            "alignItems": {
+              "line": 725,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
             },
-            "textDecorationLine": {
-              "line": 802,
-              "col": 24,
+            "justifyContent": {
+              "line": 726,
+              "col": 20,
               "endCol": 35,
-              "raw": "'underline'"
+              "raw": "'space-between'"
+            },
+            "flexWrap": {
+              "line": 727,
+              "col": 14,
+              "endCol": 20,
+              "raw": "'wrap'"
+            },
+            "gap": {
+              "line": 728,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:305": {
+    "renderHomePanel@app/index.tsx:300": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 300
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoTitle",
+          "file": "app/index.tsx",
+          "defLine": 730,
+          "properties": {
+            "fontSize": {
+              "line": 732,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            },
+            "flex": {
+              "line": 734,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:301": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 301
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoBadge",
+          "file": "app/index.tsx",
+          "defLine": 736,
+          "properties": {
+            "backgroundColor": {
+              "line": 737,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#eff6ff'"
+            },
+            "paddingHorizontal": {
+              "line": 738,
+              "col": 23,
+              "endCol": 25,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 739,
+              "col": 21,
+              "endCol": 22,
+              "raw": "4"
+            },
+            "borderRadius": {
+              "line": 740,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "app/index.tsx",
+          "properties": {
+            "backgroundColor": {
+              "line": 301,
+              "col": 62,
+              "endCol": 71,
+              "raw": "'#ecfdf5'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:302": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 302
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoBadgeText",
+          "file": "app/index.tsx",
+          "defLine": 742,
+          "properties": {
+            "fontSize": {
+              "line": 744,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "app/index.tsx",
+          "properties": {
+            "color": {
+              "line": 302,
+              "col": 58,
+              "endCol": 67,
+              "raw": "'#059669'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:305": {
       "element": {
         "file": "app/index.tsx",
         "line": 305
@@ -6432,219 +5942,295 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.footerSeparator",
+          "ref": "styles.promoDescription",
           "file": "app/index.tsx",
-          "defLine": 804,
+          "defLine": 747,
           "properties": {
             "fontSize": {
-              "line": 806,
+              "line": 749,
               "col": 14,
               "endCol": 16,
               "raw": "13"
-            },
-            "color": {
-              "line": 807,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:306": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 306
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.linkPressable",
-          "file": "app/index.tsx",
-          "defLine": 794,
-          "properties": {
-            "minHeight": {
-              "line": 795,
-              "col": 15,
-              "endCol": 17,
-              "raw": "44"
-            },
-            "justifyContent": {
-              "line": 796,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:311": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 311
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.link",
-          "file": "app/index.tsx",
-          "defLine": 798,
-          "properties": {
-            "fontSize": {
-              "line": 800,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 801,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "textDecorationLine": {
-              "line": 802,
-              "col": 24,
-              "endCol": 35,
-              "raw": "'underline'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:313": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 313
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.footerSeparator",
-          "file": "app/index.tsx",
-          "defLine": 804,
-          "properties": {
-            "fontSize": {
-              "line": 806,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 807,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:314": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 314
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.linkPressable",
-          "file": "app/index.tsx",
-          "defLine": 794,
-          "properties": {
-            "minHeight": {
-              "line": 795,
-              "col": 15,
-              "endCol": 17,
-              "raw": "44"
-            },
-            "justifyContent": {
-              "line": 796,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:319": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 319
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.link",
-          "file": "app/index.tsx",
-          "defLine": 798,
-          "properties": {
-            "fontSize": {
-              "line": 800,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 801,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "textDecorationLine": {
-              "line": 802,
-              "col": 24,
-              "endCol": 35,
-              "raw": "'underline'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:322": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 322
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.copyright",
-          "file": "app/index.tsx",
-          "defLine": 809,
-          "properties": {
-            "fontSize": {
-              "line": 811,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "color": {
-              "line": 812,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "textAlign": {
-              "line": 813,
-              "col": 15,
-              "endCol": 23,
-              "raw": "'center'"
             },
             "lineHeight": {
-              "line": 814,
+              "line": 751,
               "col": 16,
               "endCol": 18,
-              "raw": "18"
+              "raw": "20"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:335": {
+    "renderHomePanel@app/index.tsx:316": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 316
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoCard",
+          "file": "app/index.tsx",
+          "defLine": 713,
+          "properties": {
+            "borderRadius": {
+              "line": 715,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "padding": {
+              "line": 716,
+              "col": 13,
+              "endCol": 15,
+              "raw": "20"
+            },
+            "gap": {
+              "line": 717,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 718,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 720,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "boxShadow": {
+              "line": 721,
+              "col": 15,
+              "endCol": 43,
+              "raw": "'0 2px 8px rgba(0,0,0,0.04)'"
+            }
+          }
+        }
+      ]
+    },
+    "renderHomePanel@app/index.tsx:317": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 317
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.promoTitle",
+          "file": "app/index.tsx",
+          "defLine": 730,
+          "properties": {
+            "fontSize": {
+              "line": 732,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            },
+            "flex": {
+              "line": 734,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:328": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 328
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelContent",
+          "file": "app/index.tsx",
+          "defLine": 624,
+          "properties": {
+            "padding": {
+              "line": 625,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 626,
+              "col": 9,
+              "endCol": 11,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:329": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 329
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelTitle",
+          "file": "app/index.tsx",
+          "defLine": 836,
+          "properties": {
+            "fontSize": {
+              "line": 838,
+              "col": 14,
+              "endCol": 16,
+              "raw": "22"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:330": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 330
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelSubtitle",
+          "file": "app/index.tsx",
+          "defLine": 841,
+          "properties": {
+            "fontSize": {
+              "line": 843,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "marginTop": {
+              "line": 845,
+              "col": 15,
+              "endCol": 17,
+              "raw": "-8"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:333": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 333
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerRow",
+          "file": "app/index.tsx",
+          "defLine": 847,
+          "properties": {
+            "flexDirection": {
+              "line": 848,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 849,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderRadius": {
+              "line": 851,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "padding": {
+              "line": 852,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 853,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 854,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 856,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:334": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 334
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerRank",
+          "file": "app/index.tsx",
+          "defLine": 858,
+          "properties": {
+            "width": {
+              "line": 859,
+              "col": 11,
+              "endCol": 13,
+              "raw": "32"
+            },
+            "height": {
+              "line": 860,
+              "col": 12,
+              "endCol": 14,
+              "raw": "32"
+            },
+            "borderRadius": {
+              "line": 861,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "backgroundColor": {
+              "line": 862,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#eff6ff'"
+            },
+            "alignItems": {
+              "line": 863,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 864,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:335": {
       "element": {
         "file": "app/index.tsx",
         "line": 335
@@ -6652,45 +6238,71 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.modalOverlay",
+          "ref": "styles.trackerRankText",
           "file": "app/index.tsx",
-          "defLine": 818,
+          "defLine": 866,
           "properties": {
-            "flex": {
-              "line": 819,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 820,
-              "col": 21,
-              "endCol": 42,
-              "raw": "'rgba(0, 0, 0, 0.75)'"
-            },
-            "alignItems": {
-              "line": 821,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 822,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            },
-            "padding": {
-              "line": 823,
-              "col": 13,
-              "endCol": 15,
-              "raw": "24"
+            "fontSize": {
+              "line": 868,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:339": {
+    "renderTrackerPanel@app/index.tsx:337": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 337
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerInfo",
+          "file": "app/index.tsx",
+          "defLine": 871,
+          "properties": {
+            "flex": {
+              "line": 872,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "gap": {
+              "line": 873,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:338": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 338
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerName",
+          "file": "app/index.tsx",
+          "defLine": 875,
+          "properties": {
+            "fontSize": {
+              "line": 877,
+              "col": 14,
+              "endCol": 16,
+              "raw": "15"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:339": {
       "element": {
         "file": "app/index.tsx",
         "line": 339
@@ -6698,205 +6310,147 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.bankModalContent",
+          "ref": "styles.trackerTier",
           "file": "app/index.tsx",
-          "defLine": 877,
+          "defLine": 880,
           "properties": {
-            "backgroundColor": {
-              "line": 878,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#0F1629'"
-            },
-            "borderRadius": {
-              "line": 879,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            },
-            "borderCurve": {
-              "line": 880,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "padding": {
-              "line": 881,
-              "col": 13,
-              "endCol": 15,
-              "raw": "20"
-            },
-            "maxWidth": {
+            "fontSize": {
               "line": 882,
               "col": 14,
-              "endCol": 17,
-              "raw": "580"
+              "endCol": 16,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:341": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 341
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerApyBadge",
+          "file": "app/index.tsx",
+          "defLine": 885,
+          "properties": {
+            "backgroundColor": {
+              "line": 886,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#ecfdf5'"
             },
-            "width": {
-              "line": 883,
+            "paddingHorizontal": {
+              "line": 887,
+              "col": 23,
+              "endCol": 25,
+              "raw": "12"
+            },
+            "paddingVertical": {
+              "line": 888,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "borderRadius": {
+              "line": 889,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:342": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 342
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trackerApyText",
+          "file": "app/index.tsx",
+          "defLine": 891,
+          "properties": {
+            "fontSize": {
+              "line": 893,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "color": {
+              "line": 894,
               "col": 11,
-              "endCol": 17,
-              "raw": "'100%'"
-            },
-            "maxHeight": {
-              "line": 884,
-              "col": 15,
               "endCol": 20,
-              "raw": "'90%'"
+              "raw": "'#059669'"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrackerPanel@app/index.tsx:347": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 347
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButton",
+          "file": "app/index.tsx",
+          "defLine": 1083,
+          "properties": {
+            "backgroundColor": {
+              "line": 1084,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f3f4f6'"
+            },
+            "borderRadius": {
+              "line": 1085,
+              "col": 18,
+              "endCol": 20,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 1086,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            },
+            "alignItems": {
+              "line": 1087,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
             },
             "borderWidth": {
-              "line": 885,
+              "line": 1088,
               "col": 17,
               "endCol": 18,
               "raw": "1"
             },
-            "borderColor": {
-              "line": 886,
+            "borderCurve": {
+              "line": 1090,
               "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
+              "endCol": 29,
+              "raw": "'continuous'"
             },
-            "boxShadow": {
-              "line": 887,
+            "marginTop": {
+              "line": 1091,
               "col": 15,
-              "endCol": 47,
-              "raw": "'0 24px 48px rgba(0, 0, 0, 0.6)'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:343": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 343
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankModalHeader",
-          "file": "app/index.tsx",
-          "defLine": 893,
-          "properties": {
-            "flexDirection": {
-              "line": 894,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "justifyContent": {
-              "line": 895,
-              "col": 20,
-              "endCol": 35,
-              "raw": "'space-between'"
-            },
-            "alignItems": {
-              "line": 896,
-              "col": 16,
-              "endCol": 28,
-              "raw": "'flex-start'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:344": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 344
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.modalTitle",
-          "file": "app/index.tsx",
-          "defLine": 841,
-          "properties": {
-            "fontSize": {
-              "line": 843,
-              "col": 14,
               "endCol": 16,
-              "raw": "22"
-            },
-            "color": {
-              "line": 844,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            },
-            "marginBottom": {
-              "line": 845,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "letterSpacing": {
-              "line": 846,
-              "col": 19,
-              "endCol": 23,
-              "raw": "-0.3"
+              "raw": "8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:345": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 345
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankModalClose",
-          "file": "app/index.tsx",
-          "defLine": 898,
-          "properties": {
-            "width": {
-              "line": 899,
-              "col": 11,
-              "endCol": 13,
-              "raw": "36"
-            },
-            "height": {
-              "line": 900,
-              "col": 12,
-              "endCol": 14,
-              "raw": "36"
-            },
-            "borderRadius": {
-              "line": 901,
-              "col": 18,
-              "endCol": 20,
-              "raw": "18"
-            },
-            "backgroundColor": {
-              "line": 902,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(148, 163, 184, 0.1)'"
-            },
-            "alignItems": {
-              "line": 903,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 904,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:351": {
+    "renderTrackerPanel@app/index.tsx:351": {
       "element": {
         "file": "app/index.tsx",
         "line": 351
@@ -6904,61 +6458,21 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.bankModalCloseText",
+          "ref": "styles.returnButtonText",
           "file": "app/index.tsx",
-          "defLine": 906,
+          "defLine": 1093,
           "properties": {
             "fontSize": {
-              "line": 907,
+              "line": 1095,
               "col": 14,
               "endCol": 16,
-              "raw": "16"
-            },
-            "color": {
-              "line": 908,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
+              "raw": "14"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:354": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 354
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankModalSubtitle",
-          "file": "app/index.tsx",
-          "defLine": 910,
-          "properties": {
-            "fontSize": {
-              "line": 912,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 913,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#64748B'"
-            },
-            "marginBottom": {
-              "line": 914,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:357": {
+    "renderCalculatorPanel@app/index.tsx:357": {
       "element": {
         "file": "app/index.tsx",
         "line": 357
@@ -6966,719 +6480,57 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.bankModalScroll",
+          "ref": "styles.panelContent",
           "file": "app/index.tsx",
-          "defLine": 916,
+          "defLine": 624,
           "properties": {
-            "maxHeight": {
-              "line": 917,
-              "col": 15,
-              "endCol": 18,
-              "raw": "500"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:362": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 362
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankRow",
-          "file": "app/index.tsx",
-          "defLine": 919,
-          "properties": {
-            "flexDirection": {
-              "line": 920,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 921,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "paddingVertical": {
-              "line": 922,
-              "col": 21,
-              "endCol": 23,
-              "raw": "12"
-            },
-            "paddingHorizontal": {
-              "line": 923,
-              "col": 23,
-              "endCol": 24,
-              "raw": "6"
-            },
-            "borderBottomWidth": {
-              "line": 924,
-              "col": 23,
-              "endCol": 24,
-              "raw": "1"
-            },
-            "borderBottomColor": {
-              "line": 925,
-              "col": 23,
-              "endCol": 46,
-              "raw": "'rgba(31, 41, 55, 0.6)'"
-            },
-            "gap": {
-              "line": 926,
-              "col": 9,
-              "endCol": 10,
-              "raw": "8"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:370": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 370
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankInfoCol",
-          "file": "app/index.tsx",
-          "defLine": 933,
-          "properties": {
-            "flex": {
-              "line": 934,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "flexShrink": {
-              "line": 935,
-              "col": 16,
-              "endCol": 17,
-              "raw": "1"
-            },
-            "minWidth": {
-              "line": 936,
-              "col": 14,
-              "endCol": 17,
-              "raw": "120"
-            },
-            "gap": {
-              "line": 937,
-              "col": 9,
-              "endCol": 10,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:371": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 371
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankName",
-          "file": "app/index.tsx",
-          "defLine": 939,
-          "properties": {
-            "fontSize": {
-              "line": 941,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 942,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:378": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 378
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankNote",
-          "file": "app/index.tsx",
-          "defLine": 947,
-          "properties": {
-            "fontSize": {
-              "line": 949,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 950,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#64748B'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:381": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 381
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankLowYieldTag",
-          "file": "app/index.tsx",
-          "defLine": 952,
-          "properties": {
-            "fontSize": {
-              "line": 954,
-              "col": 14,
+            "padding": {
+              "line": 625,
+              "col": 13,
               "endCol": 15,
-              "raw": "9"
-            },
-            "color": {
-              "line": 955,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F87171'"
-            },
-            "letterSpacing": {
-              "line": 956,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            },
-            "textTransform": {
-              "line": 957,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "marginTop": {
-              "line": 958,
-              "col": 15,
-              "endCol": 16,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:384": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 384
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankApyCol",
-          "file": "app/index.tsx",
-          "defLine": 960,
-          "properties": {
-            "alignItems": {
-              "line": 961,
-              "col": 16,
-              "endCol": 26,
-              "raw": "'flex-end'"
-            },
-            "flexShrink": {
-              "line": 962,
-              "col": 16,
-              "endCol": 17,
-              "raw": "0"
-            },
-            "minWidth": {
-              "line": 963,
-              "col": 14,
-              "endCol": 16,
-              "raw": "48"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:385": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 385
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankApy",
-          "file": "app/index.tsx",
-          "defLine": 965,
-          "properties": {
-            "fontSize": {
-              "line": 967,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            },
-            "color": {
-              "line": 968,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#34D399'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:389": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 389
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankCtaCol",
-          "file": "app/index.tsx",
-          "defLine": 974,
-          "properties": {
-            "flexShrink": {
-              "line": 975,
-              "col": 16,
-              "endCol": 17,
-              "raw": "0"
-            },
-            "alignItems": {
-              "line": 976,
-              "col": 16,
-              "endCol": 26,
-              "raw": "'flex-end'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:391": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 391
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankCtaBtn",
-          "file": "app/index.tsx",
-          "defLine": 978,
-          "properties": {
-            "backgroundColor": {
-              "line": 979,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(52, 211, 153, 0.12)'"
-            },
-            "borderRadius": {
-              "line": 980,
-              "col": 18,
-              "endCol": 19,
-              "raw": "8"
-            },
-            "borderCurve": {
-              "line": 981,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "paddingVertical": {
-              "line": 982,
-              "col": 21,
-              "endCol": 22,
-              "raw": "7"
-            },
-            "paddingHorizontal": {
-              "line": 983,
-              "col": 23,
-              "endCol": 25,
-              "raw": "10"
-            },
-            "borderWidth": {
-              "line": 984,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderColor": {
-              "line": 985,
-              "col": 17,
-              "endCol": 43,
-              "raw": "'rgba(52, 211, 153, 0.25)'"
-            },
-            "minHeight": {
-              "line": 986,
-              "col": 15,
-              "endCol": 17,
-              "raw": "32"
-            },
-            "justifyContent": {
-              "line": 987,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:396": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 396
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankCtaBtnText",
-          "file": "app/index.tsx",
-          "defLine": 989,
-          "properties": {
-            "fontSize": {
-              "line": 991,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 992,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#34D399'"
-            },
-            "letterSpacing": {
-              "line": 993,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.2"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:399": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 399
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankCtaBtnDisabled",
-          "file": "app/index.tsx",
-          "defLine": 995,
-          "properties": {
-            "paddingVertical": {
-              "line": 996,
-              "col": 21,
-              "endCol": 22,
-              "raw": "7"
-            },
-            "paddingHorizontal": {
-              "line": 997,
-              "col": 23,
-              "endCol": 25,
-              "raw": "10"
-            },
-            "minHeight": {
-              "line": 998,
-              "col": 15,
-              "endCol": 17,
-              "raw": "32"
-            },
-            "justifyContent": {
-              "line": 999,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            },
-            "alignItems": {
-              "line": 1000,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:400": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 400
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankCtaBtnDisabledText",
-          "file": "app/index.tsx",
-          "defLine": 1002,
-          "properties": {
-            "fontSize": {
-              "line": 1004,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "color": {
-              "line": 1005,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:407": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 407
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankModalFooter",
-          "file": "app/index.tsx",
-          "defLine": 1007,
-          "properties": {
-            "marginTop": {
-              "line": 1008,
-              "col": 15,
-              "endCol": 17,
               "raw": "16"
             },
-            "paddingTop": {
-              "line": 1009,
-              "col": 16,
-              "endCol": 18,
-              "raw": "12"
-            },
-            "borderTopWidth": {
-              "line": 1010,
-              "col": 20,
-              "endCol": 21,
-              "raw": "1"
-            },
-            "borderTopColor": {
-              "line": 1011,
-              "col": 20,
-              "endCol": 43,
-              "raw": "'rgba(31, 41, 55, 0.6)'"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:408": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 408
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankModalFooterText",
-          "file": "app/index.tsx",
-          "defLine": 1013,
-          "properties": {
-            "fontSize": {
-              "line": 1015,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "color": {
-              "line": 1016,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "textAlign": {
-              "line": 1017,
-              "col": 15,
-              "endCol": 23,
-              "raw": "'center'"
-            },
-            "lineHeight": {
-              "line": 1018,
-              "col": 16,
-              "endCol": 18,
+            "gap": {
+              "line": 626,
+              "col": 9,
+              "endCol": 11,
               "raw": "16"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:423": {
+    "renderCalculatorPanel@app/index.tsx:358": {
       "element": {
         "file": "app/index.tsx",
-        "line": 423
+        "line": 358
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.modalOverlay",
+          "ref": "styles.panelTitle",
           "file": "app/index.tsx",
-          "defLine": 818,
+          "defLine": 836,
           "properties": {
-            "flex": {
-              "line": 819,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 820,
-              "col": 21,
-              "endCol": 42,
-              "raw": "'rgba(0, 0, 0, 0.75)'"
-            },
-            "alignItems": {
-              "line": 821,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 822,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            },
-            "padding": {
-              "line": 823,
-              "col": 13,
-              "endCol": 15,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "SavvymaxUS@app/index.tsx:427": {
-      "element": {
-        "file": "app/index.tsx",
-        "line": 427
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.modalContent",
-          "file": "app/index.tsx",
-          "defLine": 825,
-          "properties": {
-            "backgroundColor": {
-              "line": 826,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#111827'"
-            },
-            "borderRadius": {
-              "line": 827,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            },
-            "borderCurve": {
-              "line": 828,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "padding": {
-              "line": 829,
-              "col": 13,
-              "endCol": 15,
-              "raw": "24"
-            },
-            "maxWidth": {
-              "line": 830,
+            "fontSize": {
+              "line": 838,
               "col": 14,
-              "endCol": 17,
-              "raw": "500"
-            },
-            "width": {
-              "line": 831,
-              "col": 11,
-              "endCol": 17,
-              "raw": "'100%'"
-            },
-            "maxHeight": {
-              "line": 832,
-              "col": 15,
-              "endCol": 20,
-              "raw": "'80%'"
-            },
-            "borderWidth": {
-              "line": 833,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderColor": {
-              "line": 834,
-              "col": 17,
-              "endCol": 26,
-              "raw": "'#1F2937'"
-            },
-            "boxShadow": {
-              "line": 835,
-              "col": 15,
-              "endCol": 47,
-              "raw": "'0 24px 48px rgba(0, 0, 0, 0.5)'"
+              "endCol": 16,
+              "raw": "22"
             }
           }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:431": {
+    "renderCalculatorPanel@app/index.tsx:359": {
       "element": {
         "file": "app/index.tsx",
-        "line": 431
+        "line": 359
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.modalTitle",
+          "ref": "styles.panelSubtitle",
           "file": "app/index.tsx",
           "defLine": 841,
           "properties": {
@@ -7686,31 +6538,897 @@
               "line": 843,
               "col": 14,
               "endCol": 16,
-              "raw": "22"
+              "raw": "14"
             },
-            "color": {
-              "line": 844,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#F3F4F6'"
-            },
-            "marginBottom": {
+            "marginTop": {
               "line": 845,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "letterSpacing": {
-              "line": 846,
-              "col": 19,
-              "endCol": 23,
-              "raw": "-0.3"
+              "col": 15,
+              "endCol": 17,
+              "raw": "-8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:432": {
+    "renderCalculatorPanel@app/index.tsx:361": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 361
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcCard",
+          "file": "app/index.tsx",
+          "defLine": 899,
+          "properties": {
+            "borderRadius": {
+              "line": 901,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "padding": {
+              "line": 902,
+              "col": 13,
+              "endCol": 15,
+              "raw": "20"
+            },
+            "borderWidth": {
+              "line": 903,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 905,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:362": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 362
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcLabel",
+          "file": "app/index.tsx",
+          "defLine": 907,
+          "properties": {
+            "fontSize": {
+              "line": 909,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "marginBottom": {
+              "line": 911,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:363": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 363
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcInput",
+          "file": "app/index.tsx",
+          "defLine": 913,
+          "properties": {
+            "backgroundColor": {
+              "line": 914,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f9fafb'"
+            },
+            "borderRadius": {
+              "line": 915,
+              "col": 18,
+              "endCol": 20,
+              "raw": "10"
+            },
+            "borderWidth": {
+              "line": 916,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "paddingHorizontal": {
+              "line": 918,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "paddingVertical": {
+              "line": 919,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            },
+            "fontSize": {
+              "line": 921,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:372": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 372
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcLabel",
+          "file": "app/index.tsx",
+          "defLine": 907,
+          "properties": {
+            "fontSize": {
+              "line": 909,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "marginBottom": {
+              "line": 911,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "app/index.tsx",
+          "properties": {
+            "marginTop": {
+              "line": 372,
+              "col": 53,
+              "endCol": 55,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:373": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 373
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.apySelector",
+          "file": "app/index.tsx",
+          "defLine": 925,
+          "properties": {
+            "gap": {
+              "line": 926,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:375": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 375
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.apyOption",
+          "file": "app/index.tsx",
+          "defLine": 928,
+          "properties": {
+            "paddingVertical": {
+              "line": 929,
+              "col": 21,
+              "endCol": 23,
+              "raw": "12"
+            },
+            "paddingHorizontal": {
+              "line": 930,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "borderRadius": {
+              "line": 931,
+              "col": 18,
+              "endCol": 20,
+              "raw": "10"
+            },
+            "borderWidth": {
+              "line": 932,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "backgroundColor": {
+              "line": 934,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f9fafb'"
+            },
+            "borderCurve": {
+              "line": 935,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:383": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 383
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.apyOptionText",
+          "file": "app/index.tsx",
+          "defLine": 941,
+          "properties": {
+            "fontSize": {
+              "line": 943,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:395": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 395
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcResult",
+          "file": "app/index.tsx",
+          "defLine": 949,
+          "properties": {
+            "marginTop": {
+              "line": 950,
+              "col": 15,
+              "endCol": 17,
+              "raw": "20"
+            },
+            "paddingTop": {
+              "line": 951,
+              "col": 16,
+              "endCol": 18,
+              "raw": "20"
+            },
+            "borderTopWidth": {
+              "line": 952,
+              "col": 20,
+              "endCol": 21,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 954,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 955,
+              "col": 9,
+              "endCol": 10,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:396": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 396
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcResultLabel",
+          "file": "app/index.tsx",
+          "defLine": 957,
+          "properties": {
+            "fontSize": {
+              "line": 959,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:397": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 397
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.calcResultValue",
+          "file": "app/index.tsx",
+          "defLine": 962,
+          "properties": {
+            "fontSize": {
+              "line": 964,
+              "col": 14,
+              "endCol": 16,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:401": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 401
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButton",
+          "file": "app/index.tsx",
+          "defLine": 1083,
+          "properties": {
+            "backgroundColor": {
+              "line": 1084,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f3f4f6'"
+            },
+            "borderRadius": {
+              "line": 1085,
+              "col": 18,
+              "endCol": 20,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 1086,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            },
+            "alignItems": {
+              "line": 1087,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderWidth": {
+              "line": 1088,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 1090,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "marginTop": {
+              "line": 1091,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderCalculatorPanel@app/index.tsx:405": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 405
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButtonText",
+          "file": "app/index.tsx",
+          "defLine": 1093,
+          "properties": {
+            "fontSize": {
+              "line": 1095,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:411": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 411
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelContent",
+          "file": "app/index.tsx",
+          "defLine": 624,
+          "properties": {
+            "padding": {
+              "line": 625,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 626,
+              "col": 9,
+              "endCol": 11,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:412": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 412
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelTitle",
+          "file": "app/index.tsx",
+          "defLine": 836,
+          "properties": {
+            "fontSize": {
+              "line": 838,
+              "col": 14,
+              "endCol": 16,
+              "raw": "22"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:413": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 413
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelSubtitle",
+          "file": "app/index.tsx",
+          "defLine": 841,
+          "properties": {
+            "fontSize": {
+              "line": 843,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "marginTop": {
+              "line": 845,
+              "col": 15,
+              "endCol": 17,
+              "raw": "-8"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:415": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 415
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkCard",
+          "file": "app/index.tsx",
+          "defLine": 970,
+          "properties": {
+            "borderRadius": {
+              "line": 972,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "padding": {
+              "line": 973,
+              "col": 13,
+              "endCol": 15,
+              "raw": "20"
+            },
+            "gap": {
+              "line": 974,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 975,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 977,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "boxShadow": {
+              "line": 978,
+              "col": 15,
+              "endCol": 43,
+              "raw": "'0 2px 8px rgba(0,0,0,0.04)'"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:416": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 416
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkBadge",
+          "file": "app/index.tsx",
+          "defLine": 980,
+          "properties": {
+            "backgroundColor": {
+              "line": 981,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#fef3c7'"
+            },
+            "paddingHorizontal": {
+              "line": 982,
+              "col": 23,
+              "endCol": 25,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 983,
+              "col": 21,
+              "endCol": 22,
+              "raw": "4"
+            },
+            "borderRadius": {
+              "line": 984,
+              "col": 18,
+              "endCol": 19,
+              "raw": "6"
+            },
+            "alignSelf": {
+              "line": 985,
+              "col": 15,
+              "endCol": 27,
+              "raw": "'flex-start'"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:417": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 417
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkBadgeText",
+          "file": "app/index.tsx",
+          "defLine": 987,
+          "properties": {
+            "fontSize": {
+              "line": 989,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 990,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#92400e'"
+            },
+            "letterSpacing": {
+              "line": 991,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:419": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 419
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkTitle",
+          "file": "app/index.tsx",
+          "defLine": 993,
+          "properties": {
+            "fontSize": {
+              "line": 995,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:420": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 420
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDescription",
+          "file": "app/index.tsx",
+          "defLine": 998,
+          "properties": {
+            "fontSize": {
+              "line": 1000,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "lineHeight": {
+              "line": 1002,
+              "col": 16,
+              "endCol": 18,
+              "raw": "22"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:423": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 423
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetails",
+          "file": "app/index.tsx",
+          "defLine": 1004,
+          "properties": {
+            "gap": {
+              "line": 1005,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            },
+            "paddingVertical": {
+              "line": 1006,
+              "col": 21,
+              "endCol": 22,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:424": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 424
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailRow",
+          "file": "app/index.tsx",
+          "defLine": 1008,
+          "properties": {
+            "flexDirection": {
+              "line": 1009,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 1010,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1011,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:425": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 425
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailIcon",
+          "file": "app/index.tsx",
+          "defLine": 1013,
+          "properties": {
+            "fontSize": {
+              "line": 1014,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:426": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 426
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailText",
+          "file": "app/index.tsx",
+          "defLine": 1018,
+          "properties": {
+            "fontSize": {
+              "line": 1020,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:428": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 428
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailRow",
+          "file": "app/index.tsx",
+          "defLine": 1008,
+          "properties": {
+            "flexDirection": {
+              "line": 1009,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 1010,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1011,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:429": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 429
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailIcon",
+          "file": "app/index.tsx",
+          "defLine": 1013,
+          "properties": {
+            "fontSize": {
+              "line": 1014,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:430": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 430
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailText",
+          "file": "app/index.tsx",
+          "defLine": 1018,
+          "properties": {
+            "fontSize": {
+              "line": 1020,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:432": {
       "element": {
         "file": "app/index.tsx",
         "line": 432
@@ -7718,21 +7436,33 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.modalScroll",
+          "ref": "styles.perkDetailRow",
           "file": "app/index.tsx",
-          "defLine": 848,
+          "defLine": 1008,
           "properties": {
-            "maxHeight": {
-              "line": 849,
-              "col": 15,
-              "endCol": 18,
-              "raw": "400"
+            "flexDirection": {
+              "line": 1009,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 1010,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1011,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:433": {
+    "renderPerksPanel@app/index.tsx:433": {
       "element": {
         "file": "app/index.tsx",
         "line": 433
@@ -7740,24 +7470,322 @@
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.modalBody",
+          "ref": "styles.perkDetailIcon",
           "file": "app/index.tsx",
-          "defLine": 851,
+          "defLine": 1013,
           "properties": {
             "fontSize": {
-              "line": 853,
+              "line": 1014,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:434": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 434
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.perkDetailText",
+          "file": "app/index.tsx",
+          "defLine": 1018,
+          "properties": {
+            "fontSize": {
+              "line": 1020,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:443": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 443
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButton",
+          "file": "app/index.tsx",
+          "defLine": 1083,
+          "properties": {
+            "backgroundColor": {
+              "line": 1084,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f3f4f6'"
+            },
+            "borderRadius": {
+              "line": 1085,
+              "col": 18,
+              "endCol": 20,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 1086,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            },
+            "alignItems": {
+              "line": 1087,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderWidth": {
+              "line": 1088,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 1090,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "marginTop": {
+              "line": 1091,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderPerksPanel@app/index.tsx:447": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 447
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButtonText",
+          "file": "app/index.tsx",
+          "defLine": 1093,
+          "properties": {
+            "fontSize": {
+              "line": 1095,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:453": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 453
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelContent",
+          "file": "app/index.tsx",
+          "defLine": 624,
+          "properties": {
+            "padding": {
+              "line": 625,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 626,
+              "col": 9,
+              "endCol": 11,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:454": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 454
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelTitle",
+          "file": "app/index.tsx",
+          "defLine": 836,
+          "properties": {
+            "fontSize": {
+              "line": 838,
+              "col": 14,
+              "endCol": 16,
+              "raw": "22"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:455": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 455
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.panelSubtitle",
+          "file": "app/index.tsx",
+          "defLine": 841,
+          "properties": {
+            "fontSize": {
+              "line": 843,
               "col": 14,
               "endCol": 16,
               "raw": "14"
             },
-            "color": {
-              "line": 854,
-              "col": 11,
+            "marginTop": {
+              "line": 845,
+              "col": 15,
+              "endCol": 17,
+              "raw": "-8"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:457": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 457
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsPlaceholder",
+          "file": "app/index.tsx",
+          "defLine": 1025,
+          "properties": {
+            "borderRadius": {
+              "line": 1027,
+              "col": 18,
               "endCol": 20,
-              "raw": "'#94A3B8'"
+              "raw": "16"
+            },
+            "padding": {
+              "line": 1028,
+              "col": 13,
+              "endCol": 15,
+              "raw": "24"
+            },
+            "gap": {
+              "line": 1029,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 1030,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 1032,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderCurve": {
+              "line": 1033,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:458": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 458
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsIcon",
+          "file": "app/index.tsx",
+          "defLine": 1035,
+          "properties": {
+            "fontSize": {
+              "line": 1036,
+              "col": 14,
+              "endCol": 16,
+              "raw": "48"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:459": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 459
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsTitle",
+          "file": "app/index.tsx",
+          "defLine": 1038,
+          "properties": {
+            "fontSize": {
+              "line": 1040,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:460": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 460
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsDescription",
+          "file": "app/index.tsx",
+          "defLine": 1043,
+          "properties": {
+            "fontSize": {
+              "line": 1045,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "textAlign": {
+              "line": 1047,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
             },
             "lineHeight": {
-              "line": 855,
+              "line": 1048,
               "col": 16,
               "endCol": 18,
               "raw": "22"
@@ -7766,111 +7794,1325 @@
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:435": {
+    "renderTrendsPanel@app/index.tsx:463": {
       "element": {
         "file": "app/index.tsx",
-        "line": 435
+        "line": 463
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.closeBtn",
+          "ref": "styles.trendsStats",
           "file": "app/index.tsx",
-          "defLine": 857,
+          "defLine": 1050,
           "properties": {
-            "marginTop": {
-              "line": 858,
-              "col": 15,
-              "endCol": 17,
-              "raw": "20"
-            },
-            "backgroundColor": {
-              "line": 859,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(52, 211, 153, 0.12)'"
-            },
-            "borderRadius": {
-              "line": 860,
-              "col": 18,
-              "endCol": 20,
-              "raw": "12"
-            },
-            "borderCurve": {
-              "line": 861,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "paddingVertical": {
-              "line": 862,
-              "col": 21,
-              "endCol": 23,
-              "raw": "14"
-            },
-            "paddingHorizontal": {
-              "line": 863,
-              "col": 23,
-              "endCol": 25,
-              "raw": "24"
+            "flexDirection": {
+              "line": 1051,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
             },
             "alignItems": {
-              "line": 864,
+              "line": 1052,
               "col": 16,
               "endCol": 24,
               "raw": "'center'"
             },
             "justifyContent": {
-              "line": 865,
+              "line": 1053,
               "col": 20,
               "endCol": 28,
               "raw": "'center'"
             },
-            "minHeight": {
-              "line": 866,
-              "col": 15,
-              "endCol": 17,
-              "raw": "48"
-            },
-            "borderWidth": {
-              "line": 867,
-              "col": 17,
+            "paddingTop": {
+              "line": 1054,
+              "col": 16,
               "endCol": 18,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 1055,
+              "col": 9,
+              "endCol": 11,
+              "raw": "16"
+            },
+            "borderTopWidth": {
+              "line": 1056,
+              "col": 20,
+              "endCol": 21,
               "raw": "1"
             },
-            "borderColor": {
-              "line": 868,
-              "col": 17,
-              "endCol": 43,
-              "raw": "'rgba(52, 211, 153, 0.25)'"
+            "width": {
+              "line": 1058,
+              "col": 11,
+              "endCol": 17,
+              "raw": "'100%'"
+            },
+            "marginTop": {
+              "line": 1059,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
             }
           }
         }
       ]
     },
-    "SavvymaxUS@app/index.tsx:441": {
+    "renderTrendsPanel@app/index.tsx:464": {
       "element": {
         "file": "app/index.tsx",
-        "line": 441
+        "line": 464
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.closeBtnText",
+          "ref": "styles.trendsStat",
           "file": "app/index.tsx",
-          "defLine": 870,
+          "defLine": 1061,
+          "properties": {
+            "alignItems": {
+              "line": 1062,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1063,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:465": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 465
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatValue",
+          "file": "app/index.tsx",
+          "defLine": 1065,
           "properties": {
             "fontSize": {
-              "line": 872,
+              "line": 1067,
               "col": 14,
               "endCol": 16,
-              "raw": "15"
-            },
-            "color": {
-              "line": 873,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:466": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 466
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatLabel",
+          "file": "app/index.tsx",
+          "defLine": 1071,
+          "properties": {
+            "fontSize": {
+              "line": 1073,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:468": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 468
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsDivider",
+          "file": "app/index.tsx",
+          "defLine": 1076,
+          "properties": {
+            "width": {
+              "line": 1077,
               "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 1078,
+              "col": 12,
+              "endCol": 14,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:469": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 469
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStat",
+          "file": "app/index.tsx",
+          "defLine": 1061,
+          "properties": {
+            "alignItems": {
+              "line": 1062,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1063,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:470": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 470
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatValue",
+          "file": "app/index.tsx",
+          "defLine": 1065,
+          "properties": {
+            "fontSize": {
+              "line": 1067,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:471": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 471
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatLabel",
+          "file": "app/index.tsx",
+          "defLine": 1071,
+          "properties": {
+            "fontSize": {
+              "line": 1073,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:473": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 473
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsDivider",
+          "file": "app/index.tsx",
+          "defLine": 1076,
+          "properties": {
+            "width": {
+              "line": 1077,
+              "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 1078,
+              "col": 12,
+              "endCol": 14,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:474": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 474
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStat",
+          "file": "app/index.tsx",
+          "defLine": 1061,
+          "properties": {
+            "alignItems": {
+              "line": 1062,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "gap": {
+              "line": 1063,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:475": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 475
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatValue",
+          "file": "app/index.tsx",
+          "defLine": 1065,
+          "properties": {
+            "fontSize": {
+              "line": 1067,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:476": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 476
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.trendsStatLabel",
+          "file": "app/index.tsx",
+          "defLine": 1071,
+          "properties": {
+            "fontSize": {
+              "line": 1073,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:481": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 481
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButton",
+          "file": "app/index.tsx",
+          "defLine": 1083,
+          "properties": {
+            "backgroundColor": {
+              "line": 1084,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f3f4f6'"
+            },
+            "borderRadius": {
+              "line": 1085,
+              "col": 18,
               "endCol": 20,
-              "raw": "'#34D399'"
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 1086,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            },
+            "alignItems": {
+              "line": 1087,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "borderWidth": {
+              "line": 1088,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 1090,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "marginTop": {
+              "line": 1091,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "renderTrendsPanel@app/index.tsx:485": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 485
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.returnButtonText",
+          "file": "app/index.tsx",
+          "defLine": 1093,
+          "properties": {
+            "fontSize": {
+              "line": 1095,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:503": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 503
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app/index.tsx",
+          "defLine": 579,
+          "properties": {
+            "flex": {
+              "line": 580,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "maxWidth": {
+              "line": 582,
+              "col": 14,
+              "endCol": 17,
+              "raw": "480"
+            },
+            "width": {
+              "line": 583,
+              "col": 11,
+              "endCol": 17,
+              "raw": "'100%'"
+            },
+            "alignSelf": {
+              "line": 584,
+              "col": 15,
+              "endCol": 23,
+              "raw": "'center'"
+            },
+            "boxShadow": {
+              "line": 585,
+              "col": 15,
+              "endCol": 42,
+              "raw": "'0 0 24px rgba(0,0,0,0.08)'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:505": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 505
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.header",
+          "file": "app/index.tsx",
+          "defLine": 589,
+          "properties": {
+            "flexDirection": {
+              "line": 591,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 592,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 593,
+              "col": 20,
+              "endCol": 35,
+              "raw": "'space-between'"
+            },
+            "paddingHorizontal": {
+              "line": 594,
+              "col": 23,
+              "endCol": 25,
+              "raw": "20"
+            },
+            "paddingVertical": {
+              "line": 595,
+              "col": 21,
+              "endCol": 23,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:506": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 506
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerBrand",
+          "file": "app/index.tsx",
+          "defLine": 597,
+          "properties": {
+            "fontSize": {
+              "line": 599,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            },
+            "letterSpacing": {
+              "line": 601,
+              "col": 19,
+              "endCol": 22,
+              "raw": "1.5"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:507": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 507
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerBadge",
+          "file": "app/index.tsx",
+          "defLine": 603,
+          "properties": {
+            "backgroundColor": {
+              "line": 604,
+              "col": 21,
+              "endCol": 44,
+              "raw": "'rgba(255,255,255,0.2)'"
+            },
+            "paddingHorizontal": {
+              "line": 605,
+              "col": 23,
+              "endCol": 25,
+              "raw": "10"
+            },
+            "paddingVertical": {
+              "line": 606,
+              "col": 21,
+              "endCol": 22,
+              "raw": "4"
+            },
+            "borderRadius": {
+              "line": 607,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:508": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 508
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerBadgeText",
+          "file": "app/index.tsx",
+          "defLine": 609,
+          "properties": {
+            "fontSize": {
+              "line": 611,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:513": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 513
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.scrollView",
+          "file": "app/index.tsx",
+          "defLine": 616,
+          "properties": {
+            "flex": {
+              "line": 617,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:522": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 522
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.fixedAdBanner",
+          "file": "app/index.tsx",
+          "defLine": 1100,
+          "properties": {
+            "backgroundColor": {
+              "line": 1101,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#f9fafb'"
+            },
+            "borderTopWidth": {
+              "line": 1102,
+              "col": 20,
+              "endCol": 21,
+              "raw": "1"
+            },
+            "paddingVertical": {
+              "line": 1104,
+              "col": 21,
+              "endCol": 23,
+              "raw": "10"
+            },
+            "alignItems": {
+              "line": 1105,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:523": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 523
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.fixedAdText",
+          "file": "app/index.tsx",
+          "defLine": 1107,
+          "properties": {
+            "fontSize": {
+              "line": 1109,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:527": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 527
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bottomNav",
+          "file": "app/index.tsx",
+          "defLine": 1114,
+          "properties": {
+            "flexDirection": {
+              "line": 1115,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "borderTopWidth": {
+              "line": 1117,
+              "col": 20,
+              "endCol": 21,
+              "raw": "1"
+            },
+            "paddingTop": {
+              "line": 1119,
+              "col": 16,
+              "endCol": 17,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:528": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 528
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navItem",
+          "file": "app/index.tsx",
+          "defLine": 1121,
+          "properties": {
+            "flex": {
+              "line": 1122,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 1123,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 1124,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 1125,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "gap": {
+              "line": 1126,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            },
+            "minHeight": {
+              "line": 1127,
+              "col": 15,
+              "endCol": 17,
+              "raw": "44"
+            },
+            "position": {
+              "line": 1128,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:532": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 532
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIcon",
+          "file": "app/index.tsx",
+          "defLine": 1130,
+          "properties": {
+            "fontSize": {
+              "line": 1131,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:533": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 533
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navLabel",
+          "file": "app/index.tsx",
+          "defLine": 1133,
+          "properties": {
+            "fontSize": {
+              "line": 1135,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:536": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 536
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIndicator",
+          "file": "app/index.tsx",
+          "defLine": 1141,
+          "properties": {
+            "position": {
+              "line": 1142,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 1143,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "width": {
+              "line": 1144,
+              "col": 11,
+              "endCol": 13,
+              "raw": "20"
+            },
+            "height": {
+              "line": 1145,
+              "col": 12,
+              "endCol": 13,
+              "raw": "3"
+            },
+            "borderRadius": {
+              "line": 1147,
+              "col": 18,
+              "endCol": 21,
+              "raw": "1.5"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:538": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 538
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navItem",
+          "file": "app/index.tsx",
+          "defLine": 1121,
+          "properties": {
+            "flex": {
+              "line": 1122,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 1123,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 1124,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 1125,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "gap": {
+              "line": 1126,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            },
+            "minHeight": {
+              "line": 1127,
+              "col": 15,
+              "endCol": 17,
+              "raw": "44"
+            },
+            "position": {
+              "line": 1128,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:543": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 543
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIcon",
+          "file": "app/index.tsx",
+          "defLine": 1130,
+          "properties": {
+            "fontSize": {
+              "line": 1131,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:546": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 546
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navLabel",
+          "file": "app/index.tsx",
+          "defLine": 1133,
+          "properties": {
+            "fontSize": {
+              "line": 1135,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:549": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 549
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIndicator",
+          "file": "app/index.tsx",
+          "defLine": 1141,
+          "properties": {
+            "position": {
+              "line": 1142,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 1143,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "width": {
+              "line": 1144,
+              "col": 11,
+              "endCol": 13,
+              "raw": "20"
+            },
+            "height": {
+              "line": 1145,
+              "col": 12,
+              "endCol": 13,
+              "raw": "3"
+            },
+            "borderRadius": {
+              "line": 1147,
+              "col": 18,
+              "endCol": 21,
+              "raw": "1.5"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:551": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 551
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navItem",
+          "file": "app/index.tsx",
+          "defLine": 1121,
+          "properties": {
+            "flex": {
+              "line": 1122,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 1123,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 1124,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 1125,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "gap": {
+              "line": 1126,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            },
+            "minHeight": {
+              "line": 1127,
+              "col": 15,
+              "endCol": 17,
+              "raw": "44"
+            },
+            "position": {
+              "line": 1128,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:555": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 555
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIcon",
+          "file": "app/index.tsx",
+          "defLine": 1130,
+          "properties": {
+            "fontSize": {
+              "line": 1131,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:556": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 556
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navLabel",
+          "file": "app/index.tsx",
+          "defLine": 1133,
+          "properties": {
+            "fontSize": {
+              "line": 1135,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:559": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 559
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIndicator",
+          "file": "app/index.tsx",
+          "defLine": 1141,
+          "properties": {
+            "position": {
+              "line": 1142,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 1143,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "width": {
+              "line": 1144,
+              "col": 11,
+              "endCol": 13,
+              "raw": "20"
+            },
+            "height": {
+              "line": 1145,
+              "col": 12,
+              "endCol": 13,
+              "raw": "3"
+            },
+            "borderRadius": {
+              "line": 1147,
+              "col": 18,
+              "endCol": 21,
+              "raw": "1.5"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:561": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 561
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navItem",
+          "file": "app/index.tsx",
+          "defLine": 1121,
+          "properties": {
+            "flex": {
+              "line": 1122,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 1123,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 1124,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            },
+            "paddingVertical": {
+              "line": 1125,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "gap": {
+              "line": 1126,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            },
+            "minHeight": {
+              "line": 1127,
+              "col": 15,
+              "endCol": 17,
+              "raw": "44"
+            },
+            "position": {
+              "line": 1128,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'relative'"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:565": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 565
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIcon",
+          "file": "app/index.tsx",
+          "defLine": 1130,
+          "properties": {
+            "fontSize": {
+              "line": 1131,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:566": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 566
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navLabel",
+          "file": "app/index.tsx",
+          "defLine": 1133,
+          "properties": {
+            "fontSize": {
+              "line": 1135,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "SavvymaxDashboard@app/index.tsx:569": {
+      "element": {
+        "file": "app/index.tsx",
+        "line": 569
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.navIndicator",
+          "file": "app/index.tsx",
+          "defLine": 1141,
+          "properties": {
+            "position": {
+              "line": 1142,
+              "col": 14,
+              "endCol": 24,
+              "raw": "'absolute'"
+            },
+            "top": {
+              "line": 1143,
+              "col": 9,
+              "endCol": 10,
+              "raw": "0"
+            },
+            "width": {
+              "line": 1144,
+              "col": 11,
+              "endCol": 13,
+              "raw": "20"
+            },
+            "height": {
+              "line": 1145,
+              "col": 12,
+              "endCol": 13,
+              "raw": "3"
+            },
+            "borderRadius": {
+              "line": 1147,
+              "col": 18,
+              "endCol": 21,
+              "raw": "1.5"
             }
           }
         }

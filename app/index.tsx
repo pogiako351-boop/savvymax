@@ -1,448 +1,574 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import {
   View,
   Text,
   ScrollView,
   TextInput,
   Pressable,
-  Modal,
   StyleSheet,
-  useWindowDimensions,
+  Animated,
+  Easing,
   Linking,
-  Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Fonts } from '@/constants/Typography';
 
-// ─── US-ONLY CONSTANTS ────────────────────────────────────────────────────────
+// ─── TYPES ───────────────────────────────────────────────────────────────────
 
-const INFLATION_RATE = 3.2;
-const TRADITIONAL_BANK_APY = 0.01;
-const MAX_BENCHMARK_YIELD = 4.50;
-const CURRENCY_SYMBOL = '$';
+type Panel = 'home' | 'tracker' | 'calculator' | 'perks' | 'trends';
+type BottomTab = 'home' | 'inbox' | 'qr' | 'profile';
 
-const APP_TITLE = 'Savvymax';
-const HERO_HEADER = 'Stop Losing Money to Inflation';
-const HERO_SUBHEADER =
-  'Your savings are bleeding purchasing power every second. See exactly how much — and how to fix it.';
-const BLEED_TITLE = 'Inflation Bleed';
-const BLEED_SUB = 'Your cash is losing value after bank interest';
-const OPTIMIZER_TITLE = 'Optimized Yield Potential';
-const CTA_TEXT = 'Find Best APY Rates';
+// ─── CONSTANTS ───────────────────────────────────────────────────────────────
 
-const LEGAL = {
-  DISCLAIMER:
-    'Savvymax is an independent, advertising-supported comparison tool for US residents. APY rates shown are subject to change based on Federal Reserve policy, bank pricing, and market conditions. This is not financial advice. Verify rates directly with institutions before depositing. FDIC insurance applies up to $250,000 per depositor, per institution.',
-  PRIVACY:
-    'We do not collect personal financial data. Anonymous usage analytics (page views, deposit range) are collected via privacy-respecting analytics. No data is sold to third parties. AdSense may use cookies for ad personalization — you can opt out via Google Ad Settings.',
-  TERMS:
-    'By using Savvymax, you acknowledge this tool is for informational purposes only. We are not a bank, broker, or financial advisor. Affiliate links may earn us a commission at no cost to you. All trademarks belong to their respective owners.',
+const COLORS = {
+  primary: '#1a73e8',
+  primaryDark: '#1557b0',
+  white: '#ffffff',
+  background: '#f9fafb',
+  border: '#e5e7eb',
+  text: '#111827',
+  textMuted: '#6b7280',
+  textLight: '#9ca3af',
+  success: '#10b981',
+  danger: '#ef4444',
+  cardBg: '#ffffff',
 };
 
-// ─── US BANK DATASET ──────────────────────────────────────────────────────────
-
-interface BankEntry {
-  id: string;
-  name: string;
-  apy: number;
-  note?: string;
-  url?: string;
-  isLowYield?: boolean;
-}
-
-const US_BANK_DATASET: BankEntry[] = [
-  { id: 'sofi', name: 'SoFi', apy: 4.50, url: 'https://sofi.com/banking' },
-  { id: 'wealthfront', name: 'Wealthfront Cash', apy: 4.50, url: 'https://wealthfront.com/cash' },
-  { id: 'cit', name: 'CIT Bank', apy: 4.50, url: 'https://cit.com/banking' },
-  { id: 'marcus', name: 'Marcus by Goldman Sachs', apy: 4.40, url: 'https://marcus.com' },
-  { id: 'robinhood', name: 'Robinhood Gold', apy: 4.40, note: 'Net after $60/yr fee', url: 'https://robinhood.com/gold' },
-  { id: 'ally', name: 'Ally Bank', apy: 4.35, url: 'https://ally.com/bank/online-savings-account' },
-  { id: 'barclays', name: 'Barclays Online Savings', apy: 4.35, url: 'https://barclays.com/savings' },
-  { id: 'discover', name: 'Discover Online Savings', apy: 4.30, url: 'https://discover.com/online-banking/savings-account' },
-  { id: 'amex', name: 'American Express HYSA', apy: 4.25, url: 'https://americanexpress.com/en-us/banking/online-savings' },
-  { id: 'capital-one', name: 'Capital One 360', apy: 4.25, url: 'https://capitalone.com/bank/savings-accounts/online-performance-savings' },
-  { id: 'chase', name: 'Chase Savings', apy: 0.01, isLowYield: true },
+const BANK_DATA = [
+  { name: 'Wealthfront', apy: 5.0, tier: 'Premium' },
+  { name: 'BrioDirect', apy: 4.8, tier: 'High-Yield' },
+  { name: 'SoFi', apy: 4.6, tier: 'Secured' },
+  { name: 'UFB Direct', apy: 4.5, tier: 'Standard' },
 ];
 
-// ─── COMPONENT ────────────────────────────────────────────────────────────────
+const APY_OPTIONS = [
+  { label: 'Wealthfront 5.0%', value: 5.0 },
+  { label: 'SoFi 4.6%', value: 4.6 },
+  { label: 'Market Average 4.5%', value: 4.5 },
+];
 
-export default function SavvymaxUS() {
-  const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
-  const isDesktop = width >= 728;
+// ─── PULSING DOT COMPONENT ──────────────────────────────────────────────────
 
-  // State
-  const [deposit, setDeposit] = useState('10000');
-  const [bleed, setBleed] = useState(0);
-  const [optimizedGain, setOptimizedGain] = useState(0);
-  const [liveLost, setLiveLost] = useState(0);
-  const [activeModal, setActiveModal] = useState<'disclaimer' | 'privacy' | 'terms' | 'banks' | null>(null);
-
-  const depositAmount = Math.max(0, parseInt(deposit.replace(/[^0-9]/g, ''), 10) || 0);
-
-  // Recalculate bleed & optimizedGain on deposit change
-  useEffect(() => {
-    const amount = depositAmount;
-    const inflationLoss = (amount * INFLATION_RATE) / 100;
-    const traditionalBankEarnings = (amount * TRADITIONAL_BANK_APY) / 100;
-    const maxBenchmarkEarnings = (amount * MAX_BENCHMARK_YIELD) / 100;
-
-    const newBleed = inflationLoss - traditionalBankEarnings;
-    const newOptimizedGain = maxBenchmarkEarnings - traditionalBankEarnings;
-
-    setBleed(newBleed);
-    setOptimizedGain(newOptimizedGain);
-    setLiveLost(0);
-  }, [depositAmount]);
-
-  // Interval ticker — increment liveLost every 100ms
-  const bleedRef = useRef(bleed);
-  bleedRef.current = bleed;
+function PulsingDot({ size = 8 }: { size?: number }) {
+  const pulseAnim = useRef(new Animated.Value(1)).current;
+  const opacityAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const annualBleed = bleedRef.current;
-      const increment = (annualBleed / (365 * 24 * 60 * 60)) * 0.1;
-      setLiveLost((prev) => prev + increment);
-    }, 100);
-    return () => clearInterval(interval);
+    const pulse = Animated.loop(
+      Animated.parallel([
+        Animated.sequence([
+          Animated.timing(pulseAnim, {
+            toValue: 2.5,
+            duration: 700,
+            easing: Easing.out(Easing.ease),
+            useNativeDriver: true,
+          }),
+          Animated.timing(pulseAnim, {
+            toValue: 1,
+            duration: 700,
+            easing: Easing.in(Easing.ease),
+            useNativeDriver: true,
+          }),
+        ]),
+        Animated.sequence([
+          Animated.timing(opacityAnim, {
+            toValue: 0,
+            duration: 700,
+            easing: Easing.out(Easing.ease),
+            useNativeDriver: true,
+          }),
+          Animated.timing(opacityAnim, {
+            toValue: 1,
+            duration: 700,
+            easing: Easing.in(Easing.ease),
+            useNativeDriver: true,
+          }),
+        ]),
+      ])
+    );
+    pulse.start();
+    return () => pulse.stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Deposit input handler
-  const handleDepositChange = useCallback((text: string) => {
-    const cleaned = text.replace(/[^0-9]/g, '');
-    const num = parseInt(cleaned, 10) || 0;
-    const clamped = Math.min(num, 10000000);
-    setDeposit(clamped.toString());
-  }, []);
-
-  // CTA handler — opens bank comparison modal
-  const handleCtaPress = useCallback(() => {
-    setActiveModal('banks');
-  }, []);
-
-  // Open bank affiliate URL
-  const handleBankPress = useCallback((url: string) => {
-    if (Platform.OS === 'web' && typeof window !== 'undefined') {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } else {
-      Linking.openURL(url);
-    }
-  }, []);
-
-  // Format helpers
-  const formatCurrency = useCallback((amount: number, decimals = 2) => {
-    return `${CURRENCY_SYMBOL}${amount.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
-  }, []);
-
-  const getModalTitle = () => {
-    switch (activeModal) {
-      case 'disclaimer': return 'Disclaimer';
-      case 'privacy': return 'Privacy Policy';
-      case 'terms': return 'Terms of Service';
-      case 'banks': return 'Best US High-Yield APY Rates';
-      default: return '';
-    }
-  };
-
-  const getModalBody = () => {
-    switch (activeModal) {
-      case 'disclaimer': return LEGAL.DISCLAIMER;
-      case 'privacy': return LEGAL.PRIVACY;
-      case 'terms': return LEGAL.TERMS;
-      default: return '';
-    }
-  };
 
   return (
-    <View style={styles.root}>
+    <View style={{ position: 'absolute', top: -2, right: -2, width: size + 8, height: size + 8, alignItems: 'center', justifyContent: 'center' }}>
+      <Animated.View
+        style={{
+          position: 'absolute',
+          width: size + 4,
+          height: size + 4,
+          borderRadius: (size + 4) / 2,
+          backgroundColor: COLORS.danger,
+          opacity: opacityAnim,
+          transform: [{ scale: pulseAnim }],
+        }}
+      />
+      <View
+        style={{
+          width: size,
+          height: size,
+          borderRadius: size / 2,
+          backgroundColor: COLORS.danger,
+        }}
+      />
+    </View>
+  );
+}
+
+// ─── PULSING BUTTON COMPONENT ────────────────────────────────────────────────
+
+function PulsingButton({
+  title,
+  onPress,
+  variant = 'primary',
+}: {
+  title: string;
+  onPress: () => void;
+  variant?: 'primary' | 'dark';
+}) {
+  const scaleAnim = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    const pulse = Animated.loop(
+      Animated.sequence([
+        Animated.timing(scaleAnim, {
+          toValue: 1.03,
+          duration: 1000,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true,
+        }),
+        Animated.timing(scaleAnim, {
+          toValue: 1,
+          duration: 1000,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true,
+        }),
+      ])
+    );
+    pulse.start();
+    return () => pulse.stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const bgColor = variant === 'dark' ? '#1f2937' : COLORS.primary;
+
+  return (
+    <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+      <Pressable
+        onPress={onPress}
+        style={({ pressed }) => [
+          styles.ctaButton,
+          { backgroundColor: bgColor, opacity: pressed ? 0.85 : 1 },
+        ]}
+      >
+        <Text style={styles.ctaButtonText}>{title}</Text>
+      </Pressable>
+    </Animated.View>
+  );
+}
+
+// ─── CREDIT SCORE DIAL ───────────────────────────────────────────────────────
+
+function CreditScoreDial({ score }: { score: number }) {
+  // Semi-circle dial - score from 300 to 850
+  const percentage = ((score - 300) / (850 - 300)) * 100;
+  const rotation = (percentage / 100) * 180 - 90; // -90 to 90 degrees
+
+  return (
+    <View style={styles.dialContainer}>
+      <View style={styles.dialOuter}>
+        <View style={styles.dialTrack} />
+        <View style={[styles.dialFill, { transform: [{ rotate: `${rotation}deg` }] }]}>
+          <View style={styles.dialNeedle} />
+        </View>
+        <View style={styles.dialCenter}>
+          <Text style={styles.dialScore}>{score}</Text>
+          <Text style={styles.dialLabel}>Excellent</Text>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+// ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
+
+export default function SavvymaxDashboard() {
+  const insets = useSafeAreaInsets();
+  const [activePanel, setActivePanel] = useState<Panel>('home');
+  const [activeTab, setActiveTab] = useState<BottomTab>('home');
+
+  // Calculator state
+  const [principal, setPrincipal] = useState('10000');
+  const [selectedApyIndex, setSelectedApyIndex] = useState(0);
+
+  const calculatedReturn = useMemo(() => {
+    const amount = parseFloat(principal.replace(/[^0-9.]/g, '')) || 0;
+    const apy = APY_OPTIONS[selectedApyIndex].value;
+    return (amount * apy / 100).toFixed(2);
+  }, [principal, selectedApyIndex]);
+
+  const navigateToPanel = useCallback((panel: Panel) => {
+    setActivePanel(panel);
+    if (panel === 'home') setActiveTab('home');
+  }, []);
+
+  const handleTabPress = useCallback((tab: BottomTab) => {
+    setActiveTab(tab);
+    if (tab === 'home') setActivePanel('home');
+  }, []);
+
+  // ─── RENDER PANELS ──────────────────────────────────────────────────────────
+
+  const renderHomePanel = () => (
+    <View style={styles.panelContent}>
+      {/* Wallet Card */}
+      <View style={styles.walletCard}>
+        <Text style={styles.walletLabel}>Total Tracking Balance</Text>
+        <Text style={styles.walletBalance}>$12,345.67</Text>
+        <View style={styles.apyPill}>
+          <Text style={styles.apyPillText}>+ 4.5% APY</Text>
+        </View>
+      </View>
+
+      {/* AdSense Banner */}
+      <View style={styles.adBanner}>
+        <Text style={styles.adText}>[ AdSense Responsive Banner ]</Text>
+      </View>
+
+      {/* Service Grid */}
+      <View style={styles.serviceGrid}>
+        <Pressable
+          style={styles.serviceItem}
+          onPress={() => navigateToPanel('tracker')}
+        >
+          <View style={styles.serviceIconWrap}>
+            <Text style={styles.serviceIcon}>📊</Text>
+            <PulsingDot size={6} />
+          </View>
+          <Text style={styles.serviceLabel}>Tracker</Text>
+        </Pressable>
+        <Pressable
+          style={styles.serviceItem}
+          onPress={() => navigateToPanel('calculator')}
+        >
+          <View style={styles.serviceIconWrap}>
+            <Text style={styles.serviceIcon}>🧮</Text>
+          </View>
+          <Text style={styles.serviceLabel}>Calculator</Text>
+        </Pressable>
+        <Pressable
+          style={styles.serviceItem}
+          onPress={() => navigateToPanel('perks')}
+        >
+          <View style={styles.serviceIconWrap}>
+            <Text style={styles.serviceIcon}>💎</Text>
+          </View>
+          <Text style={styles.serviceLabel}>Perks</Text>
+        </Pressable>
+        <Pressable
+          style={styles.serviceItem}
+          onPress={() => navigateToPanel('trends')}
+        >
+          <View style={styles.serviceIconWrap}>
+            <Text style={styles.serviceIcon}>📈</Text>
+          </View>
+          <Text style={styles.serviceLabel}>Trends</Text>
+        </Pressable>
+      </View>
+
+      {/* SoFi Card */}
+      <View style={styles.promoCard}>
+        <View style={styles.promoHeader}>
+          <Text style={styles.promoTitle}>SoFi Checking & Savings</Text>
+          <View style={styles.promoBadge}>
+            <Text style={styles.promoBadgeText}>4.6% APY Secured</Text>
+          </View>
+        </View>
+        <Text style={styles.promoDescription}>
+          Earn up to 4.6% APY on savings with no account fees. FDIC insured up to $2M through partner banks.
+        </Text>
+        <PulsingButton
+          title="Open Account"
+          onPress={() => Linking.openURL('https://sofi.com/banking')}
+        />
+      </View>
+
+      {/* Wealthfront Card */}
+      <View style={styles.promoCard}>
+        <View style={styles.promoHeader}>
+          <Text style={styles.promoTitle}>Wealthfront Cash Account</Text>
+          <View style={[styles.promoBadge, { backgroundColor: '#ecfdf5' }]}>
+            <Text style={[styles.promoBadgeText, { color: '#059669' }]}>5.0% APY Tier</Text>
+          </View>
+        </View>
+        <Text style={styles.promoDescription}>
+          Industry-leading 5.0% APY with no minimum balance. Automated savings features included.
+        </Text>
+        <PulsingButton
+          title="Claim High Yield"
+          onPress={() => Linking.openURL('https://wealthfront.com/cash')}
+          variant="dark"
+        />
+      </View>
+
+      {/* Credit Score Card */}
+      <View style={styles.promoCard}>
+        <Text style={styles.promoTitle}>Credit Score Optimizer</Text>
+        <CreditScoreDial score={758} />
+        <PulsingButton
+          title="View Free Credit Score"
+          onPress={() => {}}
+        />
+      </View>
+    </View>
+  );
+
+  const renderTrackerPanel = () => (
+    <View style={styles.panelContent}>
+      <Text style={styles.panelTitle}>APY Rate Tracker</Text>
+      <Text style={styles.panelSubtitle}>Ranked by highest annual percentage yield</Text>
+
+      {BANK_DATA.map((bank, index) => (
+        <View key={bank.name} style={styles.trackerRow}>
+          <View style={styles.trackerRank}>
+            <Text style={styles.trackerRankText}>#{index + 1}</Text>
+          </View>
+          <View style={styles.trackerInfo}>
+            <Text style={styles.trackerName}>{bank.name}</Text>
+            <Text style={styles.trackerTier}>{bank.tier}</Text>
+          </View>
+          <View style={styles.trackerApyBadge}>
+            <Text style={styles.trackerApyText}>{bank.apy.toFixed(2)}%</Text>
+          </View>
+        </View>
+      ))}
+
+      <Pressable
+        style={styles.returnButton}
+        onPress={() => navigateToPanel('home')}
+      >
+        <Text style={styles.returnButtonText}>Return to Dashboard</Text>
+      </Pressable>
+    </View>
+  );
+
+  const renderCalculatorPanel = () => (
+    <View style={styles.panelContent}>
+      <Text style={styles.panelTitle}>APY Calculator</Text>
+      <Text style={styles.panelSubtitle}>See your potential annual earnings</Text>
+
+      <View style={styles.calcCard}>
+        <Text style={styles.calcLabel}>Principal Amount ($)</Text>
+        <TextInput
+          style={styles.calcInput}
+          value={principal}
+          onChangeText={setPrincipal}
+          keyboardType="numeric"
+          placeholder="Enter amount"
+          placeholderTextColor={COLORS.textLight}
+        />
+
+        <Text style={[styles.calcLabel, { marginTop: 16 }]}>Select APY Rate</Text>
+        <View style={styles.apySelector}>
+          {APY_OPTIONS.map((option, idx) => (
+            <Pressable
+              key={option.label}
+              style={[
+                styles.apyOption,
+                selectedApyIndex === idx && styles.apyOptionActive,
+              ]}
+              onPress={() => setSelectedApyIndex(idx)}
+            >
+              <Text
+                style={[
+                  styles.apyOptionText,
+                  selectedApyIndex === idx && styles.apyOptionTextActive,
+                ]}
+              >
+                {option.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <View style={styles.calcResult}>
+          <Text style={styles.calcResultLabel}>Annual Return</Text>
+          <Text style={styles.calcResultValue}>${calculatedReturn}</Text>
+        </View>
+      </View>
+
+      <Pressable
+        style={styles.returnButton}
+        onPress={() => navigateToPanel('home')}
+      >
+        <Text style={styles.returnButtonText}>Return to Dashboard</Text>
+      </Pressable>
+    </View>
+  );
+
+  const renderPerksPanel = () => (
+    <View style={styles.panelContent}>
+      <Text style={styles.panelTitle}>Exclusive Perks</Text>
+      <Text style={styles.panelSubtitle}>Limited-time offers for Savvymax users</Text>
+
+      <View style={styles.perkCard}>
+        <View style={styles.perkBadge}>
+          <Text style={styles.perkBadgeText}>LIMITED OFFER</Text>
+        </View>
+        <Text style={styles.perkTitle}>SoFi $300 Cash Bonus</Text>
+        <Text style={styles.perkDescription}>
+          Open a new SoFi Checking & Savings account with direct deposit of $5,000+ within 25 days and earn a $300 cash bonus. Plus earn up to 4.6% APY on savings.
+        </Text>
+        <View style={styles.perkDetails}>
+          <View style={styles.perkDetailRow}>
+            <Text style={styles.perkDetailIcon}>✓</Text>
+            <Text style={styles.perkDetailText}>No account fees</Text>
+          </View>
+          <View style={styles.perkDetailRow}>
+            <Text style={styles.perkDetailIcon}>✓</Text>
+            <Text style={styles.perkDetailText}>FDIC insured up to $2M</Text>
+          </View>
+          <View style={styles.perkDetailRow}>
+            <Text style={styles.perkDetailIcon}>✓</Text>
+            <Text style={styles.perkDetailText}>Free ATM access at 55,000+ locations</Text>
+          </View>
+        </View>
+        <PulsingButton
+          title="Claim $300 Bonus"
+          onPress={() => Linking.openURL('https://sofi.com/banking')}
+        />
+      </View>
+
+      <Pressable
+        style={styles.returnButton}
+        onPress={() => navigateToPanel('home')}
+      >
+        <Text style={styles.returnButtonText}>Return to Dashboard</Text>
+      </Pressable>
+    </View>
+  );
+
+  const renderTrendsPanel = () => (
+    <View style={styles.panelContent}>
+      <Text style={styles.panelTitle}>Market Trends</Text>
+      <Text style={styles.panelSubtitle}>APY rate movements and analytics</Text>
+
+      <View style={styles.trendsPlaceholder}>
+        <Text style={styles.trendsIcon}>📈</Text>
+        <Text style={styles.trendsTitle}>Analytics Dashboard</Text>
+        <Text style={styles.trendsDescription}>
+          Real-time APY trend data, Federal Reserve rate predictions, and personalized savings optimization insights coming soon.
+        </Text>
+        <View style={styles.trendsStats}>
+          <View style={styles.trendsStat}>
+            <Text style={styles.trendsStatValue}>4.5%</Text>
+            <Text style={styles.trendsStatLabel}>Avg. APY</Text>
+          </View>
+          <View style={styles.trendsDivider} />
+          <View style={styles.trendsStat}>
+            <Text style={styles.trendsStatValue}>+0.25%</Text>
+            <Text style={styles.trendsStatLabel}>30d Change</Text>
+          </View>
+          <View style={styles.trendsDivider} />
+          <View style={styles.trendsStat}>
+            <Text style={styles.trendsStatValue}>12</Text>
+            <Text style={styles.trendsStatLabel}>Banks Tracked</Text>
+          </View>
+        </View>
+      </View>
+
+      <Pressable
+        style={styles.returnButton}
+        onPress={() => navigateToPanel('home')}
+      >
+        <Text style={styles.returnButtonText}>Return to Dashboard</Text>
+      </Pressable>
+    </View>
+  );
+
+  const renderActivePanel = () => {
+    switch (activePanel) {
+      case 'home': return renderHomePanel();
+      case 'tracker': return renderTrackerPanel();
+      case 'calculator': return renderCalculatorPanel();
+      case 'perks': return renderPerksPanel();
+      case 'trends': return renderTrendsPanel();
+    }
+  };
+
+  // ─── MAIN RENDER ────────────────────────────────────────────────────────────
+
+  return (
+    <View style={[styles.container, { paddingTop: insets.top }]}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.headerBrand}>SAVVYMAX</Text>
+        <View style={styles.headerBadge}>
+          <Text style={styles.headerBadgeText}>v2.0 Live</Text>
+        </View>
+      </View>
+
+      {/* Main Content */}
       <ScrollView
         style={styles.scrollView}
-        contentContainerStyle={[
-          styles.content,
-          {
-            paddingTop: insets.top + 8,
-            paddingBottom: insets.bottom + 40,
-          },
-        ]}
+        contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {/* ─── HEADER / BRANDING ─────────────────────────────────────── */}
-        <View style={styles.header}>
-          <View style={styles.brandRow}>
-            <View style={styles.brandIconContainer}>
-              <View style={styles.brandIconBar1} />
-              <View style={styles.brandIconBar2} />
-              <View style={styles.brandIconBar3} />
-            </View>
-            <Text style={styles.brandName}>{APP_TITLE}</Text>
-          </View>
-        </View>
-
-        {/* ─── HERO SECTION ──────────────────────────────────────────── */}
-        <View style={styles.heroSection}>
-          <Text style={styles.headline} selectable>{HERO_HEADER}</Text>
-          <Text style={styles.subheadline}>{HERO_SUBHEADER}</Text>
-        </View>
-
-        {/* ─── DEPOSIT INPUT CARD ────────────────────────────────────── */}
-        <View style={styles.depositCard}>
-          <Text style={styles.depositLabel}>Your Cash Deposit</Text>
-          <View style={styles.depositInputRow}>
-            <Text style={styles.currencySymbol}>{CURRENCY_SYMBOL}</Text>
-            <TextInput
-              style={styles.depositInput}
-              value={parseInt(deposit, 10).toLocaleString('en-US')}
-              onChangeText={handleDepositChange}
-              keyboardType="numeric"
-              maxLength={12}
-              selectTextOnFocus
-              placeholderTextColor="#475569"
-              accessibilityLabel="Deposit amount input"
-            />
-          </View>
-        </View>
-
-        {/* ─── DANGER CARD (RED / BLEED) ─────────────────────────────── */}
-        <View style={styles.inflationCard}>
-          <View style={styles.cardHeader}>
-            <View style={styles.cardIconDanger}>
-              <Text style={styles.cardIconText}>📉</Text>
-            </View>
-            <View style={styles.cardHeaderText}>
-              <Text style={styles.inflationTitle}>{BLEED_TITLE}</Text>
-              <Text style={styles.inflationSubtitle}>{BLEED_SUB}</Text>
-            </View>
-          </View>
-
-          {/* Annual bleed ticker */}
-          <View style={styles.annualBleedRow}>
-            <Text style={styles.annualBleedLabel}>Annual Bleed</Text>
-            <Text selectable style={styles.annualBleedValue}>
-              -{formatCurrency(bleed)}
-            </Text>
-          </View>
-
-          <View style={styles.inflationStats}>
-            <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Monthly Loss</Text>
-              <Text selectable style={styles.statValueDanger}>
-                -{formatCurrency(bleed / 12, 2)}
-              </Text>
-            </View>
-            <View style={styles.statDivider} />
-            <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Daily Loss</Text>
-              <Text selectable style={styles.statValueDanger}>
-                -{CURRENCY_SYMBOL}{(bleed / 365).toFixed(2)}
-              </Text>
-            </View>
-            <View style={styles.statDivider} />
-            <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Lost since page load</Text>
-              <Text selectable style={styles.liveTickerValue}>
-                -{CURRENCY_SYMBOL}{liveLost.toFixed(6)}
-              </Text>
-            </View>
-          </View>
-        </View>
-
-        {/* ─── SUCCESS CARD (GREEN / OPTIMIZER) ──────────────────────── */}
-        <View style={styles.yieldCard}>
-          <View style={styles.cardHeader}>
-            <View style={styles.cardIconSuccess}>
-              <Text style={styles.cardIconText}>📈</Text>
-            </View>
-            <View style={styles.cardHeaderText}>
-              <Text style={styles.yieldTitle}>{OPTIMIZER_TITLE}</Text>
-              <Text style={styles.yieldSubtitle}>
-                Up to {MAX_BENCHMARK_YIELD}% APY available
-              </Text>
-            </View>
-          </View>
-
-          {/* Optimized gain ticker */}
-          <View style={styles.optimizedGainRow}>
-            <Text style={styles.optimizedGainLabel}>Annual Gain Over Bank</Text>
-            <Text selectable style={styles.optimizedGainValue}>
-              +{formatCurrency(optimizedGain)}
-            </Text>
-          </View>
-
-          {/* CTA Button */}
-          <View style={styles.ctaContainer}>
-            <Pressable
-              style={styles.ctaButton}
-              accessibilityRole="button"
-              onPress={handleCtaPress}
-            >
-              <Text style={styles.ctaButtonText}>{CTA_TEXT}</Text>
-            </Pressable>
-          </View>
-        </View>
-
-        {/* ─── ADSENSE PLACEHOLDER ───────────────────────────────────── */}
-        <View style={styles.adContainer}>
-          <Text style={styles.adLabel}>Advertisement</Text>
-          <View style={[styles.adBox, isDesktop && styles.adBoxDesktop]}>
-            <Text style={styles.adPlaceholder}>
-              {isDesktop ? '728×90 Ad Space' : '320×100 Ad Space'}
-            </Text>
-          </View>
-        </View>
-
-        {/* ─── LEGAL FOOTER ──────────────────────────────────────────── */}
-        <View style={styles.footer}>
-          <View style={styles.footerDivider} />
-          <View style={styles.footerLinks}>
-            <Pressable
-              onPress={() => setActiveModal('disclaimer')}
-              style={styles.linkPressable}
-              accessibilityRole="button"
-            >
-              <Text style={styles.link}>Disclaimer</Text>
-            </Pressable>
-            <Text style={styles.footerSeparator}>•</Text>
-            <Pressable
-              onPress={() => setActiveModal('privacy')}
-              style={styles.linkPressable}
-              accessibilityRole="button"
-            >
-              <Text style={styles.link}>Privacy Policy</Text>
-            </Pressable>
-            <Text style={styles.footerSeparator}>•</Text>
-            <Pressable
-              onPress={() => setActiveModal('terms')}
-              style={styles.linkPressable}
-              accessibilityRole="button"
-            >
-              <Text style={styles.link}>Terms of Service</Text>
-            </Pressable>
-          </View>
-          <Text selectable style={styles.copyright}>
-            © 2025 Savvymax. All rights reserved.
-          </Text>
-        </View>
+        {renderActivePanel()}
       </ScrollView>
 
-      {/* ─── BANK COMPARISON MODAL ─────────────────────────────────── */}
-      <Modal
-        visible={activeModal === 'banks'}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setActiveModal(null)}
-      >
-        <Pressable
-          style={styles.modalOverlay}
-          onPress={() => setActiveModal(null)}
-        >
-          <Pressable
-            style={[styles.bankModalContent, isDesktop && styles.bankModalContentDesktop]}
-            onPress={(e) => e.stopPropagation()}
-          >
-            <View style={styles.bankModalHeader}>
-              <Text style={styles.modalTitle}>{getModalTitle()}</Text>
-              <Pressable
-                onPress={() => setActiveModal(null)}
-                style={styles.bankModalClose}
-                accessibilityRole="button"
-                accessibilityLabel="Close modal"
-              >
-                <Text style={styles.bankModalCloseText}>✕</Text>
-              </Pressable>
-            </View>
-            <Text style={styles.bankModalSubtitle}>
-              Ranked by APY — updated May 2026
-            </Text>
-            <ScrollView
-              style={styles.bankModalScroll}
-              showsVerticalScrollIndicator={false}
-            >
-              {US_BANK_DATASET.map((bank, index) => (
-                <View
-                  key={bank.id}
-                  style={[
-                    styles.bankRow,
-                    bank.isLowYield && styles.bankRowLowYield,
-                    index === US_BANK_DATASET.length - 1 && { borderBottomWidth: 0 },
-                  ]}
-                >
-                  <View style={styles.bankInfoCol}>
-                    <Text
-                      style={[styles.bankName, bank.isLowYield && styles.bankNameLow]}
-                      numberOfLines={1}
-                    >
-                      {index + 1}. {bank.name}
-                    </Text>
-                    {bank.note && (
-                      <Text style={styles.bankNote} numberOfLines={1}>{bank.note}</Text>
-                    )}
-                    {bank.isLowYield && (
-                      <Text style={styles.bankLowYieldTag}>Low-Yield Trap</Text>
-                    )}
-                  </View>
-                  <View style={styles.bankApyCol}>
-                    <Text style={[styles.bankApy, bank.isLowYield && styles.bankApyLow]}>
-                      {bank.apy.toFixed(2)}%
-                    </Text>
-                  </View>
-                  <View style={styles.bankCtaCol}>
-                    {bank.url && !bank.isLowYield ? (
-                      <Pressable
-                        style={styles.bankCtaBtn}
-                        onPress={() => handleBankPress(bank.url!)}
-                        accessibilityRole="link"
-                      >
-                        <Text style={styles.bankCtaBtnText}>Claim Rate →</Text>
-                      </Pressable>
-                    ) : (
-                      <View style={styles.bankCtaBtnDisabled}>
-                        <Text style={styles.bankCtaBtnDisabledText}>—</Text>
-                      </View>
-                    )}
-                  </View>
-                </View>
-              ))}
-            </ScrollView>
-            <View style={styles.bankModalFooter}>
-              <Text style={styles.bankModalFooterText}>
-                Rates verified May 2026. Always confirm current APY with provider before depositing.
-              </Text>
-            </View>
-          </Pressable>
-        </Pressable>
-      </Modal>
+      {/* Fixed Bottom Ad */}
+      <View style={styles.fixedAdBanner}>
+        <Text style={styles.fixedAdText}>[ Mobile Fixed Bottom Floating Ad ]</Text>
+      </View>
 
-      {/* ─── LEGAL MODAL OVERLAY ───────────────────────────────────── */}
-      <Modal
-        visible={activeModal !== null && activeModal !== 'banks'}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setActiveModal(null)}
-      >
+      {/* Bottom Navigation */}
+      <View style={[styles.bottomNav, { paddingBottom: Math.max(insets.bottom, 8) }]}>
         <Pressable
-          style={styles.modalOverlay}
-          onPress={() => setActiveModal(null)}
+          style={styles.navItem}
+          onPress={() => handleTabPress('home')}
         >
-          <Pressable
-            style={[styles.modalContent, isDesktop && styles.modalContentDesktop]}
-            onPress={(e) => e.stopPropagation()}
-          >
-            <Text style={styles.modalTitle}>{getModalTitle()}</Text>
-            <ScrollView style={styles.modalScroll} showsVerticalScrollIndicator={false}>
-              <Text selectable style={styles.modalBody}>{getModalBody()}</Text>
-            </ScrollView>
-            <Pressable
-              style={styles.closeBtn}
-              onPress={() => setActiveModal(null)}
-              accessibilityRole="button"
-              accessibilityLabel="Close modal"
-            >
-              <Text style={styles.closeBtnText}>Close</Text>
-            </Pressable>
-          </Pressable>
+          <Text style={styles.navIcon}>🏠</Text>
+          <Text style={[styles.navLabel, activeTab === 'home' && styles.navLabelActive]}>
+            Home
+          </Text>
+          {activeTab === 'home' && <View style={styles.navIndicator} />}
         </Pressable>
-      </Modal>
+        <Pressable
+          style={styles.navItem}
+          onPress={() => handleTabPress('inbox')}
+        >
+          <View>
+            <Text style={styles.navIcon}>📩</Text>
+            <PulsingDot size={6} />
+          </View>
+          <Text style={[styles.navLabel, activeTab === 'inbox' && styles.navLabelActive]}>
+            Inbox
+          </Text>
+          {activeTab === 'inbox' && <View style={styles.navIndicator} />}
+        </Pressable>
+        <Pressable
+          style={styles.navItem}
+          onPress={() => handleTabPress('qr')}
+        >
+          <Text style={styles.navIcon}>🔲</Text>
+          <Text style={[styles.navLabel, activeTab === 'qr' && styles.navLabelActive]}>
+            QR Scanner
+          </Text>
+          {activeTab === 'qr' && <View style={styles.navIndicator} />}
+        </Pressable>
+        <Pressable
+          style={styles.navItem}
+          onPress={() => handleTabPress('profile')}
+        >
+          <Text style={styles.navIcon}>👤</Text>
+          <Text style={[styles.navLabel, activeTab === 'profile' && styles.navLabelActive]}>
+            Profile
+          </Text>
+          {activeTab === 'profile' && <View style={styles.navIndicator} />}
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -450,571 +576,574 @@ export default function SavvymaxUS() {
 // ─── STYLES ──────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
-  root: {
+  container: {
     flex: 1,
-    backgroundColor: '#0A0E17',
-  },
-  scrollView: {
-    flex: 1,
-  },
-  content: {
-    paddingHorizontal: 16,
-    gap: 20,
-    maxWidth: 640,
-    alignSelf: 'center',
+    backgroundColor: COLORS.white,
+    maxWidth: 480,
     width: '100%',
+    alignSelf: 'center',
+    boxShadow: '0 0 24px rgba(0,0,0,0.08)',
   },
 
   // Header
   header: {
-    gap: 10,
-    paddingTop: 12,
-  },
-  brandRow: {
+    backgroundColor: COLORS.primary,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 14,
   },
-  brandIconContainer: {
-    width: 28,
-    height: 28,
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-    gap: 3,
-  },
-  brandIconBar1: {
-    width: 5,
-    height: 10,
-    borderRadius: 2,
-    backgroundColor: '#34D399',
-    opacity: 0.6,
-  },
-  brandIconBar2: {
-    width: 5,
-    height: 17,
-    borderRadius: 2,
-    backgroundColor: '#34D399',
-    opacity: 0.8,
-  },
-  brandIconBar3: {
-    width: 5,
-    height: 24,
-    borderRadius: 2,
-    backgroundColor: '#34D399',
-  },
-  brandName: {
+  headerBrand: {
     fontFamily: Fonts.bold,
-    fontSize: 22,
-    color: '#F3F4F6',
-    letterSpacing: -0.5,
+    fontSize: 20,
+    color: COLORS.white,
+    letterSpacing: 1.5,
+  },
+  headerBadge: {
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  headerBadgeText: {
+    fontFamily: Fonts.medium,
+    fontSize: 11,
+    color: COLORS.white,
   },
 
-  // Hero
-  heroSection: {
+  // Scroll
+  scrollView: {
+    flex: 1,
+  },
+  scrollContent: {
+    paddingBottom: 16,
+  },
+
+  // Panel Content
+  panelContent: {
+    padding: 16,
+    gap: 16,
+  },
+
+  // Wallet Card
+  walletCard: {
+    backgroundColor: COLORS.primary,
+    borderRadius: 16,
+    padding: 24,
+    alignItems: 'center',
+    gap: 8,
+    borderCurve: 'continuous',
+    backgroundImage: 'linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%)',
+  },
+  walletLabel: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.8)',
+  },
+  walletBalance: {
+    fontFamily: Fonts.bold,
+    fontSize: 36,
+    color: COLORS.white,
+    fontVariant: ['tabular-nums'],
+  },
+  apyPill: {
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+    marginTop: 4,
+  },
+  apyPillText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 13,
+    color: COLORS.white,
+  },
+
+  // Ad Banner
+  adBanner: {
+    backgroundColor: '#f3f4f6',
+    borderRadius: 8,
+    paddingVertical: 20,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderStyle: 'dashed',
+  },
+  adText: {
+    fontFamily: Fonts.regular,
+    fontSize: 12,
+    color: COLORS.textLight,
+  },
+
+  // Service Grid
+  serviceGrid: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  serviceItem: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: COLORS.cardBg,
+    paddingVertical: 16,
+    paddingHorizontal: 8,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    gap: 8,
+    borderCurve: 'continuous',
+    minHeight: 80,
+    justifyContent: 'center',
+  },
+  serviceIconWrap: {
+    position: 'relative',
+  },
+  serviceIcon: {
+    fontSize: 24,
+  },
+  serviceLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 11,
+    color: COLORS.text,
+    textAlign: 'center',
+  },
+
+  // Promo Cards
+  promoCard: {
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 16,
+    padding: 20,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderCurve: 'continuous',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+  },
+  promoHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
     gap: 8,
   },
-  headline: {
-    fontFamily: Fonts.bold,
-    fontSize: 28,
-    color: '#F3F4F6',
-    lineHeight: 34,
-    letterSpacing: -0.5,
-  },
-  subheadline: {
-    fontFamily: Fonts.regular,
-    fontSize: 15,
-    color: '#94A3B8',
-    lineHeight: 22,
-  },
-
-  // Deposit Card
-  depositCard: {
-    backgroundColor: '#111827',
-    borderRadius: 16,
-    borderCurve: 'continuous',
-    padding: 22,
-    gap: 14,
-    borderWidth: 1,
-    borderColor: '#1F2937',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-  },
-  depositLabel: {
+  promoTitle: {
     fontFamily: Fonts.semiBold,
-    fontSize: 11,
-    color: '#94A3B8',
-    letterSpacing: 1.2,
-    textTransform: 'uppercase',
-  },
-  depositInputRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-    gap: 4,
-  },
-  currencySymbol: {
-    fontFamily: Fonts.bold,
-    fontSize: 36,
-    color: '#F3F4F6',
-    fontVariant: ['tabular-nums'],
-  },
-  depositInput: {
+    fontSize: 16,
+    color: COLORS.text,
     flex: 1,
-    fontFamily: Fonts.bold,
-    fontSize: 36,
-    color: '#F3F4F6',
-    fontVariant: ['tabular-nums'],
-    padding: 0,
-    margin: 0,
   },
-
-  // Inflation / Bleed Card (Red / Danger)
-  inflationCard: {
-    backgroundColor: '#111827',
-    borderRadius: 16,
-    borderCurve: 'continuous',
-    padding: 20,
-    gap: 16,
-    borderLeftWidth: 4,
-    borderLeftColor: '#F87171',
-    borderWidth: 1,
-    borderColor: '#1F2937',
-    boxShadow: '0 4px 20px rgba(248, 113, 113, 0.08)',
-  },
-  cardHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-  },
-  cardIconDanger: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    borderCurve: 'continuous',
-    backgroundColor: 'rgba(248, 113, 113, 0.12)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cardIconSuccess: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    borderCurve: 'continuous',
-    backgroundColor: 'rgba(52, 211, 153, 0.12)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cardIconText: {
-    fontSize: 18,
-  },
-  cardHeaderText: {
-    flex: 1,
-    gap: 2,
-  },
-  inflationTitle: {
-    fontFamily: Fonts.bold,
-    fontSize: 17,
-    color: '#F3F4F6',
-  },
-  inflationSubtitle: {
-    fontFamily: Fonts.regular,
-    fontSize: 13,
-    color: '#F87171',
-  },
-  annualBleedRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'rgba(248, 113, 113, 0.08)',
-    borderRadius: 10,
-    borderCurve: 'continuous',
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-  },
-  annualBleedLabel: {
-    fontFamily: Fonts.medium,
-    fontSize: 13,
-    color: '#94A3B8',
-  },
-  annualBleedValue: {
-    fontFamily: Fonts.bold,
-    fontSize: 18,
-    color: '#F87171',
-    fontVariant: ['tabular-nums'],
-  },
-  inflationStats: {
-    backgroundColor: 'rgba(248, 113, 113, 0.06)',
-    borderRadius: 12,
-    borderCurve: 'continuous',
-    padding: 16,
-    gap: 12,
-  },
-  statRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  statLabel: {
-    fontFamily: Fonts.regular,
-    fontSize: 13,
-    color: '#94A3B8',
-  },
-  statValueDanger: {
-    fontFamily: Fonts.bold,
-    fontSize: 15,
-    color: '#F87171',
-    fontVariant: ['tabular-nums'],
-  },
-  statDivider: {
-    height: 1,
-    backgroundColor: 'rgba(148, 163, 184, 0.1)',
-  },
-  liveTickerValue: {
-    fontFamily: Fonts.bold,
-    fontSize: 14,
-    color: '#F87171',
-    fontVariant: ['tabular-nums'],
-  },
-
-  // Yield Card (Green / Success)
-  yieldCard: {
-    backgroundColor: '#111827',
-    borderRadius: 16,
-    borderCurve: 'continuous',
-    padding: 20,
-    gap: 16,
-    borderLeftWidth: 4,
-    borderLeftColor: '#34D399',
-    borderWidth: 1,
-    borderColor: '#1F2937',
-    boxShadow: '0 4px 20px rgba(52, 211, 153, 0.08)',
-  },
-  yieldTitle: {
-    fontFamily: Fonts.bold,
-    fontSize: 17,
-    color: '#F3F4F6',
-  },
-  yieldSubtitle: {
-    fontFamily: Fonts.regular,
-    fontSize: 13,
-    color: '#34D399',
-  },
-  optimizedGainRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: 'rgba(52, 211, 153, 0.08)',
-    borderRadius: 10,
-    borderCurve: 'continuous',
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-  },
-  optimizedGainLabel: {
-    fontFamily: Fonts.medium,
-    fontSize: 13,
-    color: '#94A3B8',
-  },
-  optimizedGainValue: {
-    fontFamily: Fonts.bold,
-    fontSize: 18,
-    color: '#34D399',
-    fontVariant: ['tabular-nums'],
-  },
-  ctaContainer: {
-    paddingTop: 4,
-  },
-  ctaButton: {
-    backgroundColor: '#10B981',
-    borderRadius: 12,
-    borderCurve: 'continuous',
-    paddingVertical: 16,
-    paddingHorizontal: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: 52,
-  },
-  ctaButtonText: {
-    fontFamily: Fonts.bold,
-    fontSize: 15,
-    color: '#0A0E17',
-    letterSpacing: 0.3,
-  },
-
-  // AdSense Placeholder
-  adContainer: {
-    alignItems: 'center',
-    gap: 6,
-    paddingVertical: 8,
-  },
-  adLabel: {
-    fontFamily: Fonts.medium,
-    fontSize: 10,
-    color: '#475569',
-    letterSpacing: 1,
-    textTransform: 'uppercase',
-  },
-  adBox: {
-    width: 320,
-    height: 100,
-    borderWidth: 1.5,
-    borderStyle: 'dashed',
-    borderColor: '#1F2937',
+  promoBadge: {
+    backgroundColor: '#eff6ff',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
     borderRadius: 8,
-    borderCurve: 'continuous',
-    backgroundColor: 'rgba(17, 24, 39, 0.6)',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-  adBoxDesktop: {
-    width: 728,
-    height: 90,
-  },
-  adPlaceholder: {
+  promoBadgeText: {
     fontFamily: Fonts.medium,
-    fontSize: 12,
-    color: '#475569',
-    letterSpacing: 0.3,
-  },
-
-  // Footer
-  footer: {
-    gap: 14,
-    paddingTop: 8,
-  },
-  footerDivider: {
-    height: 1,
-    backgroundColor: '#1F2937',
-  },
-  footerLinks: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 12,
-    flexWrap: 'wrap',
-  },
-  linkPressable: {
-    minHeight: 44,
-    justifyContent: 'center',
-  },
-  link: {
-    fontFamily: Fonts.medium,
-    fontSize: 13,
-    color: '#94A3B8',
-    textDecorationLine: 'underline',
-  },
-  footerSeparator: {
-    fontFamily: Fonts.regular,
-    fontSize: 13,
-    color: '#475569',
-  },
-  copyright: {
-    fontFamily: Fonts.regular,
     fontSize: 11,
-    color: '#475569',
-    textAlign: 'center',
-    lineHeight: 18,
+    color: COLORS.primary,
+  },
+  promoDescription: {
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    color: COLORS.textMuted,
+    lineHeight: 20,
   },
 
-  // Modal Overlay (shared)
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 24,
-  },
-  modalContent: {
-    backgroundColor: '#111827',
-    borderRadius: 20,
-    borderCurve: 'continuous',
-    padding: 24,
-    maxWidth: 500,
-    width: '100%',
-    maxHeight: '80%',
-    borderWidth: 1,
-    borderColor: '#1F2937',
-    boxShadow: '0 24px 48px rgba(0, 0, 0, 0.5)',
-  },
-  modalContentDesktop: {
-    maxWidth: 560,
-    padding: 32,
-  },
-  modalTitle: {
-    fontFamily: Fonts.bold,
-    fontSize: 22,
-    color: '#F3F4F6',
-    marginBottom: 16,
-    letterSpacing: -0.3,
-  },
-  modalScroll: {
-    maxHeight: 400,
-  },
-  modalBody: {
-    fontFamily: Fonts.regular,
-    fontSize: 14,
-    color: '#94A3B8',
-    lineHeight: 22,
-  },
-  closeBtn: {
-    marginTop: 20,
-    backgroundColor: 'rgba(52, 211, 153, 0.12)',
-    borderRadius: 12,
-    borderCurve: 'continuous',
+  // CTA Button
+  ctaButton: {
+    backgroundColor: COLORS.primary,
+    borderRadius: 10,
     paddingVertical: 14,
     paddingHorizontal: 24,
     alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: 48,
-    borderWidth: 1,
-    borderColor: 'rgba(52, 211, 153, 0.25)',
+    borderCurve: 'continuous',
   },
-  closeBtnText: {
+  ctaButtonText: {
     fontFamily: Fonts.semiBold,
-    fontSize: 15,
-    color: '#34D399',
+    fontSize: 14,
+    color: COLORS.white,
   },
 
-  // Bank Comparison Modal
-  bankModalContent: {
-    backgroundColor: '#0F1629',
-    borderRadius: 20,
-    borderCurve: 'continuous',
-    padding: 20,
-    maxWidth: 580,
-    width: '100%',
-    maxHeight: '90%',
-    borderWidth: 1,
-    borderColor: '#1F2937',
-    boxShadow: '0 24px 48px rgba(0, 0, 0, 0.6)',
-  },
-  bankModalContentDesktop: {
-    maxWidth: 640,
-    padding: 28,
-  },
-  bankModalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-  },
-  bankModalClose: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: 'rgba(148, 163, 184, 0.1)',
+  // Credit Dial
+  dialContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingVertical: 8,
   },
-  bankModalCloseText: {
-    fontSize: 16,
-    color: '#94A3B8',
-  },
-  bankModalSubtitle: {
-    fontFamily: Fonts.regular,
-    fontSize: 13,
-    color: '#64748B',
-    marginBottom: 16,
-  },
-  bankModalScroll: {
-    maxHeight: 500,
-  },
-  bankRow: {
-    flexDirection: 'row',
+  dialOuter: {
+    width: 160,
+    height: 90,
+    position: 'relative',
     alignItems: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 6,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(31, 41, 55, 0.6)',
-    gap: 8,
+    justifyContent: 'flex-end',
+    overflow: 'hidden',
   },
-  bankRowLowYield: {
-    opacity: 0.55,
-    backgroundColor: 'rgba(248, 113, 113, 0.04)',
-    borderRadius: 10,
+  dialTrack: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    borderWidth: 12,
+    borderColor: '#e5e7eb',
+    borderBottomColor: 'transparent',
+    borderLeftColor: 'transparent',
+    transform: [{ rotate: '0deg' }],
   },
-  bankInfoCol: {
-    flex: 1,
-    flexShrink: 1,
-    minWidth: 120,
-    gap: 2,
+  dialFill: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    borderWidth: 12,
+    borderColor: COLORS.success,
+    borderBottomColor: 'transparent',
+    borderLeftColor: 'transparent',
+    transform: [{ rotate: '0deg' }],
   },
-  bankName: {
-    fontFamily: Fonts.semiBold,
-    fontSize: 13,
-    color: '#F3F4F6',
+  dialNeedle: {
+    position: 'absolute',
+    bottom: 78,
+    left: 76,
+    width: 4,
+    height: 50,
+    backgroundColor: COLORS.text,
+    borderRadius: 2,
+    transform: [{ rotate: '45deg' }],
   },
-  bankNameLow: {
-    color: '#64748B',
+  dialCenter: {
+    alignItems: 'center',
+    marginBottom: 4,
   },
-  bankNote: {
-    fontFamily: Fonts.regular,
-    fontSize: 10,
-    color: '#64748B',
-  },
-  bankLowYieldTag: {
-    fontFamily: Fonts.semiBold,
-    fontSize: 9,
-    color: '#F87171',
-    letterSpacing: 0.5,
-    textTransform: 'uppercase',
-    marginTop: 2,
-  },
-  bankApyCol: {
-    alignItems: 'flex-end',
-    flexShrink: 0,
-    minWidth: 48,
-  },
-  bankApy: {
+  dialScore: {
     fontFamily: Fonts.bold,
-    fontSize: 14,
-    color: '#34D399',
+    fontSize: 28,
+    color: COLORS.text,
     fontVariant: ['tabular-nums'],
   },
-  bankApyLow: {
-    color: '#64748B',
+  dialLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 12,
+    color: COLORS.success,
+    marginTop: 2,
   },
-  bankCtaCol: {
-    flexShrink: 0,
-    alignItems: 'flex-end',
+
+  // Tracker Panel
+  panelTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: 22,
+    color: COLORS.text,
   },
-  bankCtaBtn: {
-    backgroundColor: 'rgba(52, 211, 153, 0.12)',
-    borderRadius: 8,
-    borderCurve: 'continuous',
-    paddingVertical: 7,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: 'rgba(52, 211, 153, 0.25)',
-    minHeight: 32,
-    justifyContent: 'center',
+  panelSubtitle: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: COLORS.textMuted,
+    marginTop: -8,
   },
-  bankCtaBtnText: {
-    fontFamily: Fonts.semiBold,
-    fontSize: 10,
-    color: '#34D399',
-    letterSpacing: 0.2,
-  },
-  bankCtaBtnDisabled: {
-    paddingVertical: 7,
-    paddingHorizontal: 10,
-    minHeight: 32,
-    justifyContent: 'center',
+  trackerRow: {
+    flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 12,
+    padding: 16,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderCurve: 'continuous',
   },
-  bankCtaBtnDisabledText: {
+  trackerRank: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#eff6ff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  trackerRankText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 12,
+    color: COLORS.primary,
+  },
+  trackerInfo: {
+    flex: 1,
+    gap: 2,
+  },
+  trackerName: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 15,
+    color: COLORS.text,
+  },
+  trackerTier: {
     fontFamily: Fonts.regular,
     fontSize: 12,
-    color: '#475569',
+    color: COLORS.textMuted,
   },
-  bankModalFooter: {
-    marginTop: 16,
-    paddingTop: 12,
+  trackerApyBadge: {
+    backgroundColor: '#ecfdf5',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 8,
+  },
+  trackerApyText: {
+    fontFamily: Fonts.bold,
+    fontSize: 14,
+    color: '#059669',
+    fontVariant: ['tabular-nums'],
+  },
+
+  // Calculator Panel
+  calcCard: {
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 16,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderCurve: 'continuous',
+  },
+  calcLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 13,
+    color: COLORS.textMuted,
+    marginBottom: 8,
+  },
+  calcInput: {
+    backgroundColor: '#f9fafb',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    fontFamily: Fonts.semiBold,
+    fontSize: 18,
+    color: COLORS.text,
+    fontVariant: ['tabular-nums'],
+  },
+  apySelector: {
+    gap: 8,
+  },
+  apyOption: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    backgroundColor: '#f9fafb',
+    borderCurve: 'continuous',
+  },
+  apyOptionActive: {
+    borderColor: COLORS.primary,
+    backgroundColor: '#eff6ff',
+  },
+  apyOptionText: {
+    fontFamily: Fonts.medium,
+    fontSize: 14,
+    color: COLORS.textMuted,
+  },
+  apyOptionTextActive: {
+    color: COLORS.primary,
+  },
+  calcResult: {
+    marginTop: 20,
+    paddingTop: 20,
     borderTopWidth: 1,
-    borderTopColor: 'rgba(31, 41, 55, 0.6)',
+    borderTopColor: COLORS.border,
+    alignItems: 'center',
+    gap: 4,
   },
-  bankModalFooterText: {
+  calcResultLabel: {
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    color: COLORS.textMuted,
+  },
+  calcResultValue: {
+    fontFamily: Fonts.bold,
+    fontSize: 32,
+    color: COLORS.success,
+    fontVariant: ['tabular-nums'],
+  },
+
+  // Perks Panel
+  perkCard: {
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 16,
+    padding: 20,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderCurve: 'continuous',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+  },
+  perkBadge: {
+    backgroundColor: '#fef3c7',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    alignSelf: 'flex-start',
+  },
+  perkBadgeText: {
+    fontFamily: Fonts.bold,
+    fontSize: 10,
+    color: '#92400e',
+    letterSpacing: 0.5,
+  },
+  perkTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: 18,
+    color: COLORS.text,
+  },
+  perkDescription: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: COLORS.textMuted,
+    lineHeight: 22,
+  },
+  perkDetails: {
+    gap: 8,
+    paddingVertical: 4,
+  },
+  perkDetailRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  perkDetailIcon: {
+    fontSize: 14,
+    color: COLORS.success,
+    fontFamily: Fonts.bold,
+  },
+  perkDetailText: {
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    color: COLORS.text,
+  },
+
+  // Trends Panel
+  trendsPlaceholder: {
+    backgroundColor: COLORS.cardBg,
+    borderRadius: 16,
+    padding: 24,
+    gap: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    alignItems: 'center',
+    borderCurve: 'continuous',
+  },
+  trendsIcon: {
+    fontSize: 48,
+  },
+  trendsTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: 18,
+    color: COLORS.text,
+  },
+  trendsDescription: {
+    fontFamily: Fonts.regular,
+    fontSize: 14,
+    color: COLORS.textMuted,
+    textAlign: 'center',
+    lineHeight: 22,
+  },
+  trendsStats: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 16,
+    gap: 16,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+    width: '100%',
+    marginTop: 8,
+  },
+  trendsStat: {
+    alignItems: 'center',
+    gap: 2,
+  },
+  trendsStatValue: {
+    fontFamily: Fonts.bold,
+    fontSize: 16,
+    color: COLORS.text,
+    fontVariant: ['tabular-nums'],
+  },
+  trendsStatLabel: {
     fontFamily: Fonts.regular,
     fontSize: 11,
-    color: '#475569',
-    textAlign: 'center',
-    lineHeight: 16,
+    color: COLORS.textMuted,
+  },
+  trendsDivider: {
+    width: 1,
+    height: 32,
+    backgroundColor: COLORS.border,
+  },
+
+  // Return Button
+  returnButton: {
+    backgroundColor: '#f3f4f6',
+    borderRadius: 10,
+    paddingVertical: 14,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderCurve: 'continuous',
+    marginTop: 8,
+  },
+  returnButtonText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 14,
+    color: COLORS.textMuted,
+  },
+
+  // Fixed Ad Banner
+  fixedAdBanner: {
+    backgroundColor: '#f9fafb',
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+    paddingVertical: 10,
+    alignItems: 'center',
+  },
+  fixedAdText: {
+    fontFamily: Fonts.regular,
+    fontSize: 11,
+    color: COLORS.textLight,
+  },
+
+  // Bottom Nav
+  bottomNav: {
+    flexDirection: 'row',
+    backgroundColor: COLORS.white,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+    paddingTop: 8,
+  },
+  navItem: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 6,
+    gap: 2,
+    minHeight: 44,
+    position: 'relative',
+  },
+  navIcon: {
+    fontSize: 20,
+  },
+  navLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 10,
+    color: COLORS.textMuted,
+  },
+  navLabelActive: {
+    color: COLORS.primary,
+  },
+  navIndicator: {
+    position: 'absolute',
+    top: 0,
+    width: 20,
+    height: 3,
+    backgroundColor: COLORS.primary,
+    borderRadius: 1.5,
   },
 });
