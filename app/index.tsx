@@ -23,6 +23,7 @@ interface RegionConfig {
   inflationRate: number;
   apyBenchmark: number;
   optimizedApy: number;
+  affiliateUrl: string;
   uiCopy: {
     headline: string;
     subheadline: string;
@@ -48,6 +49,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 3.2,
     apyBenchmark: 0.01,
     optimizedApy: 5.05,
+    affiliateUrl: 'https://savvymax.goldsphere.org/us-deals',
     uiCopy: {
       headline: 'Stop Losing Money to Inflation',
       subheadline: 'Your savings are bleeding purchasing power every second. See exactly how much — and how to fix it.',
@@ -71,6 +73,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 4.0,
     apyBenchmark: 0.1,
     optimizedApy: 5.22,
+    affiliateUrl: 'https://savvymax.goldsphere.org/uk-deals',
     uiCopy: {
       headline: 'Your Savings Are Losing Value',
       subheadline: 'UK inflation is eroding your cash. See the real cost — and the best savings rates to fight back.',
@@ -94,6 +97,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 3.7,
     apyBenchmark: 0.05,
     optimizedApy: 3.88,
+    affiliateUrl: 'https://savvymax.goldsphere.org/sg-deals',
     uiCopy: {
       headline: 'Your Cash Is Losing Purchasing Power',
       subheadline: 'Singapore inflation silently eats your savings. See the real damage and how to earn more.',
@@ -117,6 +121,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 3.6,
     apyBenchmark: 0.01,
     optimizedApy: 5.50,
+    affiliateUrl: 'https://savvymax.goldsphere.org/au-deals',
     uiCopy: {
       headline: 'Inflation Is Eating Your Savings',
       subheadline: 'Australian inflation erodes purchasing power daily. See what you\'re really losing — and the best rates available.',
@@ -140,6 +145,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 2.9,
     apyBenchmark: 0.01,
     optimizedApy: 4.50,
+    affiliateUrl: 'https://savvymax.goldsphere.org/ca-deals',
     uiCopy: {
       headline: 'Your Savings Are Shrinking',
       subheadline: 'Canadian inflation is quietly reducing your purchasing power. See the numbers and find better rates.',
@@ -163,6 +169,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 2.3,
     apyBenchmark: 0.01,
     optimizedApy: 4.75,
+    affiliateUrl: 'https://savvymax.goldsphere.org/uae-deals',
     uiCopy: {
       headline: 'Maximize Your Savings Returns',
       subheadline: 'Even low UAE inflation erodes idle cash. Discover the best deposit rates available to you.',
@@ -186,6 +193,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 4.7,
     apyBenchmark: 0.05,
     optimizedApy: 5.80,
+    affiliateUrl: 'https://savvymax.goldsphere.org/nz-deals',
     uiCopy: {
       headline: 'Inflation Is Stealing Your Savings',
       subheadline: 'NZ inflation is among the highest in the OECD. See exactly what you\'re losing and how to earn more.',
@@ -209,6 +217,7 @@ const MULTI_COUNTRY_REGISTRY: Record<string, RegionConfig> = {
     inflationRate: 2.0,
     apyBenchmark: 0.01,
     optimizedApy: 3.50,
+    affiliateUrl: 'https://savvymax.goldsphere.org/ie-deals',
     uiCopy: {
       headline: 'Your Euro Savings Are Losing Value',
       subheadline: 'Even moderate inflation erodes idle cash. See the cost and find the best deposit rates in Ireland.',
@@ -276,7 +285,7 @@ export default function UnifiedSavvymax() {
     const interval = setInterval(() => {
       const elapsed = (Date.now() - startTimeRef.current) / 1000;
       setTickerLoss(elapsed * perSecondLoss);
-    }, 1000);
+    }, 100);
     return () => clearInterval(interval);
   }, [perSecondLoss]);
 
@@ -437,7 +446,7 @@ export default function UnifiedSavvymax() {
             <View style={styles.statRow}>
               <Text style={styles.statLabel}>Daily Loss</Text>
               <Text selectable style={styles.statValueDanger}>
-                -{formatCurrency(dailyInflationLoss, 4)}
+                -{formatCurrency(dailyInflationLoss, 2)}
               </Text>
             </View>
           </View>
@@ -498,7 +507,16 @@ export default function UnifiedSavvymax() {
 
           {/* CTA */}
           <View style={styles.ctaContainer}>
-            <Pressable style={styles.ctaButton} accessibilityRole="button">
+            <Pressable
+              style={styles.ctaButton}
+              accessibilityRole="button"
+              onPress={() => {
+                const url = regionConfig.affiliateUrl || 'https://savvymax.goldsphere.org';
+                if (typeof window !== 'undefined') {
+                  window.open(url, '_blank', 'noopener,noreferrer');
+                }
+              }}
+            >
               <Text style={styles.ctaButtonText}>
                 {regionConfig.uiCopy.ctaButton}
               </Text>
