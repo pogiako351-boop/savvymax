@@ -1,450 +1,36 @@
 {
   "version": 1,
-  "generatedAt": 1779067196012,
+  "generatedAt": 1779068592988,
   "entries": {
-    "LegalFooter@components/legal-footer.tsx:7": {
+    "SavvymaxLogo@components/savvymax-logo.tsx:22": {
       "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 7
+        "file": "components/savvymax-logo.tsx",
+        "line": 22
       },
       "styles": [
         {
           "origin": "stylesheet",
           "ref": "styles.container",
-          "file": "components/legal-footer.tsx",
-          "defLine": 63,
+          "file": "components/savvymax-logo.tsx",
+          "defLine": 99,
           "properties": {
-            "marginTop": {
-              "line": 64,
-              "col": 15,
-              "endCol": 17,
-              "raw": "24"
-            },
-            "paddingTop": {
-              "line": 65,
-              "col": 16,
-              "endCol": 17,
-              "raw": "0"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:9": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 9
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.divider",
-          "file": "components/legal-footer.tsx",
-          "defLine": 67,
-          "properties": {
-            "height": {
-              "line": 68,
-              "col": 12,
-              "endCol": 13,
-              "raw": "1"
-            },
-            "backgroundColor": {
-              "line": 69,
-              "col": 21,
-              "endCol": 30,
-              "raw": "'#1E293B'"
-            },
-            "marginBottom": {
-              "line": 70,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:12": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 12
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "components/legal-footer.tsx",
-          "defLine": 72,
-          "properties": {
-            "marginBottom": {
-              "line": 73,
-              "col": 18,
-              "endCol": 20,
-              "raw": "18"
-            },
-            "gap": {
-              "line": 74,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:13": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 13
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heading",
-          "file": "components/legal-footer.tsx",
-          "defLine": 76,
-          "properties": {
-            "fontSize": {
-              "line": 78,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 79,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "letterSpacing": {
-              "line": 80,
+            "flexDirection": {
+              "line": 100,
               "col": 19,
-              "endCol": 22,
-              "raw": "1.2"
-            },
-            "textTransform": {
-              "line": 81,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:14": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 14
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.body",
-          "file": "components/legal-footer.tsx",
-          "defLine": 83,
-          "properties": {
-            "fontSize": {
-              "line": 85,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 86,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "lineHeight": {
-              "line": 87,
-              "col": 16,
-              "endCol": 18,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:26": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 26
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "components/legal-footer.tsx",
-          "defLine": 72,
-          "properties": {
-            "marginBottom": {
-              "line": 73,
-              "col": 18,
-              "endCol": 20,
-              "raw": "18"
-            },
-            "gap": {
-              "line": 74,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:27": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 27
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heading",
-          "file": "components/legal-footer.tsx",
-          "defLine": 76,
-          "properties": {
-            "fontSize": {
-              "line": 78,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 79,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "letterSpacing": {
-              "line": 80,
-              "col": 19,
-              "endCol": 22,
-              "raw": "1.2"
-            },
-            "textTransform": {
-              "line": 81,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:28": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 28
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.body",
-          "file": "components/legal-footer.tsx",
-          "defLine": 83,
-          "properties": {
-            "fontSize": {
-              "line": 85,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 86,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "lineHeight": {
-              "line": 87,
-              "col": 16,
-              "endCol": 18,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:40": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 40
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "components/legal-footer.tsx",
-          "defLine": 72,
-          "properties": {
-            "marginBottom": {
-              "line": 73,
-              "col": 18,
-              "endCol": 20,
-              "raw": "18"
-            },
-            "gap": {
-              "line": 74,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:41": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 41
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heading",
-          "file": "components/legal-footer.tsx",
-          "defLine": 76,
-          "properties": {
-            "fontSize": {
-              "line": 78,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 79,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#94A3B8'"
-            },
-            "letterSpacing": {
-              "line": 80,
-              "col": 19,
-              "endCol": 22,
-              "raw": "1.2"
-            },
-            "textTransform": {
-              "line": 81,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:42": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 42
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.body",
-          "file": "components/legal-footer.tsx",
-          "defLine": 83,
-          "properties": {
-            "fontSize": {
-              "line": 85,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "color": {
-              "line": 86,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "lineHeight": {
-              "line": 87,
-              "col": 16,
-              "endCol": 18,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:53": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 53
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.copyrightRow",
-          "file": "components/legal-footer.tsx",
-          "defLine": 89,
-          "properties": {
-            "marginTop": {
-              "line": 90,
-              "col": 15,
-              "endCol": 16,
-              "raw": "8"
-            },
-            "paddingTop": {
-              "line": 91,
-              "col": 16,
-              "endCol": 18,
-              "raw": "14"
-            },
-            "borderTopWidth": {
-              "line": 92,
-              "col": 20,
-              "endCol": 21,
-              "raw": "1"
-            },
-            "borderTopColor": {
-              "line": 93,
-              "col": 20,
-              "endCol": 29,
-              "raw": "'#1E293B'"
+              "endCol": 24,
+              "raw": "'row'"
             },
             "alignItems": {
-              "line": 94,
+              "line": 101,
               "col": 16,
               "endCol": 24,
               "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "LegalFooter@components/legal-footer.tsx:54": {
-      "element": {
-        "file": "components/legal-footer.tsx",
-        "line": 54
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.copyright",
-          "file": "components/legal-footer.tsx",
-          "defLine": 96,
-          "properties": {
-            "fontSize": {
-              "line": 98,
-              "col": 14,
-              "endCol": 16,
+            },
+            "gap": {
+              "line": 102,
+              "col": 9,
+              "endCol": 11,
               "raw": "10"
-            },
-            "color": {
-              "line": 99,
-              "col": 11,
-              "endCol": 20,
-              "raw": "'#475569'"
-            },
-            "letterSpacing": {
-              "line": 100,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.2"
             }
           }
         }
@@ -1058,6 +644,454 @@
         }
       ]
     },
+    "LegalFooter@components/legal-footer.tsx:7": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 7
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "components/legal-footer.tsx",
+          "defLine": 63,
+          "properties": {
+            "marginTop": {
+              "line": 64,
+              "col": 15,
+              "endCol": 17,
+              "raw": "24"
+            },
+            "paddingTop": {
+              "line": 65,
+              "col": 16,
+              "endCol": 17,
+              "raw": "0"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:9": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 9
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.divider",
+          "file": "components/legal-footer.tsx",
+          "defLine": 67,
+          "properties": {
+            "height": {
+              "line": 68,
+              "col": 12,
+              "endCol": 13,
+              "raw": "1"
+            },
+            "backgroundColor": {
+              "line": 69,
+              "col": 21,
+              "endCol": 30,
+              "raw": "'#1E293B'"
+            },
+            "marginBottom": {
+              "line": 70,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:12": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 12
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "components/legal-footer.tsx",
+          "defLine": 72,
+          "properties": {
+            "marginBottom": {
+              "line": 73,
+              "col": 18,
+              "endCol": 20,
+              "raw": "18"
+            },
+            "gap": {
+              "line": 74,
+              "col": 9,
+              "endCol": 10,
+              "raw": "6"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:13": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 13
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heading",
+          "file": "components/legal-footer.tsx",
+          "defLine": 76,
+          "properties": {
+            "fontSize": {
+              "line": 78,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 79,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#94A3B8'"
+            },
+            "letterSpacing": {
+              "line": 80,
+              "col": 19,
+              "endCol": 22,
+              "raw": "1.2"
+            },
+            "textTransform": {
+              "line": 81,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:14": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 14
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.body",
+          "file": "components/legal-footer.tsx",
+          "defLine": 83,
+          "properties": {
+            "fontSize": {
+              "line": 85,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 86,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#475569'"
+            },
+            "lineHeight": {
+              "line": 87,
+              "col": 16,
+              "endCol": 18,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:26": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 26
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "components/legal-footer.tsx",
+          "defLine": 72,
+          "properties": {
+            "marginBottom": {
+              "line": 73,
+              "col": 18,
+              "endCol": 20,
+              "raw": "18"
+            },
+            "gap": {
+              "line": 74,
+              "col": 9,
+              "endCol": 10,
+              "raw": "6"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:27": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 27
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heading",
+          "file": "components/legal-footer.tsx",
+          "defLine": 76,
+          "properties": {
+            "fontSize": {
+              "line": 78,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 79,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#94A3B8'"
+            },
+            "letterSpacing": {
+              "line": 80,
+              "col": 19,
+              "endCol": 22,
+              "raw": "1.2"
+            },
+            "textTransform": {
+              "line": 81,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:28": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 28
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.body",
+          "file": "components/legal-footer.tsx",
+          "defLine": 83,
+          "properties": {
+            "fontSize": {
+              "line": 85,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 86,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#475569'"
+            },
+            "lineHeight": {
+              "line": 87,
+              "col": 16,
+              "endCol": 18,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:40": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 40
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "components/legal-footer.tsx",
+          "defLine": 72,
+          "properties": {
+            "marginBottom": {
+              "line": 73,
+              "col": 18,
+              "endCol": 20,
+              "raw": "18"
+            },
+            "gap": {
+              "line": 74,
+              "col": 9,
+              "endCol": 10,
+              "raw": "6"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:41": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 41
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heading",
+          "file": "components/legal-footer.tsx",
+          "defLine": 76,
+          "properties": {
+            "fontSize": {
+              "line": 78,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 79,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#94A3B8'"
+            },
+            "letterSpacing": {
+              "line": 80,
+              "col": 19,
+              "endCol": 22,
+              "raw": "1.2"
+            },
+            "textTransform": {
+              "line": 81,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:42": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 42
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.body",
+          "file": "components/legal-footer.tsx",
+          "defLine": 83,
+          "properties": {
+            "fontSize": {
+              "line": 85,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 86,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#475569'"
+            },
+            "lineHeight": {
+              "line": 87,
+              "col": 16,
+              "endCol": 18,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:53": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 53
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.copyrightRow",
+          "file": "components/legal-footer.tsx",
+          "defLine": 89,
+          "properties": {
+            "marginTop": {
+              "line": 90,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
+            },
+            "paddingTop": {
+              "line": 91,
+              "col": 16,
+              "endCol": 18,
+              "raw": "14"
+            },
+            "borderTopWidth": {
+              "line": 92,
+              "col": 20,
+              "endCol": 21,
+              "raw": "1"
+            },
+            "borderTopColor": {
+              "line": 93,
+              "col": 20,
+              "endCol": 29,
+              "raw": "'#1E293B'"
+            },
+            "alignItems": {
+              "line": 94,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "LegalFooter@components/legal-footer.tsx:54": {
+      "element": {
+        "file": "components/legal-footer.tsx",
+        "line": 54
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.copyright",
+          "file": "components/legal-footer.tsx",
+          "defLine": 96,
+          "properties": {
+            "fontSize": {
+              "line": 98,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "color": {
+              "line": 99,
+              "col": 11,
+              "endCol": 20,
+              "raw": "'#475569'"
+            },
+            "letterSpacing": {
+              "line": 100,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.2"
+            }
+          }
+        }
+      ]
+    },
     "InflationIndicator@components/inflation-indicator.tsx:36": {
       "element": {
         "file": "components/inflation-indicator.tsx",
@@ -1483,978 +1517,6 @@
               "col": 14,
               "endCol": 16,
               "raw": "15"
-            }
-          }
-        }
-      ]
-    },
-    "CtaButton@components/comparison-table.tsx:24": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 24
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.ctaDisabled",
-          "file": "components/comparison-table.tsx",
-          "defLine": 296,
-          "properties": {
-            "backgroundColor": {
-              "line": 297,
-              "col": 21,
-              "endCol": 47,
-              "raw": "'rgba(100, 116, 139, 0.2)'"
-            },
-            "borderRadius": {
-              "line": 298,
-              "col": 18,
-              "endCol": 19,
-              "raw": "8"
-            },
-            "borderCurve": {
-              "line": 299,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "paddingVertical": {
-              "line": 300,
-              "col": 21,
-              "endCol": 23,
-              "raw": "10"
-            },
-            "paddingHorizontal": {
-              "line": 301,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "alignItems": {
-              "line": 302,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "justifyContent": {
-              "line": 303,
-              "col": 20,
-              "endCol": 28,
-              "raw": "'center'"
-            }
-          }
-        }
-      ]
-    },
-    "CtaButton@components/comparison-table.tsx:25": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 25
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.ctaDisabledText",
-          "file": "components/comparison-table.tsx",
-          "defLine": 305,
-          "properties": {
-            "fontSize": {
-              "line": 307,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "letterSpacing": {
-              "line": 309,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.3"
-            }
-          }
-        }
-      ]
-    },
-    "CtaButton@components/comparison-table.tsx:31": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 31
-      },
-      "styles": [
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "CtaButton@components/comparison-table.tsx:39": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 39
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.ctaText",
-          "file": "components/comparison-table.tsx",
-          "defLine": 290,
-          "properties": {
-            "fontSize": {
-              "line": 292,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "color": {
-              "line": 293,
-              "col": 11,
-              "endCol": 17,
-              "raw": "'#000'"
-            },
-            "letterSpacing": {
-              "line": 294,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.3"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:46": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 46
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "components/comparison-table.tsx",
-          "defLine": 137,
-          "properties": {
-            "gap": {
-              "line": 138,
-              "col": 9,
-              "endCol": 11,
-              "raw": "10"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:47": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 47
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.sectionTitle",
-          "file": "components/comparison-table.tsx",
-          "defLine": 140,
-          "properties": {
-            "fontSize": {
-              "line": 142,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            },
-            "marginBottom": {
-              "line": 144,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:50": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 50
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerRow",
-          "file": "components/comparison-table.tsx",
-          "defLine": 146,
-          "properties": {
-            "flexDirection": {
-              "line": 147,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 148,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "paddingHorizontal": {
-              "line": 149,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingVertical": {
-              "line": 150,
-              "col": 21,
-              "endCol": 23,
-              "raw": "10"
-            },
-            "borderBottomWidth": {
-              "line": 151,
-              "col": 23,
-              "endCol": 24,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:51": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 51
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerCell",
-          "file": "components/comparison-table.tsx",
-          "defLine": 154,
-          "properties": {
-            "fontSize": {
-              "line": 156,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "textTransform": {
-              "line": 158,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "letterSpacing": {
-              "line": 159,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            }
-          }
-        },
-        {
-          "origin": "inline",
-          "file": "components/comparison-table.tsx",
-          "properties": {
-            "width": {
-              "line": 51,
-              "col": 50,
-              "endCol": 52,
-              "raw": "28"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:52": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 52
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerCell",
-          "file": "components/comparison-table.tsx",
-          "defLine": 154,
-          "properties": {
-            "fontSize": {
-              "line": 156,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "textTransform": {
-              "line": 158,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "letterSpacing": {
-              "line": 159,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            }
-          }
-        },
-        {
-          "origin": "inline",
-          "file": "components/comparison-table.tsx",
-          "properties": {
-            "flex": {
-              "line": 52,
-              "col": 49,
-              "endCol": 50,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:53": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 53
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerCell",
-          "file": "components/comparison-table.tsx",
-          "defLine": 154,
-          "properties": {
-            "fontSize": {
-              "line": 156,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "textTransform": {
-              "line": 158,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "letterSpacing": {
-              "line": 159,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            }
-          }
-        },
-        {
-          "origin": "inline",
-          "file": "components/comparison-table.tsx",
-          "properties": {
-            "width": {
-              "line": 53,
-              "col": 50,
-              "endCol": 52,
-              "raw": "55"
-            },
-            "textAlign": {
-              "line": 53,
-              "col": 65,
-              "endCol": 72,
-              "raw": "'right'"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:54": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 54
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerCell",
-          "file": "components/comparison-table.tsx",
-          "defLine": 154,
-          "properties": {
-            "fontSize": {
-              "line": 156,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "textTransform": {
-              "line": 158,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "letterSpacing": {
-              "line": 159,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            }
-          }
-        },
-        {
-          "origin": "inline",
-          "file": "components/comparison-table.tsx",
-          "properties": {
-            "width": {
-              "line": 54,
-              "col": 50,
-              "endCol": 52,
-              "raw": "80"
-            },
-            "textAlign": {
-              "line": 54,
-              "col": 65,
-              "endCol": 72,
-              "raw": "'right'"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:55": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 55
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.headerCell",
-          "file": "components/comparison-table.tsx",
-          "defLine": 154,
-          "properties": {
-            "fontSize": {
-              "line": 156,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "textTransform": {
-              "line": 158,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            },
-            "letterSpacing": {
-              "line": 159,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            }
-          }
-        },
-        {
-          "origin": "inline",
-          "file": "components/comparison-table.tsx",
-          "properties": {
-            "width": {
-              "line": 55,
-              "col": 50,
-              "endCol": 52,
-              "raw": "65"
-            },
-            "textAlign": {
-              "line": 55,
-              "col": 65,
-              "endCol": 72,
-              "raw": "'right'"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:63": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 63
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.row",
-          "file": "components/comparison-table.tsx",
-          "defLine": 161,
-          "properties": {
-            "borderRadius": {
-              "line": 163,
-              "col": 18,
-              "endCol": 20,
-              "raw": "14"
-            },
-            "borderCurve": {
-              "line": 164,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "overflow": {
-              "line": 165,
-              "col": 14,
-              "endCol": 22,
-              "raw": "'hidden'"
-            },
-            "boxShadow": {
-              "line": 166,
-              "col": 15,
-              "endCol": 45,
-              "raw": "'0 2px 8px rgba(0, 0, 0, 0.2)'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:70": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 70
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bestPickBadge",
-          "file": "components/comparison-table.tsx",
-          "defLine": 173,
-          "properties": {
-            "paddingHorizontal": {
-              "line": 175,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingVertical": {
-              "line": 176,
-              "col": 21,
-              "endCol": 22,
-              "raw": "5"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:71": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 71
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bestPickText",
-          "file": "components/comparison-table.tsx",
-          "defLine": 178,
-          "properties": {
-            "fontSize": {
-              "line": 180,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "color": {
-              "line": 181,
-              "col": 11,
-              "endCol": 17,
-              "raw": "'#000'"
-            },
-            "letterSpacing": {
-              "line": 182,
-              "col": 19,
-              "endCol": 22,
-              "raw": "0.5"
-            },
-            "textTransform": {
-              "line": 183,
-              "col": 19,
-              "endCol": 30,
-              "raw": "'uppercase'"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:74": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 74
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowContent",
-          "file": "components/comparison-table.tsx",
-          "defLine": 185,
-          "properties": {
-            "flexDirection": {
-              "line": 186,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 187,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
-            "paddingHorizontal": {
-              "line": 188,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingTop": {
-              "line": 189,
-              "col": 16,
-              "endCol": 18,
-              "raw": "14"
-            },
-            "paddingBottom": {
-              "line": 190,
-              "col": 19,
-              "endCol": 20,
-              "raw": "8"
-            },
-            "gap": {
-              "line": 191,
-              "col": 9,
-              "endCol": 10,
-              "raw": "8"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:75": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 75
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rank",
-          "file": "components/comparison-table.tsx",
-          "defLine": 193,
-          "properties": {
-            "width": {
-              "line": 194,
-              "col": 11,
-              "endCol": 13,
-              "raw": "22"
-            },
-            "fontSize": {
-              "line": 196,
-              "col": 14,
-              "endCol": 16,
-              "raw": "15"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:78": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 78
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankInfo",
-          "file": "components/comparison-table.tsx",
-          "defLine": 203,
-          "properties": {
-            "flex": {
-              "line": 204,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "gap": {
-              "line": 205,
-              "col": 9,
-              "endCol": 10,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:79": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 79
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bankName",
-          "file": "components/comparison-table.tsx",
-          "defLine": 207,
-          "properties": {
-            "fontSize": {
-              "line": 209,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:87": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 87
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.requirements",
-          "file": "components/comparison-table.tsx",
-          "defLine": 215,
-          "properties": {
-            "fontSize": {
-              "line": 217,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "marginTop": {
-              "line": 219,
-              "col": 15,
-              "endCol": 16,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:92": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 92
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.apy",
-          "file": "components/comparison-table.tsx",
-          "defLine": 221,
-          "properties": {
-            "width": {
-              "line": 222,
-              "col": 11,
-              "endCol": 13,
-              "raw": "52"
-            },
-            "fontSize": {
-              "line": 224,
-              "col": 14,
-              "endCol": 16,
-              "raw": "15"
-            },
-            "textAlign": {
-              "line": 226,
-              "col": 15,
-              "endCol": 22,
-              "raw": "'right'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:95": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 95
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.earningsCol",
-          "file": "components/comparison-table.tsx",
-          "defLine": 232,
-          "properties": {
-            "width": {
-              "line": 233,
-              "col": 11,
-              "endCol": 13,
-              "raw": "80"
-            },
-            "alignItems": {
-              "line": 234,
-              "col": 16,
-              "endCol": 26,
-              "raw": "'flex-end'"
-            },
-            "gap": {
-              "line": 235,
-              "col": 9,
-              "endCol": 10,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:96": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 96
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.earnings",
-          "file": "components/comparison-table.tsx",
-          "defLine": 237,
-          "properties": {
-            "fontSize": {
-              "line": 239,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:107": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 107
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.feeNote",
-          "file": "components/comparison-table.tsx",
-          "defLine": 249,
-          "properties": {
-            "fontSize": {
-              "line": 251,
-              "col": 14,
-              "endCol": 15,
-              "raw": "9"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:112": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 112
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.feeWarningBadge",
-          "file": "components/comparison-table.tsx",
-          "defLine": 254,
-          "properties": {
-            "fontSize": {
-              "line": 256,
-              "col": 14,
-              "endCol": 15,
-              "raw": "9"
-            }
-          }
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:115": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 115
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.delta",
-          "file": "components/comparison-table.tsx",
-          "defLine": 259,
-          "properties": {
-            "width": {
-              "line": 260,
-              "col": 11,
-              "endCol": 13,
-              "raw": "62"
-            },
-            "fontSize": {
-              "line": 262,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "textAlign": {
-              "line": 263,
-              "col": 15,
-              "endCol": 22,
-              "raw": "'right'"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ComparisonTable@components/comparison-table.tsx:126": {
-      "element": {
-        "file": "components/comparison-table.tsx",
-        "line": 126
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.ctaRow",
-          "file": "components/comparison-table.tsx",
-          "defLine": 272,
-          "properties": {
-            "paddingHorizontal": {
-              "line": 273,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingBottom": {
-              "line": 274,
-              "col": 19,
-              "endCol": 21,
-              "raw": "12"
-            },
-            "paddingTop": {
-              "line": 275,
-              "col": 16,
-              "endCol": 17,
-              "raw": "4"
             }
           }
         }
@@ -4056,32 +3118,152 @@
         }
       ]
     },
-    "SavvymaxLogo@components/savvymax-logo.tsx:22": {
+    "CtaButton@components/comparison-table.tsx:24": {
       "element": {
-        "file": "components/savvymax-logo.tsx",
-        "line": 22
+        "file": "components/comparison-table.tsx",
+        "line": 24
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.ctaDisabled",
+          "file": "components/comparison-table.tsx",
+          "defLine": 296,
+          "properties": {
+            "backgroundColor": {
+              "line": 297,
+              "col": 21,
+              "endCol": 47,
+              "raw": "'rgba(100, 116, 139, 0.2)'"
+            },
+            "borderRadius": {
+              "line": 298,
+              "col": 18,
+              "endCol": 19,
+              "raw": "8"
+            },
+            "borderCurve": {
+              "line": 299,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "paddingVertical": {
+              "line": 300,
+              "col": 21,
+              "endCol": 23,
+              "raw": "10"
+            },
+            "paddingHorizontal": {
+              "line": 301,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "alignItems": {
+              "line": 302,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "justifyContent": {
+              "line": 303,
+              "col": 20,
+              "endCol": 28,
+              "raw": "'center'"
+            }
+          }
+        }
+      ]
+    },
+    "CtaButton@components/comparison-table.tsx:25": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 25
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.ctaDisabledText",
+          "file": "components/comparison-table.tsx",
+          "defLine": 305,
+          "properties": {
+            "fontSize": {
+              "line": 307,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "letterSpacing": {
+              "line": 309,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.3"
+            }
+          }
+        }
+      ]
+    },
+    "CtaButton@components/comparison-table.tsx:31": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 31
+      },
+      "styles": [
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "CtaButton@components/comparison-table.tsx:39": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 39
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.ctaText",
+          "file": "components/comparison-table.tsx",
+          "defLine": 290,
+          "properties": {
+            "fontSize": {
+              "line": 292,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "color": {
+              "line": 293,
+              "col": 11,
+              "endCol": 17,
+              "raw": "'#000'"
+            },
+            "letterSpacing": {
+              "line": 294,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.3"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:46": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 46
       },
       "styles": [
         {
           "origin": "stylesheet",
           "ref": "styles.container",
-          "file": "components/savvymax-logo.tsx",
-          "defLine": 99,
+          "file": "components/comparison-table.tsx",
+          "defLine": 137,
           "properties": {
-            "flexDirection": {
-              "line": 100,
-              "col": 19,
-              "endCol": 24,
-              "raw": "'row'"
-            },
-            "alignItems": {
-              "line": 101,
-              "col": 16,
-              "endCol": 24,
-              "raw": "'center'"
-            },
             "gap": {
-              "line": 102,
+              "line": 138,
               "col": 9,
               "endCol": 11,
               "raw": "10"
@@ -4090,75 +3272,819 @@
         }
       ]
     },
-    "CategoryBadge@components/category-badge.tsx:21": {
+    "ComparisonTable@components/comparison-table.tsx:47": {
       "element": {
-        "file": "components/category-badge.tsx",
-        "line": 21
+        "file": "components/comparison-table.tsx",
+        "line": 47
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.badge",
-          "file": "components/category-badge.tsx",
-          "defLine": 28,
+          "ref": "styles.sectionTitle",
+          "file": "components/comparison-table.tsx",
+          "defLine": 140,
           "properties": {
-            "paddingHorizontal": {
-              "line": 29,
-              "col": 23,
-              "endCol": 24,
-              "raw": "8"
+            "fontSize": {
+              "line": 142,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
             },
-            "paddingVertical": {
-              "line": 30,
-              "col": 21,
-              "endCol": 22,
-              "raw": "3"
-            },
-            "borderRadius": {
-              "line": 31,
+            "marginBottom": {
+              "line": 144,
               "col": 18,
               "endCol": 19,
-              "raw": "6"
-            },
-            "borderCurve": {
-              "line": 32,
-              "col": 17,
-              "endCol": 29,
-              "raw": "'continuous'"
-            },
-            "alignSelf": {
-              "line": 33,
-              "col": 15,
-              "endCol": 27,
-              "raw": "'flex-start'"
+              "raw": "4"
             }
           }
         }
       ]
     },
-    "CategoryBadge@components/category-badge.tsx:22": {
+    "ComparisonTable@components/comparison-table.tsx:50": {
       "element": {
-        "file": "components/category-badge.tsx",
-        "line": 22
+        "file": "components/comparison-table.tsx",
+        "line": 50
       },
       "styles": [
         {
           "origin": "stylesheet",
-          "ref": "styles.text",
-          "file": "components/category-badge.tsx",
-          "defLine": 35,
+          "ref": "styles.headerRow",
+          "file": "components/comparison-table.tsx",
+          "defLine": 146,
+          "properties": {
+            "flexDirection": {
+              "line": 147,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 148,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingHorizontal": {
+              "line": 149,
+              "col": 23,
+              "endCol": 25,
+              "raw": "14"
+            },
+            "paddingVertical": {
+              "line": 150,
+              "col": 21,
+              "endCol": 23,
+              "raw": "10"
+            },
+            "borderBottomWidth": {
+              "line": 151,
+              "col": 23,
+              "endCol": 24,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:51": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 51
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerCell",
+          "file": "components/comparison-table.tsx",
+          "defLine": 154,
           "properties": {
             "fontSize": {
-              "line": 37,
+              "line": 156,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textTransform": {
+              "line": 158,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            },
+            "letterSpacing": {
+              "line": 159,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "components/comparison-table.tsx",
+          "properties": {
+            "width": {
+              "line": 51,
+              "col": 50,
+              "endCol": 52,
+              "raw": "28"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:52": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 52
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerCell",
+          "file": "components/comparison-table.tsx",
+          "defLine": 154,
+          "properties": {
+            "fontSize": {
+              "line": 156,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textTransform": {
+              "line": 158,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            },
+            "letterSpacing": {
+              "line": 159,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "components/comparison-table.tsx",
+          "properties": {
+            "flex": {
+              "line": 52,
+              "col": 49,
+              "endCol": 50,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:53": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 53
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerCell",
+          "file": "components/comparison-table.tsx",
+          "defLine": 154,
+          "properties": {
+            "fontSize": {
+              "line": 156,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textTransform": {
+              "line": 158,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            },
+            "letterSpacing": {
+              "line": 159,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "components/comparison-table.tsx",
+          "properties": {
+            "width": {
+              "line": 53,
+              "col": 50,
+              "endCol": 52,
+              "raw": "55"
+            },
+            "textAlign": {
+              "line": 53,
+              "col": 65,
+              "endCol": 72,
+              "raw": "'right'"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:54": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 54
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerCell",
+          "file": "components/comparison-table.tsx",
+          "defLine": 154,
+          "properties": {
+            "fontSize": {
+              "line": 156,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textTransform": {
+              "line": 158,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            },
+            "letterSpacing": {
+              "line": 159,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "components/comparison-table.tsx",
+          "properties": {
+            "width": {
+              "line": 54,
+              "col": 50,
+              "endCol": 52,
+              "raw": "80"
+            },
+            "textAlign": {
+              "line": 54,
+              "col": 65,
+              "endCol": 72,
+              "raw": "'right'"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:55": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 55
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.headerCell",
+          "file": "components/comparison-table.tsx",
+          "defLine": 154,
+          "properties": {
+            "fontSize": {
+              "line": 156,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "textTransform": {
+              "line": 158,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            },
+            "letterSpacing": {
+              "line": 159,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            }
+          }
+        },
+        {
+          "origin": "inline",
+          "file": "components/comparison-table.tsx",
+          "properties": {
+            "width": {
+              "line": 55,
+              "col": 50,
+              "endCol": 52,
+              "raw": "65"
+            },
+            "textAlign": {
+              "line": 55,
+              "col": 65,
+              "endCol": 72,
+              "raw": "'right'"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:63": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 63
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.row",
+          "file": "components/comparison-table.tsx",
+          "defLine": 161,
+          "properties": {
+            "borderRadius": {
+              "line": 163,
+              "col": 18,
+              "endCol": 20,
+              "raw": "14"
+            },
+            "borderCurve": {
+              "line": 164,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "overflow": {
+              "line": 165,
+              "col": 14,
+              "endCol": 22,
+              "raw": "'hidden'"
+            },
+            "boxShadow": {
+              "line": 166,
+              "col": 15,
+              "endCol": 45,
+              "raw": "'0 2px 8px rgba(0, 0, 0, 0.2)'"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:70": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 70
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bestPickBadge",
+          "file": "components/comparison-table.tsx",
+          "defLine": 173,
+          "properties": {
+            "paddingHorizontal": {
+              "line": 175,
+              "col": 23,
+              "endCol": 25,
+              "raw": "14"
+            },
+            "paddingVertical": {
+              "line": 176,
+              "col": 21,
+              "endCol": 22,
+              "raw": "5"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:71": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 71
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bestPickText",
+          "file": "components/comparison-table.tsx",
+          "defLine": 178,
+          "properties": {
+            "fontSize": {
+              "line": 180,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "color": {
+              "line": 181,
+              "col": 11,
+              "endCol": 17,
+              "raw": "'#000'"
+            },
+            "letterSpacing": {
+              "line": 182,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.5"
+            },
+            "textTransform": {
+              "line": 183,
+              "col": 19,
+              "endCol": 30,
+              "raw": "'uppercase'"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:74": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 74
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowContent",
+          "file": "components/comparison-table.tsx",
+          "defLine": 185,
+          "properties": {
+            "flexDirection": {
+              "line": 186,
+              "col": 19,
+              "endCol": 24,
+              "raw": "'row'"
+            },
+            "alignItems": {
+              "line": 187,
+              "col": 16,
+              "endCol": 24,
+              "raw": "'center'"
+            },
+            "paddingHorizontal": {
+              "line": 188,
+              "col": 23,
+              "endCol": 25,
+              "raw": "14"
+            },
+            "paddingTop": {
+              "line": 189,
+              "col": 16,
+              "endCol": 18,
+              "raw": "14"
+            },
+            "paddingBottom": {
+              "line": 190,
+              "col": 19,
+              "endCol": 20,
+              "raw": "8"
+            },
+            "gap": {
+              "line": 191,
+              "col": 9,
+              "endCol": 10,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:75": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 75
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rank",
+          "file": "components/comparison-table.tsx",
+          "defLine": 193,
+          "properties": {
+            "width": {
+              "line": 194,
+              "col": 11,
+              "endCol": 13,
+              "raw": "22"
+            },
+            "fontSize": {
+              "line": 196,
+              "col": 14,
+              "endCol": 16,
+              "raw": "15"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:78": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 78
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bankInfo",
+          "file": "components/comparison-table.tsx",
+          "defLine": 203,
+          "properties": {
+            "flex": {
+              "line": 204,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "gap": {
+              "line": 205,
+              "col": 9,
+              "endCol": 10,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:79": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 79
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bankName",
+          "file": "components/comparison-table.tsx",
+          "defLine": 207,
+          "properties": {
+            "fontSize": {
+              "line": 209,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:87": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 87
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.requirements",
+          "file": "components/comparison-table.tsx",
+          "defLine": 215,
+          "properties": {
+            "fontSize": {
+              "line": 217,
               "col": 14,
               "endCol": 16,
               "raw": "10"
             },
-            "letterSpacing": {
-              "line": 38,
-              "col": 19,
+            "marginTop": {
+              "line": 219,
+              "col": 15,
+              "endCol": 16,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:92": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 92
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.apy",
+          "file": "components/comparison-table.tsx",
+          "defLine": 221,
+          "properties": {
+            "width": {
+              "line": 222,
+              "col": 11,
+              "endCol": 13,
+              "raw": "52"
+            },
+            "fontSize": {
+              "line": 224,
+              "col": 14,
+              "endCol": 16,
+              "raw": "15"
+            },
+            "textAlign": {
+              "line": 226,
+              "col": 15,
               "endCol": 22,
-              "raw": "0.3"
+              "raw": "'right'"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:95": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 95
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.earningsCol",
+          "file": "components/comparison-table.tsx",
+          "defLine": 232,
+          "properties": {
+            "width": {
+              "line": 233,
+              "col": 11,
+              "endCol": 13,
+              "raw": "80"
+            },
+            "alignItems": {
+              "line": 234,
+              "col": 16,
+              "endCol": 26,
+              "raw": "'flex-end'"
+            },
+            "gap": {
+              "line": 235,
+              "col": 9,
+              "endCol": 10,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:96": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 96
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.earnings",
+          "file": "components/comparison-table.tsx",
+          "defLine": 237,
+          "properties": {
+            "fontSize": {
+              "line": 239,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:107": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 107
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.feeNote",
+          "file": "components/comparison-table.tsx",
+          "defLine": 249,
+          "properties": {
+            "fontSize": {
+              "line": 251,
+              "col": 14,
+              "endCol": 15,
+              "raw": "9"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:112": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 112
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.feeWarningBadge",
+          "file": "components/comparison-table.tsx",
+          "defLine": 254,
+          "properties": {
+            "fontSize": {
+              "line": 256,
+              "col": 14,
+              "endCol": 15,
+              "raw": "9"
+            }
+          }
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:115": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 115
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.delta",
+          "file": "components/comparison-table.tsx",
+          "defLine": 259,
+          "properties": {
+            "width": {
+              "line": 260,
+              "col": 11,
+              "endCol": 13,
+              "raw": "62"
+            },
+            "fontSize": {
+              "line": 262,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "textAlign": {
+              "line": 263,
+              "col": 15,
+              "endCol": 22,
+              "raw": "'right'"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ComparisonTable@components/comparison-table.tsx:126": {
+      "element": {
+        "file": "components/comparison-table.tsx",
+        "line": 126
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.ctaRow",
+          "file": "components/comparison-table.tsx",
+          "defLine": 272,
+          "properties": {
+            "paddingHorizontal": {
+              "line": 273,
+              "col": 23,
+              "endCol": 25,
+              "raw": "14"
+            },
+            "paddingBottom": {
+              "line": 274,
+              "col": 19,
+              "endCol": 21,
+              "raw": "12"
+            },
+            "paddingTop": {
+              "line": 275,
+              "col": 16,
+              "endCol": 17,
+              "raw": "4"
             }
           }
         }
@@ -4337,6 +4263,80 @@
               "col": 15,
               "endCol": 49,
               "raw": "'0 2px 6px rgba(34, 197, 94, 0.4)'"
+            }
+          }
+        }
+      ]
+    },
+    "CategoryBadge@components/category-badge.tsx:21": {
+      "element": {
+        "file": "components/category-badge.tsx",
+        "line": 21
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.badge",
+          "file": "components/category-badge.tsx",
+          "defLine": 28,
+          "properties": {
+            "paddingHorizontal": {
+              "line": 29,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
+            },
+            "paddingVertical": {
+              "line": 30,
+              "col": 21,
+              "endCol": 22,
+              "raw": "3"
+            },
+            "borderRadius": {
+              "line": 31,
+              "col": 18,
+              "endCol": 19,
+              "raw": "6"
+            },
+            "borderCurve": {
+              "line": 32,
+              "col": 17,
+              "endCol": 29,
+              "raw": "'continuous'"
+            },
+            "alignSelf": {
+              "line": 33,
+              "col": 15,
+              "endCol": 27,
+              "raw": "'flex-start'"
+            }
+          }
+        }
+      ]
+    },
+    "CategoryBadge@components/category-badge.tsx:22": {
+      "element": {
+        "file": "components/category-badge.tsx",
+        "line": 22
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.text",
+          "file": "components/category-badge.tsx",
+          "defLine": 35,
+          "properties": {
+            "fontSize": {
+              "line": 37,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "letterSpacing": {
+              "line": 38,
+              "col": 19,
+              "endCol": 22,
+              "raw": "0.3"
             }
           }
         }
