@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/Colors';
@@ -8,6 +8,7 @@ import { DepositInput } from '@/components/deposit-input';
 import { InflationIndicator } from '@/components/inflation-indicator';
 import { ComparisonTable } from '@/components/comparison-table';
 import { EarningsCard } from '@/components/earnings-card';
+import { AdPlaceholder, AnchorAdBar } from '@/components/ad-placeholder';
 
 function calculateEarnings(apy: number, deposit: number, annualFee?: number) {
   const gross = (deposit * apy) / 100;
@@ -19,6 +20,7 @@ function calculateEarnings(apy: number, deposit: number, annualFee?: number) {
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const [depositAmount, setDepositAmount] = useState(10000);
+  const [showAnchorAd, setShowAnchorAd] = useState(true);
 
   const rankedBanks = useMemo(() => {
     const chaseEarnings = (depositAmount * 0.01) / 100;
@@ -45,75 +47,101 @@ export default function HomeScreen() {
 
   const maxEarnings = rankedBanks.length > 0 ? rankedBanks[0].netEarnings : 0;
 
-  // Show top 5 in the earnings panel
+  // Show top 6 in the earnings panel
   const topBanks = rankedBanks.slice(0, 6);
 
+  const handleDismissAnchor = useCallback(() => {
+    setShowAnchorAd(false);
+  }, []);
+
+  // Add bottom padding for anchor ad space
+  const anchorHeight = showAnchorAd ? 76 : 0;
+
   return (
-    <ScrollView
-      style={styles.scrollView}
-      contentContainerStyle={[
-        styles.content,
-        { paddingTop: insets.top + 20, paddingBottom: insets.bottom + 40 },
-      ]}
-      showsVerticalScrollIndicator={false}
-    >
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.title}>US Savings Rate Hacker</Text>
-        <Text style={styles.subtitle}>
-          Maximize your cash deposits with zero backend.
-        </Text>
-      </View>
+    <View style={styles.root}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={[
+          styles.content,
+          {
+            paddingTop: insets.top + 12,
+            paddingBottom: insets.bottom + 40 + anchorHeight,
+          },
+        ]}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* Leaderboard Ad */}
+        <AdPlaceholder variant="leaderboard" />
 
-      {/* Deposit Input */}
-      <DepositInput value={depositAmount} onValueChange={setDepositAmount} />
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.title}>US Savings Rate Hacker</Text>
+          <Text style={styles.subtitle}>
+            Maximize your cash deposits with zero backend.
+          </Text>
+        </View>
 
-      {/* Inflation Bleed Indicator */}
-      <InflationIndicator depositAmount={depositAmount} />
+        {/* Deposit Input */}
+        <DepositInput value={depositAmount} onValueChange={setDepositAmount} />
 
-      {/* Comparison Table */}
-      <ComparisonTable rankedBanks={rankedBanks} />
+        {/* Inflation Bleed Indicator */}
+        <InflationIndicator depositAmount={depositAmount} />
 
-      {/* Annual Earnings Calculator Panel */}
-      <View style={styles.earningsSection}>
-        <Text style={styles.sectionTitle}>
-          Annual Earnings Breakdown
-        </Text>
-        <Text style={styles.sectionSubtitle}>
-          (${depositAmount.toLocaleString('en-US')} Deposit)
-        </Text>
+        {/* Comparison Table */}
+        <ComparisonTable rankedBanks={rankedBanks} />
 
-        {topBanks.map((bank) => (
-          <EarningsCard
-            key={bank.id}
-            bank={bank}
-            grossEarnings={bank.grossEarnings}
-            netEarnings={bank.netEarnings}
-            maxEarnings={maxEarnings}
-            feeWarning={bank.feeWarning}
-          />
-        ))}
-      </View>
+        {/* Annual Earnings Calculator Panel */}
+        <View style={styles.earningsSection}>
+          <View style={styles.earningsHeader}>
+            <Text style={styles.sectionTitle}>Annual Earnings Breakdown</Text>
+            <Text style={styles.sectionSubtitle}>
+              ${depositAmount.toLocaleString('en-US')} Deposit
+            </Text>
+          </View>
 
-      {/* Footer Disclaimer */}
-      <View style={styles.footer}>
-        <Text style={styles.disclaimer}>
-          APY rates are subject to change. Calculations are estimates. Not financial advice.
-          Rates last checked May 2026.
-        </Text>
-      </View>
-    </ScrollView>
+          {topBanks.map((bank, index) => (
+            <EarningsCard
+              key={bank.id}
+              bank={bank}
+              grossEarnings={bank.grossEarnings}
+              netEarnings={bank.netEarnings}
+              maxEarnings={maxEarnings}
+              feeWarning={bank.feeWarning}
+              isBestPick={index === 0}
+            />
+          ))}
+        </View>
+
+        {/* Footer Disclaimer */}
+        <View style={styles.footer}>
+          <Text style={styles.disclaimer}>
+            APY rates are subject to change. Calculations are estimates.
+            Not financial advice. Rates last checked May 2026.
+          </Text>
+        </View>
+      </ScrollView>
+
+      {/* Sticky Bottom Anchor Ad */}
+      {showAnchorAd && (
+        <View style={{ paddingBottom: insets.bottom }}>
+          <AnchorAdBar onClose={handleDismissAnchor} />
+        </View>
+      )}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
+  root: {
     flex: 1,
     backgroundColor: Colors.background,
   },
+  scrollView: {
+    flex: 1,
+  },
   content: {
     paddingHorizontal: 16,
-    gap: 20,
+    gap: 22,
   },
   header: {
     gap: 6,
@@ -121,7 +149,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: Fonts.bold,
-    fontSize: 26,
+    fontSize: 28,
     color: Colors.textPrimary,
     textAlign: 'center',
     letterSpacing: -0.5,
@@ -133,18 +161,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   earningsSection: {
-    gap: 12,
+    gap: 14,
+  },
+  earningsHeader: {
+    gap: 4,
   },
   sectionTitle: {
     fontFamily: Fonts.bold,
-    fontSize: 18,
+    fontSize: 20,
     color: Colors.textPrimary,
   },
   sectionSubtitle: {
-    fontFamily: Fonts.regular,
+    fontFamily: Fonts.medium,
     fontSize: 13,
     color: Colors.textMuted,
-    marginTop: -8,
+    fontVariant: ['tabular-nums'],
   },
   footer: {
     marginTop: 12,
@@ -157,6 +188,6 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: Colors.textDark,
     textAlign: 'center',
-    lineHeight: 16,
+    lineHeight: 18,
   },
 });

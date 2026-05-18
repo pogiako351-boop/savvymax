@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Linking } from 'react-native';
 import { Colors } from '@/constants/Colors';
 import { Fonts } from '@/constants/Typography';
 import { CategoryBadge } from './category-badge';
+import { AdPlaceholder } from './ad-placeholder';
 import type { Bank } from '@/constants/BankData';
 
 interface RankedBank extends Bank {
@@ -17,6 +18,29 @@ interface ComparisonTableProps {
   rankedBanks: RankedBank[];
 }
 
+function CtaButton({ bank }: { bank: RankedBank }) {
+  if (bank.cat === 'Traditional') {
+    return (
+      <View style={styles.ctaDisabled}>
+        <Text style={styles.ctaDisabledText}>Low-Yield Trap</Text>
+      </View>
+    );
+  }
+
+  return (
+    <Pressable
+      onPress={() => Linking.openURL(bank.url)}
+      style={({ pressed }) => [
+        styles.ctaButton,
+        pressed && styles.ctaPressed,
+      ]}
+      accessibilityRole="link"
+    >
+      <Text style={styles.ctaText}>Claim High Rate →</Text>
+    </Pressable>
+  );
+}
+
 export function ComparisonTable({ rankedBanks }: ComparisonTableProps) {
   return (
     <View style={styles.container}>
@@ -27,75 +51,83 @@ export function ComparisonTable({ rankedBanks }: ComparisonTableProps) {
         <Text style={[styles.headerCell, { width: 28 }]}>#</Text>
         <Text style={[styles.headerCell, { flex: 1 }]}>Bank Name</Text>
         <Text style={[styles.headerCell, { width: 55, textAlign: 'right' }]}>APY %</Text>
-        <Text style={[styles.headerCell, { width: 75, textAlign: 'right' }]}>Annual</Text>
+        <Text style={[styles.headerCell, { width: 80, textAlign: 'right' }]}>Annual $</Text>
         <Text style={[styles.headerCell, { width: 65, textAlign: 'right' }]}>vs Chase</Text>
       </View>
 
       {rankedBanks.map((bank, index) => (
-        <View
-          key={bank.id}
-          style={[
-            styles.row,
-            index === 0 && styles.bestPickRow,
-          ]}
-        >
-          {index === 0 && (
-            <View style={styles.bestPickBadge}>
-              <Text style={styles.bestPickText}>⭐ Best Pick</Text>
-            </View>
-          )}
-          <View style={styles.rowContent}>
-            <Text style={[styles.rank, index === 0 && styles.bestPickRank]}>
-              {bank.rank}
-            </Text>
-            <View style={styles.bankInfo}>
-              <Text
-                style={[styles.bankName, index === 0 && styles.bestPickName]}
-                numberOfLines={1}
-              >
-                {bank.name}
+        <React.Fragment key={bank.id}>
+          {/* Inject in-feed ad between 5th and 6th row */}
+          {index === 5 && <AdPlaceholder variant="in-feed" />}
+
+          <View
+            style={[
+              styles.row,
+              index === 0 && styles.bestPickRow,
+            ]}
+          >
+            {index === 0 && (
+              <View style={styles.bestPickBadge}>
+                <Text style={styles.bestPickText}>⭐ Best Pick</Text>
+              </View>
+            )}
+            <View style={styles.rowContent}>
+              <Text style={[styles.rank, index === 0 && styles.bestPickRank]}>
+                {bank.rank}
               </Text>
-              <CategoryBadge category={bank.cat} />
-              {bank.req ? (
-                <Text style={styles.requirements} numberOfLines={1}>
-                  {bank.req}
+              <View style={styles.bankInfo}>
+                <Text
+                  style={[styles.bankName, index === 0 && styles.bestPickName]}
+                  numberOfLines={1}
+                >
+                  {bank.name}
                 </Text>
-              ) : null}
-            </View>
-            <Text style={[styles.apy, index === 0 && styles.bestPickApy]}>
-              {bank.apy.toFixed(2)}%
-            </Text>
-            <View style={styles.earningsCol}>
+                <CategoryBadge category={bank.cat} />
+                {bank.req ? (
+                  <Text style={styles.requirements} numberOfLines={1}>
+                    {bank.req}
+                  </Text>
+                ) : null}
+              </View>
+              <Text style={[styles.apy, index === 0 && styles.bestPickApy]}>
+                {bank.apy.toFixed(2)}%
+              </Text>
+              <View style={styles.earningsCol}>
+                <Text
+                  selectable
+                  style={[
+                    styles.earnings,
+                    index === 0 && styles.bestPickEarnings,
+                    bank.feeWarning && styles.warningText,
+                  ]}
+                >
+                  ${bank.netEarnings.toFixed(2)}
+                </Text>
+                {bank.annualFee ? (
+                  <Text style={styles.feeNote}>
+                    (net after ${bank.annualFee}/yr)
+                  </Text>
+                ) : null}
+                {bank.feeWarning && (
+                  <Text style={styles.feeWarningBadge}>⚠️ Fee &gt; Yield</Text>
+                )}
+              </View>
               <Text
                 selectable
                 style={[
-                  styles.earnings,
-                  index === 0 && styles.bestPickEarnings,
-                  bank.feeWarning && styles.warningText,
+                  styles.delta,
+                  bank.chaseDelta > 0 ? styles.deltaPositive : styles.deltaNeutral,
                 ]}
               >
-                ${bank.netEarnings.toFixed(0)}
+                {bank.chaseDelta > 0 ? '+' : ''}${bank.chaseDelta.toFixed(2)}
               </Text>
-              {bank.annualFee ? (
-                <Text style={styles.feeNote}>
-                  (net after ${bank.annualFee}/yr fee)
-                </Text>
-              ) : null}
-              {bank.feeWarning && (
-                <Text style={styles.feeWarningBadge}>⚠️ Fee {'>'} Yield</Text>
-              )}
             </View>
-            <Text
-              selectable
-              style={[
-                styles.delta,
-                bank.chaseDelta > 0 ? styles.deltaPositive : styles.deltaNeutral,
-              ]}
-            >
-              {bank.chaseDelta > 0 ? '+' : ''}${bank.chaseDelta.toFixed(0)}
-            </Text>
+            {/* CTA Button */}
+            <View style={styles.ctaRow}>
+              <CtaButton bank={bank} />
+            </View>
           </View>
-        </View>
+        </React.Fragment>
       ))}
     </View>
   );
@@ -103,19 +135,19 @@ export function ComparisonTable({ rankedBanks }: ComparisonTableProps) {
 
 const styles = StyleSheet.create({
   container: {
-    gap: 8,
+    gap: 10,
   },
   sectionTitle: {
     fontFamily: Fonts.bold,
     fontSize: 18,
     color: Colors.textPrimary,
-    marginBottom: 8,
+    marginBottom: 4,
   },
   headerRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: Colors.border,
   },
@@ -128,36 +160,40 @@ const styles = StyleSheet.create({
   },
   row: {
     backgroundColor: Colors.cardSurface,
-    borderRadius: 12,
+    borderRadius: 14,
     borderCurve: 'continuous',
     overflow: 'hidden',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
   },
   bestPickRow: {
     borderWidth: 1.5,
     borderColor: Colors.goldHighlight,
-    boxShadow: '0 0 20px rgba(245, 158, 11, 0.15)',
+    boxShadow: '0 0 24px rgba(245, 158, 11, 0.2), 0 4px 12px rgba(245, 158, 11, 0.1)',
   },
   bestPickBadge: {
     backgroundColor: Colors.goldHighlight,
-    paddingHorizontal: 12,
-    paddingVertical: 4,
+    paddingHorizontal: 14,
+    paddingVertical: 5,
   },
   bestPickText: {
     fontFamily: Fonts.bold,
     fontSize: 11,
     color: '#000',
-    letterSpacing: 0.3,
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
   },
   rowContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 12,
+    paddingHorizontal: 14,
+    paddingTop: 14,
+    paddingBottom: 8,
     gap: 8,
   },
   rank: {
     width: 22,
     fontFamily: Fonts.bold,
-    fontSize: 14,
+    fontSize: 15,
     color: Colors.textMuted,
     fontVariant: ['tabular-nums'],
   },
@@ -170,7 +206,7 @@ const styles = StyleSheet.create({
   },
   bankName: {
     fontFamily: Fonts.semiBold,
-    fontSize: 13,
+    fontSize: 14,
     color: Colors.textPrimary,
   },
   bestPickName: {
@@ -180,11 +216,12 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: 10,
     color: Colors.textDark,
+    marginTop: 1,
   },
   apy: {
     width: 52,
     fontFamily: Fonts.bold,
-    fontSize: 14,
+    fontSize: 15,
     color: Colors.accentGreen,
     textAlign: 'right',
     fontVariant: ['tabular-nums'],
@@ -193,7 +230,7 @@ const styles = StyleSheet.create({
     color: Colors.accentGreen,
   },
   earningsCol: {
-    width: 75,
+    width: 80,
     alignItems: 'flex-end',
     gap: 2,
   },
@@ -220,7 +257,7 @@ const styles = StyleSheet.create({
     color: Colors.accentRed,
   },
   delta: {
-    width: 58,
+    width: 62,
     fontFamily: Fonts.bold,
     fontSize: 13,
     textAlign: 'right',
@@ -231,5 +268,44 @@ const styles = StyleSheet.create({
   },
   deltaNeutral: {
     color: Colors.textDark,
+  },
+  ctaRow: {
+    paddingHorizontal: 14,
+    paddingBottom: 12,
+    paddingTop: 4,
+  },
+  ctaButton: {
+    backgroundColor: Colors.accentGreen,
+    borderRadius: 8,
+    borderCurve: 'continuous',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  ctaPressed: {
+    opacity: 0.85,
+    transform: [{ scale: 0.98 }],
+  },
+  ctaText: {
+    fontFamily: Fonts.bold,
+    fontSize: 13,
+    color: '#000',
+    letterSpacing: 0.3,
+  },
+  ctaDisabled: {
+    backgroundColor: 'rgba(100, 116, 139, 0.2)',
+    borderRadius: 8,
+    borderCurve: 'continuous',
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  ctaDisabledText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 12,
+    color: Colors.textDark,
+    letterSpacing: 0.3,
   },
 });
