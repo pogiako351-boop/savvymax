@@ -247,17 +247,7 @@ export default function ProductionSavvymax() {
   const regionConfig = MULTI_COUNTRY_REGISTRY[currentRegion];
   const depositAmount = Math.max(0, parseInt(deposit.replace(/[^0-9]/g, ''), 10) || 0);
 
-  // ─── useEffect 1: Auto-detect region from URL on mount ───────────────────
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.location) {
-      const path = window.location.pathname.replace(/^\//, '').toUpperCase();
-      if (path && REGION_CODES.includes(path)) {
-        setCurrentRegion(path);
-      }
-    }
-  }, []);
-
-  // ─── useEffect 2: Recalculate bleed & optimizedGain on deposit/region change
+  // ─── useEffect: Recalculate bleed & optimizedGain on deposit/region change
   useEffect(() => {
     const amount = depositAmount;
     const config = MULTI_COUNTRY_REGISTRY[currentRegion];
@@ -287,13 +277,9 @@ export default function ProductionSavvymax() {
     return () => clearInterval(interval);
   }, []);
 
-  // ─── Region selection handler (with URL pushState) ───────────────────────
+  // ─── Region selection handler (state-driven only) ────────────────────────
   const handleRegionSelection = useCallback((code: string) => {
     setCurrentRegion(code);
-    if (typeof window !== 'undefined' && window.history) {
-      const slug = code === 'US' ? '/' : `/${code.toLowerCase()}`;
-      window.history.pushState(null, '', slug);
-    }
   }, []);
 
   // ─── Deposit input handler ───────────────────────────────────────────────
