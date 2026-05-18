@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "fastshot",
+    "scheme": "savvymax",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "ios": {
@@ -36,8 +36,7 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": true,
-      "baseUrl": "/655502b0-a2fd-4e02-80b2-fdf3ca7e7e79/dev-preview/"
+      "typedRoutes": true
     }
   }
 }

@@ -10,6 +10,7 @@ import { ComparisonTable } from '@/components/comparison-table';
 import { EarningsCard } from '@/components/earnings-card';
 import { AdPlaceholder, AnchorAdBar } from '@/components/ad-placeholder';
 import { LegalFooter } from '@/components/legal-footer';
+import { SavvymaxLogo } from '@/components/savvymax-logo';
 
 function calculateEarnings(apy: number, deposit: number, annualFee?: number) {
   const gross = (deposit * apy) / 100;
@@ -76,9 +77,9 @@ export default function HomeScreen() {
 
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>US Savings Rate Hacker</Text>
+          <SavvymaxLogo />
           <Text style={styles.subtitle}>
-            Maximize your cash deposits with zero backend.
+            Maximize your cash deposits effortlessly.
           </Text>
         </View>
 
@@ -140,15 +141,8 @@ const styles = StyleSheet.create({
     gap: 22,
   },
   header: {
-    gap: 6,
+    gap: 8,
     alignItems: 'center',
-  },
-  title: {
-    fontFamily: Fonts.bold,
-    fontSize: 28,
-    color: Colors.textPrimary,
-    textAlign: 'center',
-    letterSpacing: -0.5,
   },
   subtitle: {
     fontFamily: Fonts.regular,

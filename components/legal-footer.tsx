@@ -52,7 +52,7 @@ export function LegalFooter() {
       {/* Copyright */}
       <View style={styles.copyrightRow}>
         <Text style={styles.copyright} selectable>
-          © 2025 US Savings Rate Hacker. All rights reserved.
+          © 2025 Savvymax. All rights reserved.
         </Text>
       </View>
     </View>
